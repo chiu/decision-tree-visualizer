@@ -23,11 +23,20 @@ var graphviz = d3.select("#graph").graphviz()
 function render() {
     var dotLines = dots[dotIndex];
     var dot = dotLines.join('');
-    var svgContainer = d3.select(".node").append("svg").attr("width", 200).attr("height", 200);
+    var svgContainer = d3.select(".node").append("svg").attr("width", 2000).attr("height", 2000);
  
              // /Draw the Rectangle
     var rectangle = svgContainer.append("rect").attr("width", 100).attr("height", 50).attr('fill', 'teal');
-    
+
+
+        var data = [
+            { id : 1, value : 100},
+            { id : 2, value : 200},
+            { id : 3, value : 300},
+            { id : 4, value : 400},
+            { id : 5, value : 500}
+        ];
+
 
     graphviz
         .renderDot(dot)
@@ -35,6 +44,9 @@ function render() {
             dotIndex = (dotIndex + 1) % dots.length;
             render();
         });
+
+
+    
 
 
 
