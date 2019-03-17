@@ -1,22 +1,14 @@
-<html>
-<head>
-    <title>Learn D3 in 5 minutes</title>
-</head>
+<!DOCTYPE html>
+<meta charset="utf-8">
 <body>
-
-<h3>Today is a beautiful day!!</h3>
-
-<script src='https://d3js.org/d3.v4.min.js'></script>
-
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker"></script>
+<script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>
+<div id="graph" style="text-align: center;"></div>
 <script>
-    var fruits = ['apple', 'mango', 'banana', 'orange'];
-    d3.select('ul')
-        .selectAll('li')
-        .data(fruits)
-        .enter()
-        .append('li')
-        .text(function(d) { return d; });
-</script>
 
-</body>
-</html>
+d3.select("#graph").graphviz()
+    .fade(false)
+    .renderDot('digraph  {a -> b}');
+
+</script>
