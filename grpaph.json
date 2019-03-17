@@ -1,0 +1,314 @@
+{
+  "name": "Tree",
+  "directed": true,
+  "strict": false,
+  "_subgraph_cnt": 0,
+  "objects": [
+    {
+      "_gvid": 0,
+      "name": "0",
+      "color": "black",
+      "fillcolor": "#b139e542",
+      "fontname": "helvetica",
+      "label": "milk &le; 0.5<br\/>gini = 0.759<br\/>samples = 101<br\/>value = [4, 20, 8, 13, 10, 41, 5]<br\/>class = Bug",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 1,
+      "name": "1",
+      "color": "black",
+      "fillcolor": "#b7e53926",
+      "fontname": "helvetica",
+      "label": "feathers &le; 0.5<br\/>gini = 0.785<br\/>samples = 60<br\/>value = [4, 20, 8, 13, 10, 0, 5]<br\/>class = Bird",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 2,
+      "name": "2",
+      "color": "black",
+      "fillcolor": "#39e5e21a",
+      "fontname": "helvetica",
+      "label": "fins &le; 0.5<br\/>gini = 0.766<br\/>samples = 40<br\/>value = [4, 0, 8, 13, 10, 0, 5]<br\/>class = Fish",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 3,
+      "name": "3",
+      "color": "black",
+      "fillcolor": "#3956e51b",
+      "fontname": "helvetica",
+      "label": "backbone &le; 0.5<br\/>gini = 0.719<br\/>samples = 27<br\/>value = [4, 0, 8, 0, 10, 0, 5]<br\/>class = Amphibian",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 4,
+      "name": "4",
+      "color": "black",
+      "fillcolor": "#3956e533",
+      "fontname": "helvetica",
+      "label": "airborne &le; 0.5<br\/>gini = 0.494<br\/>samples = 18<br\/>value = [0, 0, 8, 0, 10, 0, 0]<br\/>class = Amphibian",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 5,
+      "name": "5",
+      "color": "black",
+      "fillcolor": "#3956e5cc",
+      "fontname": "helvetica",
+      "label": "predator &le; 0.5<br\/>gini = 0.278<br\/>samples = 12<br\/>value = [0, 0, 2, 0, 10, 0, 0]<br\/>class = Amphibian",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 6,
+      "name": "6",
+      "color": "black",
+      "fillcolor": "#39e54d00",
+      "fontname": "helvetica",
+      "label": "legs &le; 3.0<br\/>gini = 0.5<br\/>samples = 4<br\/>value = [0, 0, 2, 0, 2, 0, 0]<br\/>class = Reptile",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 7,
+      "name": "7",
+      "color": "black",
+      "fillcolor": "#3956e5ff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 2<br\/>value = [0, 0, 0, 0, 2, 0, 0]<br\/>class = Amphibian",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 8,
+      "name": "8",
+      "color": "black",
+      "fillcolor": "#39e54dff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 2<br\/>value = [0, 0, 2, 0, 0, 0, 0]<br\/>class = Reptile",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 9,
+      "name": "9",
+      "color": "black",
+      "fillcolor": "#3956e5ff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 8<br\/>value = [0, 0, 0, 0, 8, 0, 0]<br\/>class = Amphibian",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 10,
+      "name": "10",
+      "color": "black",
+      "fillcolor": "#39e54dff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 6<br\/>value = [0, 0, 6, 0, 0, 0, 0]<br\/>class = Reptile",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 11,
+      "name": "11",
+      "color": "black",
+      "fillcolor": "#e5398633",
+      "fontname": "helvetica",
+      "label": "aquatic &le; 0.5<br\/>gini = 0.494<br\/>samples = 9<br\/>value = [4, 0, 0, 0, 0, 0, 5]<br\/>class = Invertebrate",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 12,
+      "name": "12",
+      "color": "black",
+      "fillcolor": "#e53986ff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 4<br\/>value = [0, 0, 0, 0, 0, 0, 4]<br\/>class = Invertebrate",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 13,
+      "name": "13",
+      "color": "black",
+      "fillcolor": "#e58139bf",
+      "fontname": "helvetica",
+      "label": "breathes &le; 0.5<br\/>gini = 0.32<br\/>samples = 5<br\/>value = [4, 0, 0, 0, 0, 0, 1]<br\/>class = Mammal",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 14,
+      "name": "14",
+      "color": "black",
+      "fillcolor": "#e53986ff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 1<br\/>value = [0, 0, 0, 0, 0, 0, 1]<br\/>class = Invertebrate",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 15,
+      "name": "15",
+      "color": "black",
+      "fillcolor": "#e58139ff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 4<br\/>value = [4, 0, 0, 0, 0, 0, 0]<br\/>class = Mammal",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 16,
+      "name": "16",
+      "color": "black",
+      "fillcolor": "#39e5e2ff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 13<br\/>value = [0, 0, 0, 13, 0, 0, 0]<br\/>class = Fish",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 17,
+      "name": "17",
+      "color": "black",
+      "fillcolor": "#b7e539ff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 20<br\/>value = [0, 20, 0, 0, 0, 0, 0]<br\/>class = Bird",
+      "shape": "box",
+      "style": "filled, rounded"
+    },
+    {
+      "_gvid": 18,
+      "name": "18",
+      "color": "black",
+      "fillcolor": "#b139e5ff",
+      "fontname": "helvetica",
+      "label": "gini = 0.0<br\/>samples = 41<br\/>value = [0, 0, 0, 0, 0, 41, 0]<br\/>class = Bug",
+      "shape": "box",
+      "style": "filled, rounded"
+    }
+  ],
+  "edges": [
+    {
+      "_gvid": 0,
+      "tail": 0,
+      "head": 1,
+      "fontname": "helvetica",
+      "headlabel": "True",
+      "labelangle": "45",
+      "labeldistance": "2.5"
+    },
+    {
+      "_gvid": 1,
+      "tail": 0,
+      "head": 18,
+      "fontname": "helvetica",
+      "headlabel": "False",
+      "labelangle": "-45",
+      "labeldistance": "2.5"
+    },
+    {
+      "_gvid": 2,
+      "tail": 1,
+      "head": 2,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 3,
+      "tail": 1,
+      "head": 17,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 4,
+      "tail": 2,
+      "head": 3,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 5,
+      "tail": 2,
+      "head": 16,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 6,
+      "tail": 3,
+      "head": 4,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 7,
+      "tail": 3,
+      "head": 11,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 8,
+      "tail": 4,
+      "head": 5,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 9,
+      "tail": 4,
+      "head": 10,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 10,
+      "tail": 5,
+      "head": 6,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 11,
+      "tail": 5,
+      "head": 9,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 12,
+      "tail": 6,
+      "head": 7,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 13,
+      "tail": 6,
+      "head": 8,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 14,
+      "tail": 11,
+      "head": 12,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 15,
+      "tail": 11,
+      "head": 13,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 16,
+      "tail": 13,
+      "head": 14,
+      "fontname": "helvetica"
+    },
+    {
+      "_gvid": 17,
+      "tail": 13,
+      "head": 15,
+      "fontname": "helvetica"
+    }
+  ]
+}
