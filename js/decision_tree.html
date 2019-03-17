@@ -25,20 +25,18 @@ function render() {
     var dot = dotLines.join('');
 
 
-    var div = d3.select("#graph");
-    var svg = d3.select(div.node().querySelector("svg"));
-    // var g = d3.select(svg.node().querySelector("text"));
+    var div = d3.selectAll("#graph");
+    var svg = d3.select(div.node());
+    // var g = d3.select(svg.text());
 
-    // var svgContainer = svg.append("svg").attr("width", 2000).attr("height", 2000);
- 
-    //          // /Draw the Rectangle
-    // var rectangle = svgContainer.append("rect").attr("width", 100).attr("height", 50).attr('fill', 'teal');
+    
 
 
-    graphviz
-        .renderDot(dot)
-        .on("end", function () {
+    graphviz.renderDot(dot).on("end", function () {
             dotIndex = (dotIndex + 1) % dots.length;
+            var svgContainer = svg.append("svg").attr("width", 20).attr("height", 20);
+             // /Draw the Rectangle
+            var rectangle = svgContainer.append("rect").attr("width", 100).attr("height", 50).attr('fill', 'teal');
             render();
         });
 
