@@ -23,10 +23,10 @@ var graphviz = d3.select("#graph").graphviz()
 function render() {
     var dotLines = dots[dotIndex];
     var dot = dotLines.join('');
-    var svgContainer = d3.select("body").append("svg").attr("width", 200).attr("height", 200);
+    var svgContainer = d3.select(".node").append("svg").attr("width", 200).attr("height", 200);
  
              // /Draw the Rectangle
-             var rectangle = svgContainer.append("rect").attr("x", 10).attr("y", 10).attr("width", 50).attr("height", 100).attr('fill', 'teal');
+    var rectangle = svgContainer.append("rect").attr("width", 100).attr("height", 50).attr('fill', 'teal');
     
 
     graphviz
