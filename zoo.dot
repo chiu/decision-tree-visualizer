@@ -26,7 +26,7 @@ edge [fontname=helvetica] ;
 3 -> 11 ;
 12 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 0, 0, 0, 0, 0, 4]<br/>class = Invertebrate>, fillcolor="#e53986ff"] ;
 11 -> 12 ;
-13 [label=<breathes &le; 0.5<br/>gini = 0.32<br/>samples = 5<br/>value = [4, 0, 0, 0, 0, 0, 1]<br/>class = Mammal>, fillcolor="#e58139bf"] ;
+13 [label=<legs &le; 2.0<br/>gini = 0.32<br/>samples = 5<br/>value = [4, 0, 0, 0, 0, 0, 1]<br/>class = Mammal>, fillcolor="#e58139bf"] ;
 11 -> 13 ;
 14 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 0, 0, 0, 0, 1]<br/>class = Invertebrate>, fillcolor="#e53986ff"] ;
 13 -> 14 ;
