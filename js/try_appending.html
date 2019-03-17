@@ -18,15 +18,13 @@
 	<body>
 		<script type="text/javascript">
 		
-			var dataset = [ 5, 10, 15, 20, 25 ];
-			
-			d3.select("body").selectAll("div")
-				.data(dataset)
-				.enter()
-				.append("div")
-				.attr("class", "bar")
-				.attr("width", 7)
-            .attr("height", 70);
+			var svgContainer = d3.select("body").append("svg").attr("width", 200).attr("height", 200);
+ 
+			 // /Draw the Rectangle
+			 var rectangle = svgContainer.append("rect").attr("x", 10).attr("y", 10).attr("width", 50).attr("height", 100).attr('fill', 'teal');
+
+
+
 			
 		</script>
 	</body>
