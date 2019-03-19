@@ -97,9 +97,9 @@ body {
 }
 
 .nodeExample1 {
-    padding: 2px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+    padding: 10px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
     border-radius: 3px;
     background-color: #ffffff;
     border: 1px solid #000;
@@ -110,4 +110,5 @@ body {
 
 .nodeExample1 img {
     margin-right: 10px;
+    margin-left: 30px;
 }
