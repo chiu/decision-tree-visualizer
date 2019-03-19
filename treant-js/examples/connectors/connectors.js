@@ -25,7 +25,7 @@ var chart_config = {
 		text: { name: "CEO" },
 		connectors: {
 			style: {
-				'stroke': '#bbb',
+				'stroke': 'red',
 				'arrow-end': 'oval-wide-long'
 			}
 		},
@@ -35,7 +35,7 @@ var chart_config = {
 				stackChildren: true,
 				connectors: {
 					style: {
-						'stroke': '#8080FF',
+						'stroke': 'blue',
 						'arrow-end': 'block-wide-long'
 					}
 				},
