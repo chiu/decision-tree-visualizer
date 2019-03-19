@@ -1,8 +1,12 @@
 var config = {
         container: "#basic-example",
-        
-        connectors: {
-            type: 'step'
+        levelSeparation: 45,
+
+       connectors: {
+            type: "step",
+            style: {
+                "stroke-width": 20
+            }
         },
         node: {
             HTMLclass: 'nodeExample1'
@@ -19,7 +23,7 @@ var config = {
 
     cto = {
         parent: ceo,
-        text:{
+        text: {
             name: "Joe Linux",
             title: "Chief Technology Officer",
         },
@@ -29,7 +33,7 @@ var config = {
     cbo = {
         parent: ceo,
         stackChildren: true,
-        text:{
+        text: {
             name: "Linda May",
             title: "Chief Business Officer",
         },
@@ -37,7 +41,7 @@ var config = {
     },
     cdo = {
         parent: ceo,
-        text:{
+        text: {
             name: "John Green",
             title: "Chief accounting officer",
             contact: "Tel: 01 213 123 134",
@@ -46,7 +50,7 @@ var config = {
     },
     cio = {
         parent: cto,
-        text:{
+        text: {
             name: "Ron Blomquist",
             title: "Chief Information Security Officer"
         },
@@ -54,16 +58,16 @@ var config = {
     },
     ciso = {
         parent: cto,
-        text:{
+        text: {
             name: "Michael Rubin",
             title: "Chief Innovation Officer",
-            contact: {val: "we@aregreat.com", href: "mailto:we@aregreat.com"}
+            contact: { val: "we@aregreat.com", href: "mailto:we@aregreat.com" }
         },
         image: "../headshots/9.jpg"
     },
     cio2 = {
         parent: cdo,
-        text:{
+        text: {
             name: "Erica Reel",
             title: "Chief Customer Officer"
         },
@@ -74,7 +78,7 @@ var config = {
     },
     ciso2 = {
         parent: cbo,
-        text:{
+        text: {
             name: "Alice Lopez",
             title: "Chief Communications Officer"
         },
@@ -82,7 +86,7 @@ var config = {
     },
     ciso3 = {
         parent: cbo,
-        text:{
+        text: {
             name: "Mary Johnson",
             title: "Chief Brand Officer"
         },
@@ -90,32 +94,32 @@ var config = {
     },
     ciso4 = {
         parent: cbo,
-        text:{
+        text: {
             name: "Kirk Douglas",
             title: "Chief Business Development Officer"
         },
         image: "../headshots/11.jpg"
     }
 
-    chart_config = [
-        config,
-        ceo,
-        cto,
-        cbo,
-        cdo,
-        cio,
-        ciso,
-        cio2,
-        ciso2,
-        ciso3,
-        ciso4
-    ];
+chart_config = [
+    config,
+    ceo,
+    cto,
+    cbo,
+    cdo,
+    cio,
+    ciso,
+    cio2,
+    ciso2,
+    ciso3,
+    ciso4
+];
 
 
 
 
-    // Another approach, same result
-    // JSON approach
+// Another approach, same result
+// JSON approach
 
 /*
     var chart_config = {

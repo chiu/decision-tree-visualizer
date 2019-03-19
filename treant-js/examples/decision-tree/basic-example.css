@@ -81,7 +81,7 @@ body {
 .chart {
     height: 1200px;
     margin: 5px;
-    width: 1800px;
+    width: 2500px;
 }
 
 .Treant>.node {}
@@ -103,7 +103,7 @@ body {
     border-radius: 3px;
     background-color: #ffffff;
     border: 1px solid #000;
-    width: 400px;
+    width: 600px;
     font-family: Tahoma;
     font-size: 12px;
 }
