@@ -18,6 +18,14 @@
     <script>
     new Treant(chart_config);
     </script>
+    <script>
+    $(".nodeExample1").click(function(e) {
+        if (e.target.classList.value !== "collapse-switch") {
+            $(this).children(".node-gini").toggle();
+            $(this).children(".node-samples").toggle();
+        }
+    })
+    </script>
 </body>
 
 </html>

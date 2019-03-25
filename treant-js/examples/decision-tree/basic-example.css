@@ -130,6 +130,6 @@ body {
     margin-left: 10px;
 }
 
-.Treant .collapse-switch { width: 100%; height: 100%; border: none; }
-.Treant .node.collapsed { background-color: #DEF82D; }
-.Treant .node.collapsed .collapse-switch { background: none; }
+.Treant .collapse-switch { width: 50%; height: 50%; border: 'red'; }
+.Treant .node.collapsed { background-color: "red";visibility: visible;}
+.Treant .node.collapsed .collapse-switch { background:'blue'; }
