@@ -69,24 +69,29 @@
         {
             "name": "Top Parent",
             "parent": "null",
+            "distribution":  [4, 20, 8, 13, 10, 41, 5],
             "children": [
                 {
                     "name": "Level 2: A",
                     "parent": "Top Parent",
+                    "distribution":  [4, 20, 8, 13, 10, 41, 5],
                     "children": [
                         {
                             "name": "Son of A",
-                            "parent": "Level 2: A"
+                            "parent": "Level 2: A",
+                            "distribution":  [4, 20, 8, 13, 10, 41, 5],
                         },
                         {
                             "name": "Daughter of A",
-                            "parent": "Level 2: A"
+                            "parent": "Level 2: A",
+                            "distribution":  [4, 20, 8, 13, 10, 41, 5],
                         }
                     ]
                 },
                 {
                     "name": "Level 2: B",
-                    "parent": "Top Level"
+                    "parent": "Top Level",
+                    "distribution":  [4, 20, 8, 13, 10, 41, 5],
                 }
             ]
         }
@@ -155,7 +160,7 @@
                     .classed('info', true)
                     .attr('x', 20)
                     .attr('y', 10)
-                    .text('More info');
+                    .text('More info' + d.distribution.toString());
 
                 var dataset = [4, 20, 8, 13, 10, 41, 5];
 
@@ -170,7 +175,7 @@
                     .attr("height", svgHeight);
 
                 var barChart = svg.selectAll("rect")
-                    .data(dataset)
+                    .data(this.values)
                     .enter()
                     .append("rect")
                     .attr("y", function (d) {
@@ -189,6 +194,7 @@
             .on("mouseout", function () {
                 // Remove the info text on mouse out.
                 d3.select(this).select('text.info').remove()
+                d3.select(this).selectAll('rect').remove()
             });
         ;
 
