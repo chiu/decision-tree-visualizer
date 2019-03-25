@@ -64,7 +64,7 @@
         .attr("class", "tooltip")
         .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'>hi</div>")
         .style("opacity", 1e-6);
-     
+
 
 
 
@@ -124,18 +124,41 @@
 
 
     function mousemove(d) {
+        console.log("inside select")
+        var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
+        var svgWidth = 200;
+        var svgHeight = 100
+        var barPadding = 5;
+        var barWidth = (svgWidth / dataset.length);
+        
         div
             .text("Info about " + d.name + ":" + d.info + "\n" + d.attribute)
             .attr("transform", "translate(0," + 5 + ")")
             .style("left", (d3.event.pageX) + "px")
             .style("top", (d3.event.pageY) + "px")
             .attr("class", "tooltip")
-            .html("Info about " + d.name + ":" + d.info + "\n" + d.attribute + "<p>This is a SVG inside a tooltip:</p><div id='tipDiv'>hi</div>");
-            // .style("opacity", 1e-6);
+            .append("svg")
+            .data(dataset)
+            .enter()
+            .append("rect")
+            .attr("y", function(d) {
+                return svgHeight - d
+            })
+            .attr("height", function(d) {
+                return d;
+            })
+            .attr("width", barWidth - barPadding)
+            .attr("transform", function(d, i) {
+                var translate = [barWidth * i, 0];
+                return "translate(" + translate + ")";
+            });
+
+        // .style("opacity", 1e-6);
 
 
         // .call(wrap, 40);
     }
+
 
     function mouseout() {
         div.transition()
