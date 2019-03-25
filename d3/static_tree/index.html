@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Simple Tree Demo</title>
+    <title>Simple Tree Demo 2</title>
     <script src="http://d3js.org/d3.v3.js"></script>
     <style>
         .link {
@@ -62,7 +62,9 @@
     // Add tooltip div
     var div = d3.select("body").append("div")
         .attr("class", "tooltip")
+        .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'>hi</div>")
         .style("opacity", 1e-6);
+     
 
 
 
@@ -122,38 +124,14 @@
 
 
     function mousemove(d) {
-        var dataset = [4, 20, 8, 13, 10, 41, 5];
-
-        var svgWidth = 200;
-        var svgHeight = 100
-        var barPadding = 5;
-        var barWidth = (svgWidth / dataset.length);
-
-
-        var svg = d3.select('tooltip')
-            .attr("width", svgWidth)
-            .attr("height", svgHeight);
-
-
         div
             .text("Info about " + d.name + ":" + d.info + "\n" + d.attribute)
             .attr("transform", "translate(0," + 5 + ")")
             .style("left", (d3.event.pageX) + "px")
             .style("top", (d3.event.pageY) + "px")
-            .data(dataset)
-            .enter()
-            .append("rect")
-            .attr("y", function(d) {
-                return svgHeight - d
-            })
-            .attr("height", function(d) {
-                return d;
-            })
-            .attr("width", barWidth - barPadding)
-            .attr("transform", function(d, i) {
-                var translate = [barWidth * i, 0];
-                return "translate(" + translate + ")";
-            });
+            .attr("class", "tooltip")
+            .html("Info about " + d.name + ":" + d.info + "\n" + d.attribute + "<p>This is a SVG inside a tooltip:</p><div id='tipDiv'>hi</div>");
+            // .style("opacity", 1e-6);
 
 
         // .call(wrap, 40);
