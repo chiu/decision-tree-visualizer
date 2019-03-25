@@ -74,17 +74,17 @@
                 {
                     "name": "Level 2: A",
                     "parent": "Top Parent",
-                    "distribution":  [4, 20, 8, 13, 10, 41, 5],
+                    "distribution":  [4, 20, 8, 13, 10, 0, 5] 	,
                     "children": [
                         {
                             "name": "Son of A",
                             "parent": "Level 2: A",
-                            "distribution":  [4, 20, 8, 13, 10, 41, 5],
+                            "distribution":  [4, 0, 8, 13, 10, 0, 5],
                         },
                         {
                             "name": "Daughter of A",
                             "parent": "Level 2: A",
-                            "distribution":  [4, 20, 8, 13, 10, 41, 5],
+                            "distribution":  [4, 0, 8, 0, 10, 0, 5] 	,
                         }
                     ]
                 },
@@ -175,7 +175,7 @@
                     .attr("height", svgHeight);
 
                 var barChart = svg.selectAll("rect")
-                    .data(this.values)
+                    .data(d.distribution)
                     .enter()
                     .append("rect")
                     .attr("y", function (d) {
