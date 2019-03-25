@@ -54,6 +54,10 @@
             visibility: visible;
         }
 
+        .bar-chart {
+            background-color: #C7D9D9;
+        }
+
     </style>
 
 </head>
@@ -69,29 +73,30 @@
         {
             "name": "Top Parent",
             "parent": "null",
-            "distribution":  [4, 20, 8, 13, 10, 41, 5],
+            "distribution": [4, 20, 8, 13, 10, 41, 5],
             "children": [
                 {
                     "name": "Level 2: A",
+                    "attribute": "milk <= 0.5",
                     "parent": "Top Parent",
-                    "distribution":  [4, 20, 8, 13, 10, 0, 5] 	,
+                    "distribution": [4, 20, 8, 13, 10, 0, 5],
                     "children": [
                         {
                             "name": "Son of A",
                             "parent": "Level 2: A",
-                            "distribution":  [4, 0, 8, 13, 10, 0, 5],
+                            "distribution": [4, 0, 8, 13, 10, 0, 5],
                         },
                         {
                             "name": "Daughter of A",
                             "parent": "Level 2: A",
-                            "distribution":  [4, 0, 8, 0, 10, 0, 5] 	,
+                            "distribution": [4, 0, 8, 0, 10, 0, 5],
                         }
                     ]
                 },
                 {
                     "name": "Level 2: B",
                     "parent": "Top Level",
-                    "distribution":  [4, 20, 8, 13, 10, 41, 5],
+                    "distribution": [4, 20, 8, 13, 10, 41, 5],
                 }
             ]
         }
@@ -160,7 +165,7 @@
                     .classed('info', true)
                     .attr('x', 20)
                     .attr('y', 10)
-                    .text('More info' + d.distribution.toString());
+                    .text('More info ' + d.attribute + ' ' +  d.distribution.toString());
 
                 var dataset = [4, 20, 8, 13, 10, 41, 5];
 
@@ -173,6 +178,8 @@
                 var svg = d3.select(this)
                     .attr("width", svgWidth)
                     .attr("height", svgHeight);
+                    // .attr("fill", "green")
+                    // .attr("opacity", 0.8);
 
                 var barChart = svg.selectAll("rect")
                     .data(d.distribution)
@@ -187,8 +194,11 @@
                     .attr("width", barWidth - barPadding)
                     .attr("transform", function (d, i) {
                         var translate = [barWidth * i, 0];
-                        return "translate(" + translate + ")";
-                    });
+                        return "translate(" + translate + ")"
+
+                    })
+                    .attr("fill", "red")
+                    .attr("opacity", 0.8);
 
             })
             .on("mouseout", function () {
