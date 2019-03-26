@@ -6,47 +6,69 @@
     <script src="http://d3js.org/d3.v3.js"></script>
     <style>
         .link {
-                fill: none;
-                stroke: #ccc;
-                stroke-width: 1.5px;
-            }
-            div.tooltip {
-                position: absolute;
-                text-align: center;
-                width: 100px;
-                height: 10px;
-                padding: 8px;
-                font: 10px sans-serif;
-                background: #ffff99;
-                border: solid 1px #aaa;
-                border-radius: 8px;
-                pointer-events: none;
-            }
-        </style>
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1.5px;
+        }
+
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            padding: 8px;
+            font: 10px sans-serif;
+            background: #ffff99;
+            border: solid 1px #aaa;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="viz"></div>
-    <script type="text/javascript">
+<div id="viz"></div>
+<script type="text/javascript">
     //JSON object with the data
     var treeData = {
-        "name": "Root",
-        "info": "1",
+        "name": "node0",
         "attribute": "milk <= 0.5",
+        "parent": "null",
+        "samples": 101,
+        "distribution": [4, 20, 8, 13, 10, 41, 5],
         "children": [
-            { "name": "A", "info": "2" },
-            { "name": "B", "info": "3" },
             {
-                "name": "C",
-                "info": "4",
+                "name": "Level 2: A",
+                "attribute": "none; leaf",
+                "parent": "Top Parent",
+                "samples": 41,
+                "distribution": [4, 20, 8, 13, 10, 0, 5],
+            },
+            {
+                "name": "Level 2: B",
+                "attribute": "feathers <= 0.5",
+                "parent": "Top Level",
+                "samples": 60,
+                "distribution": [4, 20, 8, 13, 10, 41, 5],
                 "children": [
-
-                    { "name": "C1", "info": "5" },
-                    { "name": "C2", "info": "6" }
+                    {
+                        "name": "Son of A",
+                        "attribute": "none; leaf",
+                        "parent": "Level 2: A",
+                        "samples": 20,
+                        "distribution": [4, 0, 8, 13, 10, 0, 5],
+                    },
+                    {
+                        "name": "Daughter of A",
+                        "attribute": "fins <= 0.5",
+                        "parent": "Level 2: A",
+                        "samples": 40,
+                        "distribution": [4, 0, 8, 0, 10, 0, 5],
+                    }
                 ]
             }
         ]
-    };
+    }
 
     // Create a svg canvas
     var vis = d3.select("#viz").append("svg:svg")
@@ -56,17 +78,11 @@
         .attr("transform", "translate(40, 30)"); // shift everything to the right
 
 
-
-
-
     // Add tooltip div
     var div = d3.select("body").append("div")
         .attr("class", "tooltip")
         .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'>hi</div>")
         .style("opacity", 1e-6);
-
-
-
 
 
     // Create a tree "canvas"
@@ -100,12 +116,16 @@
     var node = vis.selectAll("g.node")
         .data(nodes)
         .enter().append("svg:g")
-        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+        .attr("transform", function (d) {
+            return "translate(" + d.x + "," + d.y + ")";
+        })
 
     // Add the dot at every node
     node.append("svg:circle")
         .on("mouseover", mouseover)
-        .on("mousemove", function(d) { mousemove(d); })
+        .on("mousemove", function (d) {
+            mousemove(d);
+        })
         .on("mouseout", mouseout)
         .attr("fill", "red")
         .attr("r", 5.5);
@@ -113,14 +133,15 @@
     node.append("svg:text")
         .attr("dx", 8)
         .attr("dy", 3)
-        .text(function(d) { return d.name; })
+        .text(function (d) {
+            return d.name;
+        })
 
     function mouseover() {
         div.transition()
             .duration(300)
             .style("opacity", 1);
     }
-
 
 
     function mousemove(d) {
@@ -130,7 +151,7 @@
         var svgHeight = 100
         var barPadding = 5;
         var barWidth = (svgWidth / dataset.length);
-        
+
         div
             .text("Info about " + d.name + ":" + d.info + "\n" + d.attribute)
             .attr("transform", "translate(0," + 5 + ")")
@@ -141,14 +162,14 @@
             .data(dataset)
             .enter()
             .append("rect")
-            .attr("y", function(d) {
+            .attr("y", function (d) {
                 return svgHeight - d
             })
-            .attr("height", function(d) {
+            .attr("height", function (d) {
                 return d;
             })
             .attr("width", barWidth - barPadding)
-            .attr("transform", function(d, i) {
+            .attr("transform", function (d, i) {
                 var translate = [barWidth * i, 0];
                 return "translate(" + translate + ")";
             });
@@ -165,7 +186,7 @@
             .duration(300)
             .style("opacity", 1e-6);
     }
-    </script>
+</script>
 </body>
 
 </html>

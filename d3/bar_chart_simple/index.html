@@ -2,8 +2,12 @@
 <script src="https://d3js.org/d3.v3.min.js"></script>
 
 <style>
+    .chart {
+        background: red;
+    }
     .chart rect {
-        fill: steelblue
+        fill: steelblue;
+        opacity: 0.5
     }
 
     .axis path,
@@ -45,6 +49,8 @@
 
     chart.attr("width", width + 2 * margin)
         .attr("height", height + 2 * margin)
+        .style('fill', 'green')
+        // .style('background', 'green')
         .append("g")
         .attr("transform", "translate(" + margin + "," + margin + ")")
         .selectAll("rect")

@@ -106,15 +106,21 @@ function update(source) {
             //     .html("heya");
 
             // The class is used to remove the additional text later
+
+            // adding class distribution bar charts
+            var chart = g.append('svg')
+                .style('fill', 'green')
+                .classed('chart', true);
+
+                // .style('opacity', 100);
+
             var info = g.append('text')
                 .classed('info', true)
                 .attr('x', 20)
                 .attr('y', 20)
                 .text('distribution: ' + d.distribution.toString());
 
-            // adding class distribution bar charts
-            var chart = g.append('svg')
-                .classed('chart', true)
+
 
             var margin = 30;
             var width = 150;
@@ -132,7 +138,7 @@ function update(source) {
                 .range([height, 0]);
 
             chart.attr("width", width + 2 * margin)
-                .attr("height", height + 20 * margin)
+                .attr("height", height + 10 * margin)
                 .append("g")
                 .attr("transform", "translate(" + margin + "," + margin + ")")
                 .selectAll("rect")
@@ -180,12 +186,12 @@ function update(source) {
                 .attr("class", "axis")
                 .call(yAxis);
         })
-        .on("mouseout", function () {
-            // Remove the info text on mouse out.
-            d3.select(this).select('text.info').remove()
-            d3.select(this).selectAll('rect').remove()
-            d3.select(this).selectAll('g.axis').remove()
-        });
+        // .on("mouseout", function () {
+        //     // Remove the info text on mouse out.
+        //     d3.select(this).select('text.info').remove()
+        //     d3.select(this).selectAll('rect').remove()
+        //     d3.select(this).selectAll('g.axis').remove()
+        // });
 
 
     nodeEnter.append("circle")
