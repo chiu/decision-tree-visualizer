@@ -58,7 +58,10 @@
             background-color: #C7D9D9;
         }
 
-        .chart rect { fill: steelblue }
+        .chart rect {
+            fill: steelblue
+        }
+
         .axis path,
         .axis line {
             fill: none;
@@ -85,31 +88,35 @@
     var treeData = [
         {
             "name": "Top Parent",
+            "attribute": "milk <= 0.5",
             "parent": "null",
             "distribution": [4, 20, 8, 13, 10, 41, 5],
             "children": [
                 {
                     "name": "Level 2: A",
-                    "attribute": "milk <= 0.5",
+                    "attribute": "none; leaf",
                     "parent": "Top Parent",
                     "distribution": [4, 20, 8, 13, 10, 0, 5],
+                },
+                {
+                    "name": "Level 2: B",
+                    "attribute": "feathers <= 0.5",
+                    "parent": "Top Level",
+                    "distribution": [4, 20, 8, 13, 10, 41, 5],
                     "children": [
                         {
                             "name": "Son of A",
+                            "attribute": "none; leaf",
                             "parent": "Level 2: A",
                             "distribution": [4, 0, 8, 13, 10, 0, 5],
                         },
                         {
                             "name": "Daughter of A",
+                            "attribute": "fins <= 0.5",
                             "parent": "Level 2: A",
                             "distribution": [4, 0, 8, 0, 10, 0, 5],
                         }
                     ]
-                },
-                {
-                    "name": "Level 2: B",
-                    "parent": "Top Level",
-                    "distribution": [4, 20, 8, 13, 10, 41, 5],
                 }
             ]
         }
@@ -118,8 +125,8 @@
 
     // ************** Generate the tree diagram	 *****************
     var margin = {top: 20, right: 120, bottom: 20, left: 120},
-        width = 3*960 - margin.right - margin.left,
-        height = 3*500 - margin.top - margin.bottom;
+        width = 3 * 960 - margin.right - margin.left,
+        height = 3 * 500 - margin.top - margin.bottom;
 
     var i = 0,
         duration = 750,
@@ -178,7 +185,7 @@
                     .classed('info', true)
                     .attr('x', 20)
                     .attr('y', 20)
-                    .text('hi More info ' + d.attribute + ' ' +  d.distribution.toString());
+                    .text('distribution: ' + d.distribution.toString());
 
                 // adding class distribution bar charts
                 var chart = g.append('svg')
@@ -191,10 +198,8 @@
                 // var data = [4, 8, 15, 16, 23, 42];
                 // document.getElementById("data").innerHTML = data;
                 var data = d.distribution;
-
-                const names = ["Bob", "Bob", "Terry", "Joe", "Bob", "Terry", "Joe", "Shiva", "Terry", "Joe"];
                 var x = d3.scale.ordinal()
-                    .domain([0,1,2,3,4,5,6])
+                    .domain([0, 1, 2, 3, 4, 5, 6])
                     .rangeBands([0, width]);
 
                 var y = d3.scale.linear()
@@ -226,7 +231,6 @@
                 var x_names = d3.scale.ordinal()
                     .domain(['Mammal', 'Bird', 'Reptile', 'Fish', 'Amphibian', 'Bug', 'Invertebrate'])
                     .rangeBands([0, width]);
-
 
 
                 var xAxis = d3.svg.axis()
@@ -280,7 +284,7 @@
                 return d.children || d._children ? "end" : "start";
             })
             .text(function (d) {
-                return d.name;
+                return d.attribute;
             })
             .style("fill-opacity", 1e-6);
 
