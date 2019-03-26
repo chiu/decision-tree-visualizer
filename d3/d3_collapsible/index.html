@@ -180,18 +180,20 @@
                     .attr('y', 10)
                     .text('hi More info ' + d.attribute + ' ' +  d.distribution.toString());
 
+                // adding class distribution bar charts
                 var chart = g.append('svg')
                     .classed('chart', true)
 
                 var margin = 30;
                 var width = 120;
-                var height = 300;
+                var height = 150;
 
-                var data = [4, 8, 15, 16, 23, 42];
+                // var data = [4, 8, 15, 16, 23, 42];
                 // document.getElementById("data").innerHTML = data;
+                var data = d.distribution;
 
                 var x = d3.scale.ordinal()
-                    .domain([0, 1, 2, 3, 4, 5])
+                    .domain(['Mammal', 'Bird', 'Reptile', 'Fish', 'Amphibian', 'Bug', 'Invertebrate'])
                     .rangeBands([0, width]);
 
                 var y = d3.scale.linear()
@@ -201,7 +203,7 @@
                 // var chart = d3.select(".chart");
 
                 chart.attr("width", width + 2 * margin)
-                    .attr("height", height + 2 * margin)
+                    .attr("height", height + 20 * margin)
                     .append("g")
                     .attr("transform", "translate(" + margin + "," + margin + ")")
                     .selectAll("rect")
@@ -231,7 +233,13 @@
                 chart.append("g")
                     .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
                     .attr("class", "axis")
-                    .call(xAxis);
+                    .call(xAxis)
+                    .selectAll("text")
+                    .attr("y", 0)
+                    .attr("x", 9)
+                    .attr("dy", ".35em")
+                    .attr("transform", "rotate(90)")
+                    .style("text-anchor", "start");
 
                 chart.append("g")
                     .attr("transform", "translate(" + margin + "," + margin + ")")
