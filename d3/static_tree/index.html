@@ -14,14 +14,33 @@
         div.tooltip {
             position: absolute;
             text-align: center;
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 350px;
             padding: 8px;
             font: 10px sans-serif;
             background: #ffff99;
             border: solid 1px #aaa;
             border-radius: 8px;
             pointer-events: none;
+        }
+
+
+        .chart rect {
+            fill: red;
+            opacity: 0.5
+        }
+
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispEdges;
+        }
+
+        .axis text {
+            font-family: sans-serif;
+            font-size: 11px;
         }
     </style>
 </head>
@@ -134,7 +153,7 @@
         .attr("dx", 8)
         .attr("dy", 3)
         .text(function (d) {
-            return d.name;
+            return d.attribute;
         })
 
     function mouseover() {
@@ -156,7 +175,6 @@
 
         var g = d3.select(".tooltip"); //
         var chart = g.append('svg')
-            .style('fill', 'green')
             .classed('chart', true);
 
         var info = g.append('text')
