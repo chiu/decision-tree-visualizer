@@ -177,7 +177,7 @@
                 var info = g.append('text')
                     .classed('info', true)
                     .attr('x', 20)
-                    .attr('y', 10)
+                    .attr('y', 20)
                     .text('hi More info ' + d.attribute + ' ' +  d.distribution.toString());
 
                 // adding class distribution bar charts
@@ -185,8 +185,8 @@
                     .classed('chart', true)
 
                 var margin = 30;
-                var width = 120;
-                var height = 300;
+                var width = 150;
+                var height = 200;
 
                 // var data = [4, 8, 15, 16, 23, 42];
                 // document.getElementById("data").innerHTML = data;
@@ -198,7 +198,7 @@
                     .rangeBands([0, width]);
 
                 var y = d3.scale.linear()
-                    .domain([0, 42])
+                    .domain([0, 45])
                     .range([height, 0]);
 
                 // var chart = d3.select(".chart");
@@ -257,12 +257,12 @@
 
 
             })
-            // .on("mouseout", function () {
-            //     // Remove the info text on mouse out.
-            //     d3.select(this).select('text.info').remove()
-            //     d3.select(this).selectAll('rect').remove()
-            //     d3.select(this).selectAll('g.axis').remove()
-            // });
+            .on("mouseout", function () {
+                // Remove the info text on mouse out.
+                d3.select(this).select('text.info').remove()
+                d3.select(this).selectAll('rect').remove()
+                d3.select(this).selectAll('g.axis').remove()
+            });
         ;
 
         nodeEnter.append("circle")
