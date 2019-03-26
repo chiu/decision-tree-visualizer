@@ -192,8 +192,9 @@
                 // document.getElementById("data").innerHTML = data;
                 var data = d.distribution;
 
+                const names = ["Bob", "Bob", "Terry", "Joe", "Bob", "Terry", "Joe", "Shiva", "Terry", "Joe"];
                 var x = d3.scale.ordinal()
-                    .domain([0,1,2,3,4,5])
+                    .domain([0,1,2,3,4,5,6])
                     .rangeBands([0, width]);
 
                 var y = d3.scale.linear()
@@ -214,14 +215,22 @@
                         return height - y(d);
                     })
                     .attr("x", function (d, i) {
+                        console.log(i);
                         return x(i);
                     })
                     .attr("y", function (d) {
                         return y(d);
                     });
 
+
+                var x_names = d3.scale.ordinal()
+                    .domain(['Mammal', 'Bird', 'Reptile', 'Fish', 'Amphibian', 'Bug', 'Invertebrate'])
+                    .rangeBands([0, width]);
+
+
+
                 var xAxis = d3.svg.axis()
-                    .scale(x)
+                    .scale(x_names)
                     .orient("bottom")
                     .ticks(6);
 
@@ -233,13 +242,13 @@
                 chart.append("g")
                     .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
                     .attr("class", "axis")
-                    .call(xAxis);
-                    // .selectAll("text")
-                    // .attr("y", 0)
-                    // .attr("x", 9)
-                    // .attr("dy", ".35em")
-                    // .attr("transform", "rotate(90)")
-                    // .style("text-anchor", "start");
+                    .call(xAxis)
+                    .selectAll("text")
+                    .attr("y", 0)
+                    .attr("x", 9)
+                    .attr("dy", ".35em")
+                    .attr("transform", "rotate(90)")
+                    .style("text-anchor", "start");
 
                 chart.append("g")
                     .attr("transform", "translate(" + margin + "," + margin + ")")
