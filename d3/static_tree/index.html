@@ -146,13 +146,91 @@
 
     function mousemove(d) {
         console.log("inside select")
-        
+
         div
             .text("Info about " + d.name + ":" + d.info + "\n" + d.attribute)
             .attr("transform", "translate(0," + 5 + ")")
             .style("left", (d3.event.pageX) + "px")
             .style("top", (d3.event.pageY) + "px")
             .attr("class", "tooltip")
+
+        var g = d3.select(".tooltip"); //
+        var chart = g.append('svg')
+            .style('fill', 'green')
+            .classed('chart', true);
+
+        var info = g.append('text')
+            .classed('info', true)
+            .attr('x', 20)
+            .attr('y', 20)
+            .text('distribution: ' + d.distribution.toString());
+
+
+
+        var margin = 30;
+        var width = 150;
+        var height = 200;
+
+        // var data = [4, 8, 15, 16, 23, 42];
+        // document.getElementById("data").innerHTML = data;
+        var data = d.distribution;
+        var x = d3.scale.ordinal()
+            .domain([0, 1, 2, 3, 4, 5, 6])
+            .rangeBands([0, width]);
+
+        var y = d3.scale.linear()
+            .domain([0, 45])
+            .range([height, 0]);
+
+        chart.attr("width", width + 2 * margin)
+            .attr("height", height + 10 * margin)
+            .append("g")
+            .attr("transform", "translate(" + margin + "," + margin + ")")
+            .selectAll("rect")
+            .data(data)
+            .enter().append("rect")
+            .attr("width", 19)
+            .attr("height", function (d) {
+                return height - y(d);
+            })
+            .attr("x", function (d, i) {
+                console.log(i);
+                return x(i);
+            })
+            .attr("y", function (d) {
+                return y(d);
+            });
+
+        var x_names = d3.scale.ordinal()
+            .domain(['Mammal', 'Bird', 'Reptile', 'Fish', 'Amphibian', 'Bug', 'Invertebrate'])
+            .rangeBands([0, width]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x_names)
+            .orient("bottom")
+            .ticks(6);
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .ticks(5);
+
+        chart.append("g")
+            .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
+            .attr("class", "axis")
+            .call(xAxis)
+            .selectAll("text")
+            .attr("y", 0)
+            .attr("x", 9)
+            .attr("dy", ".35em")
+            .attr("transform", "rotate(90)")
+            .style("text-anchor", "start");
+
+        chart.append("g")
+            .attr("transform", "translate(" + margin + "," + margin + ")")
+            .attr("class", "axis")
+            .call(yAxis);
+
         // .call(wrap, 40);
     }
 
