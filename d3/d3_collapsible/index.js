@@ -186,12 +186,12 @@ function update(source) {
                 .attr("class", "axis")
                 .call(yAxis);
         })
-        // .on("mouseout", function () {
-        //     // Remove the info text on mouse out.
-        //     d3.select(this).select('text.info').remove()
-        //     d3.select(this).selectAll('rect').remove()
-        //     d3.select(this).selectAll('g.axis').remove()
-        // });
+        .on("mouseout", function () {
+            // Remove the info text on mouse out.
+            d3.select(this).select('text.info').remove()
+            d3.select(this).selectAll('rect').remove()
+            d3.select(this).selectAll('g.axis').remove()
+        });
 
 
     nodeEnter.append("circle")
