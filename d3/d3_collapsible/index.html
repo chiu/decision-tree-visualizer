@@ -186,14 +186,14 @@
 
                 var margin = 30;
                 var width = 120;
-                var height = 150;
+                var height = 300;
 
                 // var data = [4, 8, 15, 16, 23, 42];
                 // document.getElementById("data").innerHTML = data;
                 var data = d.distribution;
 
                 var x = d3.scale.ordinal()
-                    .domain(['Mammal', 'Bird', 'Reptile', 'Fish', 'Amphibian', 'Bug', 'Invertebrate'])
+                    .domain([0,1,2,3,4,5])
                     .rangeBands([0, width]);
 
                 var y = d3.scale.linear()
@@ -223,7 +223,7 @@
                 var xAxis = d3.svg.axis()
                     .scale(x)
                     .orient("bottom")
-                    .ticks(1);
+                    .ticks(6);
 
                 var yAxis = d3.svg.axis()
                     .scale(y)
@@ -233,13 +233,13 @@
                 chart.append("g")
                     .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
                     .attr("class", "axis")
-                    .call(xAxis)
-                    .selectAll("text")
-                    .attr("y", 0)
-                    .attr("x", 9)
-                    .attr("dy", ".35em")
-                    .attr("transform", "rotate(90)")
-                    .style("text-anchor", "start");
+                    .call(xAxis);
+                    // .selectAll("text")
+                    // .attr("y", 0)
+                    // .attr("x", 9)
+                    // .attr("dy", ".35em")
+                    // .attr("transform", "rotate(90)")
+                    // .style("text-anchor", "start");
 
                 chart.append("g")
                     .attr("transform", "translate(" + margin + "," + margin + ")")
@@ -248,12 +248,12 @@
 
 
             })
-            .on("mouseout", function () {
-                // Remove the info text on mouse out.
-                d3.select(this).select('text.info').remove()
-                d3.select(this).selectAll('rect').remove()
-                d3.select(this).selectAll('g.axis').remove()
-            });
+            // .on("mouseout", function () {
+            //     // Remove the info text on mouse out.
+            //     d3.select(this).select('text.info').remove()
+            //     d3.select(this).selectAll('rect').remove()
+            //     d3.select(this).selectAll('g.axis').remove()
+            // });
         ;
 
         nodeEnter.append("circle")
