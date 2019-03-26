@@ -143,11 +143,11 @@
     node.append("svg:circle")
         .on("mouseover", mouseover)
         .on("mousemove", function (d) {
-            mousemove(d);
+            click(d);
         })
         .on("mouseout", mouseout)
         .attr("fill", "red")
-        .attr("r", 5.5);
+        .attr("r", 10);
 
     node.append("svg:text")
         .attr("dx", 8)
@@ -163,8 +163,8 @@
     }
 
 
-    function mousemove(d) {
-        console.log("inside select")
+    function click(d) {
+        console.log("inside select");
 
         div
             .text("Info about " + d.name + ":" + d.info + "\n" + d.attribute)
@@ -249,6 +249,7 @@
             .attr("class", "axis")
             .call(yAxis);
 
+        console.log("done");
         // .call(wrap, 40);
     }
 
