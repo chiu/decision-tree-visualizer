@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bar_chart_simple/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bar_chart_simple/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d3_collapsible/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/d3_collapsible/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d3_collapsible/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/d3_collapsible/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static_tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,8 +38,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/d3_collapsible/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="644">
-                  <caret line="39" column="5" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+                <state relative-caret-position="391">
+                  <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -54,8 +51,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/static_tree/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="598">
-                  <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+                <state relative-caret-position="301">
+                  <caret line="148" column="8" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -102,11 +99,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="140" />
-    <option name="y" value="43" />
-    <option name="width" value="1400" />
-    <option name="height" value="918" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -190,19 +185,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553543074769</updated>
-      <workItem from="1553543077467" duration="18940000" />
+      <workItem from="1553543077467" duration="19178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18940000" />
+    <option name="totallyTimeSpent" value="19178000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="140" y="43" width="1400" height="918" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16823785" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13984329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
@@ -296,15 +291,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/d3_collapsible/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="391">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        <state relative-caret-position="301">
+          <caret line="148" column="8" selection-start-line="148" selection-start-column="8" selection-end-line="148" selection-end-column="8" />
         </state>
       </provider>
     </entry>
