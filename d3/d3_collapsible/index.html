@@ -169,8 +169,22 @@
 
                 var dataset = [4, 20, 8, 13, 10, 41, 5];
 
+                var margin = {top: 10, right: 10, bottom: 10, left: 10},
+                    width = 500 - margin.left - margin.right,
+                    height = 250 - margin.top - margin.bottom;
+
+                var x = d3.scale.ordinal()
+                    .domain(["a", "b", "c", "d", "e", "f"])
+                    .rangePoints([0, width]);
+
+                var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("bottom");
+
+
+
                 var svgWidth = 200;
-                var svgHeight = 100
+                var svgHeight = 100;
                 var barPadding = 5;
                 var barWidth = (svgWidth / dataset.length);
 
@@ -200,11 +214,26 @@
                     .attr("fill", "red")
                     .attr("opacity", 0.8);
 
+
+                var svg_axis = d3.select(this).append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                svg_axis.append("g")
+                    .attr("class", "x_axis")
+                    .call(xAxis);
+
+
+
+
             })
             .on("mouseout", function () {
                 // Remove the info text on mouse out.
                 d3.select(this).select('text.info').remove()
                 d3.select(this).selectAll('rect').remove()
+                d3.select(this).selectAll('g.x_axis').remove()
             });
         ;
 
