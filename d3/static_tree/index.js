@@ -114,18 +114,30 @@ function mouseover() {
 }
 
 
-function click(d){
+function click(d) {
     console.log("clicked");
+    console.log("the name of this node is " + d.name);
+    var this_node = d3.select(this);
 
-    // Add tooltip div
-    var div = d3.select("body").append("div")
-        .attr("class", "attributetip")
-        .html("\<img src=\"milk.png\" style=\"float:right;width:400px;height:2000px;\">");
 
-// <img src="milk.png" style="float:right;width:400px;height:2000px;">
-    // d3.select("div").select(img)
+    // if (!cbMed)
+    //     this.$node.selectAll(".MEDICATION").classed('hideRect', true);
+    // else
+    //     this.$node.selectAll(".MEDICATION").classed('hideRect', false);
+    console.log("this node class is " + this_node.classed("toggled_on"));
+    if (!this_node.classed("toggled_on")) {
+        console.log("inside toggle on");
+        this_node.attr("class", "toggled_on");
+        var div = d3.select("body").append("div")
+            .attr("class", "attributetip")
+            .html("\<img src=\"milk.png\" style=\"float:right;width:400px;height:2000px;\">");
+    } else {
+        console.log("inside toggle off");
+        this_node.classed("toggled_on", false);
+    }
+
+
 }
-
 
 
 function mousemove(d) {
@@ -147,7 +159,6 @@ function mousemove(d) {
         .attr('x', 20)
         .attr('y', 20)
         .text('distribution: ' + d.distribution.toString());
-
 
 
     var margin = 30;

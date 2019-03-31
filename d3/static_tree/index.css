@@ -20,15 +20,26 @@ div.tooltip {
 
 div.attributetip {
     position: absolute;
+    top: 0px;
+    left: 900px;
     text-align: center;
-    width: 200px;
-    height: 350px;
+    /*width: 400px;*/
+    /*height: 1100px;*/
     padding: 8px;
     font: 10px sans-serif;
-    background: red;
-    border: solid 1px #aaa;
+    background: green;
+    border: solid 1px red;
     border-radius: 8px;
     pointer-events: none;
+}
+
+
+.toggled_on {
+    background: green;
+    border: solid 1px green;
+    border-radius: 80px;
+    pointer-events: none;
+    fill: green;
 }
 
 
