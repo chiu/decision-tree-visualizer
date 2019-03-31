@@ -195,12 +195,9 @@ div.tooltip {
         // adds the circle to the node
         node.append("circle")
             .attr("r", 10)
-            .on("click", click)
-            .on("mousemove", function (d) {
-                mousemove(d);
-            })
-            .on("mouseout", mouseout)
-            .attr("fill", "red");
+            .attr("fill", "red")
+    .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
 
         // function mouseover() {
         //     div.transition()
