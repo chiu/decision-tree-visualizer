@@ -248,6 +248,11 @@ body {
                 .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'>hi</div>")
+            .style("opacity", 1e-6);
+
         // adds the links between the nodes
         var link = g.selectAll(".link")
             .data(nodes.descendants().slice(1))
@@ -321,11 +326,11 @@ body {
             var chart = g.append('svg')
                 .classed('chart', true);
 
-            var info = g.append('text')
-                .classed('info', true)
-                .attr('x', 20)
-                .attr('y', 20)
-                .text('distribution: ' + d.distribution.toString());
+            // var info = g.append('text')
+            //     .classed('info', true)
+            //     .attr('x', 20)
+            //     .attr('y', 20)
+            //     .text('distribution: ' + d.distribution.toString());
 
 
             var margin = 30;
@@ -335,46 +340,46 @@ body {
             // var data = [4, 8, 15, 16, 23, 42];
             // document.getElementById("data").innerHTML = data;
             var data = d.distribution;
-            var x = d3.scale.ordinal()
+            var x = d3.scaleBand()
                 .domain([0, 1, 2, 3, 4, 5, 6])
-                .rangeBands([0, width]);
+                .range([0, width]);
 
-            var y = d3.scale.linear()
+            var y = d3.scaleLinear()
                 .domain([0, 45])
                 .range([height, 0]);
 
-            chart.attr("width", width + 2 * margin)
-                .attr("height", height + 10 * margin)
-                .append("g")
-                .attr("transform", "translate(" + margin + "," + margin + ")")
-                .selectAll("rect")
-                .data(data)
-                .enter().append("rect")
-                .attr("width", 19)
-                .attr("height", function (d) {
-                    return height - y(d);
-                })
-                .attr("x", function (d, i) {
-                    console.log(i);
-                    return x(i);
-                })
-                .attr("y", function (d) {
-                    return y(d);
-                });
+            // chart.attr("width", width + 2 * margin)
+            //     .attr("height", height + 10 * margin)
+            //     .append("g")
+            //     .attr("transform", "translate(" + margin + "," + margin + ")")
+            //     .selectAll("rect")
+            //     .data(data)
+            //     .enter().append("rect")
+            //     .attr("width", 19)
+            //     .attr("height", function (d) {
+            //         return height - y(d);
+            //     })
+            //     .attr("x", function (d, i) {
+            //         console.log(i);
+            //         return x(i);
+            //     })
+            //     .attr("y", function (d) {
+            //         return y(d);
+            //     });
 
-            var x_names = d3.scale.ordinal()
+            var x_names = d3.scaleBand()
                 .domain(['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'])
-                .rangeBands([0, width]);
+                .range([0, width]);
 
-            var xAxis = d3.svg.axis()
-                .scale(x_names)
-                .orient("bottom")
-                .ticks(6);
+            var xAxis = d3.axisBottom(x_names)
+                // .scale(x_names)
+                // .orient("bottom")
+                // .ticks(6);
 
-            var yAxis = d3.svg.axis()
-                .scale(y)
-                .orient("left")
-                .ticks(5);
+            var yAxis = d3.axisLeft(y)
+                // .scale(y)
+                // .orient("left")
+                // .ticks(5);
 
             chart.append("g")
                 .attr("transform", "translate(" + margin + "," + (height + margin) + ")")

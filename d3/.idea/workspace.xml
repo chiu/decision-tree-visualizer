@@ -15,14 +15,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static_tree/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="385" column="36" lean-forward="true" selection-start-line="385" selection-start-column="36" selection-end-line="385" selection-end-column="36" />
+            <state relative-caret-position="897">
+              <caret line="381" column="29" lean-forward="true" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static_tree/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="57" selection-start-line="57" selection-end-line="60" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -31,9 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>info about</find>
-      <find>more info</find>
-      <find>svg</find>
       <find>More info</find>
       <find>chart</find>
       <find>circles</find>
@@ -46,7 +61,6 @@
       <find>stroke-width</find>
       <find>green</find>
       <find>name</find>
-      <find>mousemove</find>
       <find>class</find>
       <find>this</find>
       <find>d3.svg</find>
@@ -59,8 +73,12 @@
       <find>handleNOde</find>
       <find>fill</find>
       <find>blue</find>
-      <find>circle</find>
       <find>mouseover</find>
+      <find>circle</find>
+      <find>mousemove</find>
+      <find>tooltip</find>
+      <find>drawvertical</find>
+      <find>chart.attr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,12 +209,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="4118000" />
+      <workItem from="1553998917985" duration="4645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34270000" />
+    <option name="totallyTimeSpent" value="34797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3782" y="47" width="1680" height="954" extended-state="0" />
@@ -302,13 +320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/force_feedback/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="574">
@@ -332,18 +343,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="240" column="1" lean-forward="true" selection-start-line="123" selection-end-line="240" selection-end-column="1" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="57" selection-start-line="57" selection-end-line="60" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="385" column="36" lean-forward="true" selection-start-line="385" selection-start-column="36" selection-end-line="385" selection-end-column="36" />
+        <state relative-caret-position="897">
+          <caret line="381" column="29" lean-forward="true" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
