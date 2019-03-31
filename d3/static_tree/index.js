@@ -93,7 +93,7 @@ var link = vis.selectAll("pathlink")
     .enter().append("svg:path")
     .attr("class", "link")
     .attr("d", diagonal)
-    .style("stroke",'lightgrey')
+    .style("stroke", 'lightgrey')
     .style("stroke-width", function (d) {
         return (d.target.samples)
     });
@@ -106,7 +106,7 @@ var node = vis.selectAll("g.node")
     });
 
 // Add the dot at every node
-node.append("svg:circle")
+node.append("svg:rect")
     .on("mouseover", mouseover)
     .on("click", click)
     .on("mousemove", function (d) {
@@ -114,8 +114,12 @@ node.append("svg:circle")
     })
     .on("mouseout", mouseout)
     .attr("fill", "red")
-    .attr("r", function (d) {
-        return Math.sqrt(d.samples / Math.PI) * 10;
+    .attr("height", 30)
+    .attr("width", function (d) {
+        return d.samples;
+    })
+    .attr("transform", function (d) {
+        return "translate(-" + d.samples/2 + "," + 0 + ")";
     });
 
 // .classed("toggled_on", true);
@@ -144,7 +148,7 @@ function click(d) {
         .attr("class", "attributetip")
         .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:1500px;\">");
 
-    this_node.style("border", "solid 1px green");
+    // this_node.style("border", "solid 1px green");
 
 
 }

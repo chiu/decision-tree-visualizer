@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/d3_collapsible/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/d3_collapsible/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,11 +21,20 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/static_tree/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="373">
-                  <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+                <state relative-caret-position="362">
+                  <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
                   <folding>
                     <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/d3_collapsible/index.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="290">
+                  <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -76,8 +86,8 @@
       <find>links</find>
       <find>link</find>
       <find>path</find>
-      <find>circle</find>
       <find>stroke-width</find>
+      <find>circle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,7 +102,6 @@
         <option value="$PROJECT_DIR$/bars_example/index.js" />
         <option value="$PROJECT_DIR$/d3_collapsible/index.html" />
         <option value="$PROJECT_DIR$/bar_chart_simple/index.html" />
-        <option value="$PROJECT_DIR$/d3_collapsible/index.css" />
         <option value="$PROJECT_DIR$/d3_collapsible/index.js" />
         <option value="$PROJECT_DIR$/static_tree/index.html" />
         <option value="$PROJECT_DIR$/static_tree/index.css" />
@@ -104,6 +113,7 @@
         <option value="$PROJECT_DIR$/v5_bar_chart/index.html" />
         <option value="$PROJECT_DIR$/v5_tree/index.html" />
         <option value="$PROJECT_DIR$/nice_tooltip/index.html" />
+        <option value="$PROJECT_DIR$/d3_collapsible/index.css" />
         <option value="$PROJECT_DIR$/static_tree/index.js" />
       </list>
     </option>
@@ -223,12 +233,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="14459000" />
+      <workItem from="1553998917985" duration="14888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44611000" />
+    <option name="totallyTimeSpent" value="45040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3600" y="0" width="1920" height="1080" extended-state="0" />
@@ -385,13 +395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/d3_collapsible/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -413,10 +416,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+        <state relative-caret-position="362">
+          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
