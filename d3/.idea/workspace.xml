@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/v5_tree/test_json.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v5_tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/v5_tree/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/decision_tree_preprocessing-Copy3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/decision_tree_preprocessing-Copy3.ipynb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +29,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="421">
-                  <caret line="69" column="6" lean-forward="true" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+                <state relative-caret-position="321">
+                  <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -162,11 +159,6 @@
               <item name="d3" type="462c0819:PsiDirectoryNode" />
               <item name="tooltip_barchart" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3" type="462c0819:PsiDirectoryNode" />
-              <item name="v5_tree" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -221,12 +213,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="2924000" />
+      <workItem from="1553998917985" duration="3090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33076000" />
+    <option name="totallyTimeSpent" value="33242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3782" y="47" width="1680" height="954" extended-state="0" />
@@ -372,8 +364,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="69" column="6" lean-forward="true" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+        <state relative-caret-position="321">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
         </state>
       </provider>
     </entry>
