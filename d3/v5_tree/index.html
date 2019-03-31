@@ -50,6 +50,9 @@ div.tooltip {
 <p>Decisions:</p>
 <div id="list"></div>
 
+
+<div id="vis"></div>
+
 <script>
     const list = document.getElementById("list");
 
@@ -188,13 +191,18 @@ div.tooltip {
             }
         };
 
-        // Embed the visualization in the container with id `vis`
-        // vegaEmbed('#vis', vlSpec);
+
+        // var tip ={}
         // Define the div for the tooltip
+
         var tip = d3.tip().attr('class', 'd3-tip').direction('e').offset([0, 5])
-            .html("hi");
+            .html(function (d) {
+                var content = d.data.id;
+                return content;
+            });
+
         svg.call(tip);
-        // vegaEmbed('#vis', vlSpec);
+
 
         // adds the links between the nodes
         var link = g.selectAll(".link")
@@ -287,5 +295,5 @@ div.tooltip {
 
 </script>
 
-<div id="vis"></div>
+
 </body>

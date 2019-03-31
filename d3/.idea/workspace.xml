@@ -27,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="196" column="22" lean-forward="true" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
+            <state relative-caret-position="556">
+              <caret line="203" column="22" selection-start-line="203" selection-start-column="22" selection-end-line="203" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -70,10 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>root</find>
-      <find>orange</find>
-      <find>margin</find>
-      <find>backgorund-</find>
       <find>stroke-width</find>
       <find>green</find>
       <find>name</find>
@@ -95,10 +91,14 @@
       <find>chart.attr</find>
       <find>distribution</find>
       <find>viz</find>
-      <find>tooltip</find>
       <find>div</find>
       <find>mouseover</find>
       <find>d3.tip</find>
+      <find>embed</find>
+      <find>vlSpec</find>
+      <find>tooltip</find>
+      <find>d.</find>
+      <find>d.id</find>
       <find>tip</find>
     </findStrings>
   </component>
@@ -237,12 +237,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="6625000" />
+      <workItem from="1553998917985" duration="7634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36777000" />
+    <option name="totallyTimeSpent" value="37786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3782" y="47" width="1680" height="954" extended-state="0" />
@@ -383,13 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/v5_tree/d3-tip.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6098">
@@ -400,10 +393,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="196" column="22" lean-forward="true" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
+        <state relative-caret-position="556">
+          <caret line="203" column="22" selection-start-line="203" selection-start-column="22" selection-end-line="203" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
