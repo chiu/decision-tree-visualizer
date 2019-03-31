@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/v5_tree/d3-tip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vega/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vega/new_vega" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v5_tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/v5_tree/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,11 +31,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
-              <caret line="381" column="29" lean-forward="true" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
+            <state relative-caret-position="45">
+              <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v5_tree/d3-tip.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6098">
+              <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vega/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-203">
+              <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -49,10 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>More info</find>
-      <find>chart</find>
-      <find>circles</find>
-      <find>text</find>
       <find>links</find>
       <find>root</find>
       <find>orange</find>
@@ -73,12 +94,16 @@
       <find>handleNOde</find>
       <find>fill</find>
       <find>blue</find>
-      <find>mouseover</find>
       <find>circle</find>
       <find>mousemove</find>
-      <find>tooltip</find>
       <find>drawvertical</find>
       <find>chart.attr</find>
+      <find>distribution</find>
+      <find>viz</find>
+      <find>tooltip</find>
+      <find>div</find>
+      <find>tip</find>
+      <find>mouseover</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,6 +125,8 @@
         <option value="$PROJECT_DIR$/static_tree/index.js" />
         <option value="$PROJECT_DIR$/force_feedback/index.html" />
         <option value="$PROJECT_DIR$/v5_tree/test_json.json" />
+        <option value="$PROJECT_DIR$/vega/index.html" />
+        <option value="$PROJECT_DIR$/v5_tree/d3-tip.js" />
         <option value="$PROJECT_DIR$/v5_tree/index.html" />
       </list>
     </option>
@@ -155,6 +182,11 @@
               <item name="d3" type="462c0819:PsiDirectoryNode" />
               <item name="v5_tree" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="d3" type="462c0819:PsiDirectoryNode" />
+              <item name="vega" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -209,12 +241,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="4645000" />
+      <workItem from="1553998917985" duration="6071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34797000" />
+    <option name="totallyTimeSpent" value="36223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3782" y="47" width="1680" height="954" extended-state="0" />
@@ -348,6 +380,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vega/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="20" selection-start-line="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -355,10 +394,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/v5_tree/d3-tip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6098">
+          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="381" column="29" lean-forward="true" selection-start-line="381" selection-start-column="29" selection-end-line="381" selection-end-column="29" />
+        <state relative-caret-position="45">
+          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>

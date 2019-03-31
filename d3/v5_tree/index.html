@@ -27,6 +27,19 @@ body {
     stroke-width: 2px;
 }
 
+div.tooltip {
+    position: relative;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
 </style>
 
 
@@ -60,6 +73,10 @@ body {
 
 <!-- load the d3.js library -->
 <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="d3-tip.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.3.2/build/vega.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.3/build/vega-lite.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@4.0.0-rc1/build/vega-embed.js"></script>
 <script>
 
     // the flat data
@@ -81,112 +98,6 @@ body {
     //
     // }
 
-    function drawHorizontalTree(flatData) {
-
-// convert the flat data into a hierarchy
-        var treeData = d3.stratify()
-            .id(function (d) {
-                return d.name;
-            })
-            .parentId(function (d) {
-                return d.parent;
-            })
-            (flatData);
-
-// assign the name to each node
-        treeData.each(function (d) {
-            d.name = d.id;
-        });
-
-// set the dimensions and margins of the diagram
-        var margin = {top: 20, right: 90, bottom: 30, left: 90},
-            width = 660 - margin.left - margin.right,
-            height = 300 - margin.top - margin.bottom;
-
-// declares a tree layout and assigns the size
-        var treemap = d3.tree()
-            .size([height, width]);
-
-//  assigns the data to a hierarchy using parent-child relationships
-        var nodes = d3.hierarchy(treeData, function (d) {
-            return d.children;
-        });
-
-// maps the node data to the tree layout
-        nodes = treemap(nodes);
-
-// append the svg object to the body of the page
-// appends a 'group' element to 'svg'
-// moves the 'group' element to the top left margin
-        var svg = d3.select("body").append("svg")
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom),
-            g = svg.append("g")
-                .attr("transform",
-                    "translate(" + margin.left + "," + margin.top + ")");
-
-        const drawLink = d => {
-            if (d.children && d.children.length > 0)
-                return "M" + d.y + "," + d.x
-                    + "C" + (d.y + d.parent.y) / 2 + "," + d.x
-                    + " " + (d.y + d.parent.y) / 2 + "," + d.parent.x
-                    + " " + d.parent.y + "," + d.parent.x;
-        }
-
-
-// adds the links between the nodes
-        var link = g.selectAll(".link")
-            .data(nodes.descendants().slice(1))
-            .enter().append("path")
-            .attr("class", "link")
-            .attr("d", drawLink);
-
-        const getOnlyChildren = (descendants) => {
-            console.log(descendants)
-            const onlyChildren = [];
-            descendants.map(descendant => {
-                if (descendant.children) onlyChildren.push(descendant)
-            })
-            return onlyChildren;
-        }
-
-
-// adds each node as a group
-        var node = g.selectAll(".node")
-            .data(getOnlyChildren(nodes.descendants()))
-            .enter().append("g")
-            .attr("class", function (d) {
-                return "node" +
-                    (d.children ? " node--internal" : " node--leaf");
-            })
-            .attr("transform", function (d) {
-                return "translate(" + d.y + "," + d.x + ")";
-            });
-            // .on('click', handleNodeClick);
-
-
-// adds the circle to the node
-        node.append("circle")
-            .attr("r", 10);
-
-
-
-
-
-// adds the text to the node
-        node.append("text")
-            .attr("dy", ".35em")
-            .attr("x", function (d) {
-                return d.children ? -13 : 13;
-            })
-            .style("text-anchor", function (d) {
-                return d.children ? "end" : "start";
-            })
-            .text(function (d) {
-                return d.data.name;
-            });
-
-    }
 
     function drawVerticalTree(flatData) {
         // ************** Generate the tree diagram	 *****************
@@ -248,10 +159,13 @@ body {
                 .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
-        var div = d3.select("body").append("div")
-            .attr("class", "tooltip")
-            .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'>hi</div>")
-            .style("opacity", 1e-6);
+
+        // Define the div for the tooltip
+        var tip = d3.tip().attr('class', 'd3-tip').direction('e').offset([0,5])
+            .html(function(d) {
+                return d
+            });
+        svg.call(tip);
 
         // adds the links between the nodes
         var link = g.selectAll(".link")
@@ -281,7 +195,6 @@ body {
         // adds the circle to the node
         node.append("circle")
             .attr("r", 10)
-            .on("mouseover", mouseover)
             .on("click", click)
             .on("mousemove", function (d) {
                 mousemove(d);
@@ -289,11 +202,11 @@ body {
             .on("mouseout", mouseout)
             .attr("fill", "red");
 
-        function mouseover() {
-            div.transition()
-                .duration(300)
-                .style("opacity", 1);
-        }
+        // function mouseover() {
+        //     div.transition()
+        //         .duration(300)
+        //         .style("opacity", 1);
+        // }
 
 
         function click(d) {
@@ -315,90 +228,38 @@ body {
         function mousemove(d) {
             console.log("inside select");
 
-            div
-                .text("Info about " + d.name + ":" + d.info + "\n" + d.attribute)
-                .attr("transform", "translate(0," + 5 + ")")
-                .style("left", (d3.event.pageX) + "px")
-                .style("top", (d3.event.pageY) + "px")
-                .attr("class", "tooltip");
+            // Assign the specification to a local variable vlSpec.
+            var vlSpec = {
+                $schema: 'https://vega.github.io/schema/vega-lite/v3.json',
+                data: {
+                    values: [
+                        {a: 'C', b: 2},
+                        {a: 'C', b: 7},
+                        {a: 'C', b: 4},
+                        {a: 'D', b: 1},
+                        {a: 'D', b: 2},
+                        {a: 'D', b: 6},
+                        {a: 'E', b: 8},
+                        {a: 'E', b: 4},
+                        {a: 'E', b: 7}
+                    ]
+                },
+                mark: 'bar',
+                encoding: {
+                    y: {field: 'a', type: 'nominal'},
+                    x: {
+                        aggregate: 'average',
+                        field: 'b',
+                        type: 'quantitative',
+                        axis: {
+                            title: 'Average of b'
+                        }
+                    }
+                }
+            };
 
-            var g = d3.select(".tooltip"); //
-            var chart = g.append('svg')
-                .classed('chart', true);
-
-            // var info = g.append('text')
-            //     .classed('info', true)
-            //     .attr('x', 20)
-            //     .attr('y', 20)
-            //     .text('distribution: ' + d.distribution.toString());
-
-
-            var margin = 30;
-            var width = 150;
-            var height = 200;
-
-            // var data = [4, 8, 15, 16, 23, 42];
-            // document.getElementById("data").innerHTML = data;
-            var data = d.distribution;
-            var x = d3.scaleBand()
-                .domain([0, 1, 2, 3, 4, 5, 6])
-                .range([0, width]);
-
-            var y = d3.scaleLinear()
-                .domain([0, 45])
-                .range([height, 0]);
-
-            // chart.attr("width", width + 2 * margin)
-            //     .attr("height", height + 10 * margin)
-            //     .append("g")
-            //     .attr("transform", "translate(" + margin + "," + margin + ")")
-            //     .selectAll("rect")
-            //     .data(data)
-            //     .enter().append("rect")
-            //     .attr("width", 19)
-            //     .attr("height", function (d) {
-            //         return height - y(d);
-            //     })
-            //     .attr("x", function (d, i) {
-            //         console.log(i);
-            //         return x(i);
-            //     })
-            //     .attr("y", function (d) {
-            //         return y(d);
-            //     });
-
-            var x_names = d3.scaleBand()
-                .domain(['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'])
-                .range([0, width]);
-
-            var xAxis = d3.axisBottom(x_names)
-                // .scale(x_names)
-                // .orient("bottom")
-                // .ticks(6);
-
-            var yAxis = d3.axisLeft(y)
-                // .scale(y)
-                // .orient("left")
-                // .ticks(5);
-
-            chart.append("g")
-                .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
-                .attr("class", "axis")
-                .call(xAxis)
-                .selectAll("text")
-                .attr("y", 0)
-                .attr("x", 9)
-                .attr("dy", ".35em")
-                .attr("transform", "rotate(90)")
-                .style("text-anchor", "start");
-
-            chart.append("g")
-                .attr("transform", "translate(" + margin + "," + margin + ")")
-                .attr("class", "axis")
-                .call(yAxis);
-
-            console.log("done");
-            // .call(wrap, 40);
+            // Embed the visualization in the container with id `vis`
+            vegaEmbed('#vis', vlSpec);
         }
 
 
@@ -430,4 +291,6 @@ body {
 
 
 </script>
+
+<div id="vis"></div>
 </body>
