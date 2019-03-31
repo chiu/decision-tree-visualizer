@@ -34,11 +34,17 @@ var treeData = {
             "attribute": "none; leaf",
             "parent": "Top Parent",
             "samples": 41,
-            "distribution":[0, 0, 0, 0, 0, 41, 0],
+            "distribution": [0, 0, 0, 0, 0, 41, 0],
         }
 
     ]
-}
+};
+
+
+var linkData = [
+{source: "node0", target: "node18"},
+{source: "node0", target: "node1"}
+];
 
 // Create a svg canvas
 var vis = d3.select("#viz").append("svg:svg")
@@ -62,8 +68,14 @@ var diagonal = d3.svg.diagonal();
 
 // Preparing the data for the tree layout, convert data into an array of nodes
 var nodes = tree.nodes(treeData);
+console.log(nodes);
 // Create an array with all the links
+
+var links_try = linkData;
+console.log("links try is ");
+console.log(links_try);
 var links = tree.links(nodes);
+console.log("actual links are " + links);
 
 console.log("Raw:");
 console.log(treeData);

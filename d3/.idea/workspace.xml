@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/force_feedback/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v5_tree/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/milk.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/milk.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node18.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/decision_tree_preprocessing-Copy3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/decision_tree_preprocessing-Copy3.ipynb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,14 +29,32 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static_tree/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1380">
-                  <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+                <state relative-caret-position="415">
+                  <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
                   <folding>
                     <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/force_feedback/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="574">
+                  <caret line="99" column="28" lean-forward="true" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="6279">
+                  <caret line="273" lean-forward="true" selection-start-line="273" selection-end-line="273" />
                 </state>
               </provider>
             </entry>
@@ -105,6 +120,7 @@
       <find>click</find>
       <find>toggle</find>
       <find>attribute</find>
+      <find>links_data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,8 +138,10 @@
         <option value="$PROJECT_DIR$/d3_collapsible/index.css" />
         <option value="$PROJECT_DIR$/d3_collapsible/index.js" />
         <option value="$PROJECT_DIR$/static_tree/index.html" />
-        <option value="$PROJECT_DIR$/static_tree/index.js" />
         <option value="$PROJECT_DIR$/static_tree/index.css" />
+        <option value="$PROJECT_DIR$/static_tree/index.js" />
+        <option value="$PROJECT_DIR$/force_feedback/index.html" />
+        <option value="$PROJECT_DIR$/v5_tree/index.html" />
       </list>
     </option>
   </component>
@@ -227,12 +245,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="781000" />
+      <workItem from="1553998917985" duration="2255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30933000" />
+    <option name="totallyTimeSpent" value="32407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3782" y="47" width="1680" height="954" extended-state="0" />
@@ -338,13 +356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -352,13 +363,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        <state relative-caret-position="415">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/force_feedback/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="99" column="28" lean-forward="true" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6279">
+          <caret line="273" lean-forward="true" selection-start-line="273" selection-end-line="273" />
         </state>
       </provider>
     </entry>
