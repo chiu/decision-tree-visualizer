@@ -7,35 +7,36 @@ var treeData = {
     "distribution": [4, 20, 8, 13, 10, 41, 5],
     "children": [
         {
-            "name": "Level 2: A",
-            "attribute": "none; leaf",
-            "parent": "Top Parent",
-            "samples": 41,
-            "distribution": [4, 20, 8, 13, 10, 0, 5],
-        },
-        {
-            "name": "Level 2: B",
+            "name": "node1",
             "attribute": "feathers <= 0.5",
             "parent": "Top Level",
             "samples": 60,
-            "distribution": [4, 20, 8, 13, 10, 41, 5],
+            "distribution": [4, 20, 8, 13, 10, 0, 5],
             "children": [
                 {
-                    "name": "Son of A",
+                    "name": "node2",
                     "attribute": "none; leaf",
-                    "parent": "Level 2: A",
-                    "samples": 20,
+                    "parent": "node1",
+                    "samples": 40,
                     "distribution": [4, 0, 8, 13, 10, 0, 5],
                 },
                 {
-                    "name": "Daughter of A",
+                    "name": "node17",
                     "attribute": "fins <= 0.5",
-                    "parent": "Level 2: A",
-                    "samples": 40,
-                    "distribution": [4, 0, 8, 0, 10, 0, 5],
+                    "parent": "node1",
+                    "samples": 20,
+                    "distribution": [0, 20, 0, 0, 0, 0, 0],
                 }
             ]
+        },
+        {
+            "name": "node18",
+            "attribute": "none; leaf",
+            "parent": "Top Parent",
+            "samples": 41,
+            "distribution":[0, 0, 0, 0, 0, 41, 0],
         }
+
     ]
 }
 
@@ -52,7 +53,6 @@ var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'>hi</div>")
     .style("opacity", 1e-6);
-
 
 // Create a tree "canvas"
 var tree = d3.layout.tree()
@@ -106,7 +106,7 @@ node.append("svg:text")
     .attr("dx", 8)
     .attr("dy", 3)
     .text(function (d) {
-        return d.attribute;
+        return d.name;
     });
 
 function mouseover() {
@@ -117,13 +117,14 @@ function mouseover() {
 
 
 function click(d) {
+    console.log("d.name is " + d.name);
     var this_node = d3.select(this);
     console.log("class is " + this_node.attr("class"));
     console.log("class is " + this_node.attr("class") == "toggled_on");
 
     var div = d3.select("body").append("div")
         .attr("class", "attributetip")
-        .html("\<img src=\"python_plots/"+ d.name + ".png\" style=\"float:right;width:400px;height:2000px;\">");
+        .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2000px;\">");
 
     this_node.style("border", "solid 1px green");
 
@@ -187,7 +188,7 @@ function mousemove(d) {
         });
 
     var x_names = d3.scale.ordinal()
-        .domain(['Mammal', 'Bird', 'Reptile', 'Fish', 'Amphibian', 'Bug', 'Invertebrate'])
+        .domain(['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'])
         .rangeBands([0, width]);
 
     var xAxis = d3.svg.axis()
