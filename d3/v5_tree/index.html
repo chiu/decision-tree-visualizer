@@ -245,35 +245,7 @@ div.tooltip {
         // }
 
 
-        function click(d) {
-            console.log("d.name is " + d.name);
-            var this_node = d3.select(this);
-            console.log("class is " + this_node.attr("class"));
-            console.log("class is " + this_node.attr("class") == "toggled_on");
-
-            var div = d3.select("body").append("div")
-                .attr("class", "attributetip")
-                .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2000px;\">");
-
-            this_node.style("border", "solid 1px green");
-
-
-        }
-
-
-        function mousemove(d) {
-            console.log("inside select");
-
-            // Assign the specification to a local variable vlSpec.
-
-        }
-
-
-        function mouseout() {
-            div.transition()
-                .duration(300)
-                .style("opacity", 1e-6);
-        }
+        
 
 
         // adds the text to the node
