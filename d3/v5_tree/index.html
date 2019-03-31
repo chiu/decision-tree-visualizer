@@ -74,10 +74,12 @@ body {
         if (data.hasChildren) flatData.push(data);
     })
 
-    const handleNodeClick = d => {
-        console.log(d)
-        if (d.children && d.children.length > 0) window.actions.drawList(d.children)
-    }
+    // const handleNodeClick = d => {
+    //     console.log(d)
+    //     if (d.children && d.children.length > 0) window.actions.drawList(d.children);
+    //
+    //
+    // }
 
     function drawHorizontalTree(flatData) {
 
@@ -159,12 +161,17 @@ body {
             })
             .attr("transform", function (d) {
                 return "translate(" + d.y + "," + d.x + ")";
-            })
-            .on('click', handleNodeClick);
+            });
+            // .on('click', handleNodeClick);
+
 
 // adds the circle to the node
         node.append("circle")
             .attr("r", 10);
+
+
+
+
 
 // adds the text to the node
         node.append("text")
@@ -263,12 +270,139 @@ body {
             })
             .attr("transform", function (d) {
                 return "translate(" + d.x + "," + d.y + ")";
-            })
-            .on('click', handleNodeClick);
+            });
+            // .on('click', handleNodeClick);
 
         // adds the circle to the node
         node.append("circle")
-            .attr("r", 10);
+            .attr("r", 10)
+            .on("mouseover", mouseover)
+            .on("click", click)
+            .on("mousemove", function (d) {
+                mousemove(d);
+            })
+            .on("mouseout", mouseout)
+            .attr("fill", "red");
+
+        function mouseover() {
+            div.transition()
+                .duration(300)
+                .style("opacity", 1);
+        }
+
+
+        function click(d) {
+            console.log("d.name is " + d.name);
+            var this_node = d3.select(this);
+            console.log("class is " + this_node.attr("class"));
+            console.log("class is " + this_node.attr("class") == "toggled_on");
+
+            var div = d3.select("body").append("div")
+                .attr("class", "attributetip")
+                .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2000px;\">");
+
+            this_node.style("border", "solid 1px green");
+
+
+        }
+
+
+        function mousemove(d) {
+            console.log("inside select");
+
+            div
+                .text("Info about " + d.name + ":" + d.info + "\n" + d.attribute)
+                .attr("transform", "translate(0," + 5 + ")")
+                .style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY) + "px")
+                .attr("class", "tooltip");
+
+            var g = d3.select(".tooltip"); //
+            var chart = g.append('svg')
+                .classed('chart', true);
+
+            var info = g.append('text')
+                .classed('info', true)
+                .attr('x', 20)
+                .attr('y', 20)
+                .text('distribution: ' + d.distribution.toString());
+
+
+            var margin = 30;
+            var width = 150;
+            var height = 200;
+
+            // var data = [4, 8, 15, 16, 23, 42];
+            // document.getElementById("data").innerHTML = data;
+            var data = d.distribution;
+            var x = d3.scale.ordinal()
+                .domain([0, 1, 2, 3, 4, 5, 6])
+                .rangeBands([0, width]);
+
+            var y = d3.scale.linear()
+                .domain([0, 45])
+                .range([height, 0]);
+
+            chart.attr("width", width + 2 * margin)
+                .attr("height", height + 10 * margin)
+                .append("g")
+                .attr("transform", "translate(" + margin + "," + margin + ")")
+                .selectAll("rect")
+                .data(data)
+                .enter().append("rect")
+                .attr("width", 19)
+                .attr("height", function (d) {
+                    return height - y(d);
+                })
+                .attr("x", function (d, i) {
+                    console.log(i);
+                    return x(i);
+                })
+                .attr("y", function (d) {
+                    return y(d);
+                });
+
+            var x_names = d3.scale.ordinal()
+                .domain(['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'])
+                .rangeBands([0, width]);
+
+            var xAxis = d3.svg.axis()
+                .scale(x_names)
+                .orient("bottom")
+                .ticks(6);
+
+            var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left")
+                .ticks(5);
+
+            chart.append("g")
+                .attr("transform", "translate(" + margin + "," + (height + margin) + ")")
+                .attr("class", "axis")
+                .call(xAxis)
+                .selectAll("text")
+                .attr("y", 0)
+                .attr("x", 9)
+                .attr("dy", ".35em")
+                .attr("transform", "rotate(90)")
+                .style("text-anchor", "start");
+
+            chart.append("g")
+                .attr("transform", "translate(" + margin + "," + margin + ")")
+                .attr("class", "axis")
+                .call(yAxis);
+
+            console.log("done");
+            // .call(wrap, 40);
+        }
+
+
+        function mouseout() {
+            div.transition()
+                .duration(300)
+                .style("opacity", 1e-6);
+        }
+
 
         // adds the text to the node
         node.append("text")
@@ -285,6 +419,9 @@ body {
 
     drawVerticalTree(flatData);
     //drawHorizontalTree(flatData);
+
+
+
 
 
 </script>
