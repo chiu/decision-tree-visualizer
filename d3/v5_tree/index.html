@@ -168,18 +168,12 @@ div.tooltip {
                 var content = "<div class='cool'>" + d.data.id + "</div>";
                 return content;
             });
-
+        tip_svg.call(tip);
 
         // var margin = {top: 20, right: 20, bottom: 30, left: 40},
         //     width = 960 - margin.left - margin.right,
         //     height = 500 - margin.top - margin.bottom;
         function mousemove() {
-            // set the ranges
-            var x = d3.scaleBand()
-                .range([0, width])
-                .padding(0.1);
-            var y = d3.scaleLinear()
-                .range([height, 0]);
 
 
             var margin = {top: 40, right: 30, bottom: 30, left: 50},
@@ -196,7 +190,7 @@ div.tooltip {
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
                 .append("g")
-            // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
             var x = d3.scaleBand()
@@ -298,8 +292,6 @@ div.tooltip {
         }
 
 
-        tip_svg.call(tip);
-
         // adds the links between the nodes
         var link = g.selectAll(".link")
             .data(nodes.descendants().slice(1))
@@ -330,8 +322,10 @@ div.tooltip {
         node.append("circle")
             .attr("r", 10)
             .attr("fill", "red")
-            .on('mouseover', tip.show)
-            .on('mousemove', mousemove)
+            .on('mouseover', function () {
+                tip.show;
+                mousemove()
+            })
             .on('mouseout', tip.hide);
 
 
