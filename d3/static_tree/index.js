@@ -80,18 +80,19 @@ var link = vis.selectAll("pathlink")
     .data(links)
     .enter().append("svg:path")
     .attr("class", "link")
-    .attr("d", diagonal)
+    .attr("d", diagonal);
 
 var node = vis.selectAll("g.node")
     .data(nodes)
     .enter().append("svg:g")
     .attr("transform", function (d) {
         return "translate(" + d.x + "," + d.y + ")";
-    })
+    });
 
 // Add the dot at every node
 node.append("svg:circle")
     .on("mouseover", mouseover)
+    .on("click", click)
     .on("mousemove", function (d) {
         mousemove(d);
     })
@@ -104,13 +105,27 @@ node.append("svg:text")
     .attr("dy", 3)
     .text(function (d) {
         return d.attribute;
-    })
+    });
 
 function mouseover() {
     div.transition()
         .duration(300)
         .style("opacity", 1);
 }
+
+
+function click(d){
+    console.log("clicked");
+
+    // Add tooltip div
+    var div = d3.select("body").append("div")
+        .attr("class", "attributetip")
+        .html("\<img src=\"milk.png\" style=\"float:right;width:400px;height:2000px;\">");
+
+// <img src="milk.png" style="float:right;width:400px;height:2000px;">
+    // d3.select("div").select(img)
+}
+
 
 
 function mousemove(d) {
@@ -121,7 +136,7 @@ function mousemove(d) {
         .attr("transform", "translate(0," + 5 + ")")
         .style("left", (d3.event.pageX) + "px")
         .style("top", (d3.event.pageY) + "px")
-        .attr("class", "tooltip")
+        .attr("class", "tooltip");
 
     var g = d3.select(".tooltip"); //
     var chart = g.append('svg')
