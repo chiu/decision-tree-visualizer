@@ -14,35 +14,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="154" column="12" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v5_tree/sales.csv">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v5_bar_chart/sales.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static_tree/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="164" column="60" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="164" selection-end-column="60" />
+            <state relative-caret-position="252">
+              <caret line="333" column="38" lean-forward="true" selection-start-line="333" selection-start-column="38" selection-end-line="333" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -51,21 +28,16 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>attribute</find>
-      <find>links_data</find>
-      <find>article tree</find>
       <find>handleNode</find>
       <find>handleNOde</find>
       <find>fill</find>
       <find>blue</find>
       <find>circle</find>
-      <find>mousemove</find>
       <find>drawvertical</find>
       <find>chart.attr</find>
       <find>distribution</find>
       <find>viz</find>
       <find>div</find>
-      <find>mouseover</find>
       <find>d3.tip</find>
       <find>embed</find>
       <find>vlSpec</find>
@@ -74,13 +46,18 @@
       <find>d.id</find>
       <find>make_bar</find>
       <find>click</find>
-      <find>tip</find>
       <find>d3-tip</find>
       <find>bar</find>
       <find>select</find>
       <find>chart</find>
       <find>960</find>
+      <find>mouseover</find>
+      <find>tip</find>
+      <find>d3.</find>
+      <find>append</find>
       <find>cool</find>
+      <find>greyColor</find>
+      <find>mousemove</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -225,12 +202,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="10515000" />
+      <workItem from="1553998917985" duration="11449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40667000" />
+    <option name="totallyTimeSpent" value="41601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3782" y="47" width="1680" height="954" extended-state="0" />
@@ -374,24 +351,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/v5_bar_chart/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="84" column="20" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="84" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="164" column="60" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="164" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -405,10 +368,27 @@
     <entry file="file://$PROJECT_DIR$/v5_tree/sales.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="154" column="12" selection-start-line="154" selection-start-column="12" selection-end-line="154" selection-end-column="12" />
+        <state relative-caret-position="252">
+          <caret line="333" column="38" lean-forward="true" selection-start-line="333" selection-start-column="38" selection-end-line="333" selection-end-column="38" />
         </state>
       </provider>
     </entry>
