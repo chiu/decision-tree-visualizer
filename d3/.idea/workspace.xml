@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/nice_tooltip/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/nice_tooltip/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,16 +14,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.254949">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
+            <entry file="file://$PROJECT_DIR$/static_tree/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-401">
-                  <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+                <state relative-caret-position="373">
+                  <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
                   <folding>
-                    <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -34,10 +34,10 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/nice_tooltip/index.html">
+            <entry file="file://$PROJECT_DIR$/d3_collapsible/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="276">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                <state relative-caret-position="325">
+                  <caret line="226" column="10" lean-forward="true" selection-start-line="224" selection-start-column="8" selection-end-line="226" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -48,10 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>handleNode</find>
-      <find>handleNOde</find>
-      <find>fill</find>
-      <find>blue</find>
       <find>drawvertical</find>
       <find>chart.attr</find>
       <find>distribution</find>
@@ -77,7 +73,11 @@
       <find>tooltip</find>
       <find>mousemove</find>
       <find>mouseover</find>
+      <find>links</find>
+      <find>link</find>
+      <find>path</find>
       <find>circle</find>
+      <find>stroke-width</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,7 +96,6 @@
         <option value="$PROJECT_DIR$/d3_collapsible/index.js" />
         <option value="$PROJECT_DIR$/static_tree/index.html" />
         <option value="$PROJECT_DIR$/static_tree/index.css" />
-        <option value="$PROJECT_DIR$/static_tree/index.js" />
         <option value="$PROJECT_DIR$/force_feedback/index.html" />
         <option value="$PROJECT_DIR$/v5_tree/test_json.json" />
         <option value="$PROJECT_DIR$/vega/index.html" />
@@ -105,6 +104,7 @@
         <option value="$PROJECT_DIR$/v5_bar_chart/index.html" />
         <option value="$PROJECT_DIR$/v5_tree/index.html" />
         <option value="$PROJECT_DIR$/nice_tooltip/index.html" />
+        <option value="$PROJECT_DIR$/static_tree/index.js" />
       </list>
     </option>
   </component>
@@ -223,12 +223,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="13447000" />
+      <workItem from="1553998917985" duration="14459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43599000" />
+    <option name="totallyTimeSpent" value="44611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3600" y="0" width="1920" height="1080" extended-state="0" />
@@ -306,31 +306,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="78" column="1" lean-forward="true" selection-start-line="62" selection-end-line="78" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/bars.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="197" column="23" selection-start-line="197" selection-start-column="23" selection-end-line="197" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -348,13 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vega/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-203">
@@ -362,34 +334,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v5_bar_chart/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="84" column="20" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="84" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/v5_bar_chart/sales.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -406,6 +354,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nice_tooltip/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-401">
@@ -416,10 +371,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nice_tooltip/index.html">
+    <entry file="file://$PROJECT_DIR$/v5_bar_chart/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="726">
+          <caret line="84" column="20" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="84" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="226" column="10" lean-forward="true" selection-start-line="224" selection-start-column="8" selection-end-line="226" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="115" column="22" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

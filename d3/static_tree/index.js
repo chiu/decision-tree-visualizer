@@ -41,15 +41,15 @@ var treeData = {
 };
 
 
-var linkData = [
-{source: "node0", target: "node18"},
-{source: "node0", target: "node1"}
-];
+// var linkData = [
+// {source: "node0", target: "node18"},
+// {source: "node0", target: "node1"}
+// ];
 
 // Create a svg canvas
 var vis = d3.select("#viz").append("svg:svg")
-    .attr("width", 400)
-    .attr("height", 300)
+    .attr("width", 600)
+    .attr("height", 600)
     .append("svg:g")
     .attr("transform", "translate(40, 30)"); // shift everything to the right
 
@@ -62,7 +62,7 @@ var div = d3.select("body").append("div")
 
 // Create a tree "canvas"
 var tree = d3.layout.tree()
-    .size([300, 150]);
+    .size([600, 300]);
 
 var diagonal = d3.svg.diagonal();
 
@@ -71,9 +71,9 @@ var nodes = tree.nodes(treeData);
 console.log(nodes);
 // Create an array with all the links
 
-var links_try = linkData;
-console.log("links try is ");
-console.log(links_try);
+// var links_try = linkData;
+// console.log("links try is ");
+// console.log(links_try);
 var links = tree.links(nodes);
 console.log("actual links are " + links);
 
@@ -92,7 +92,11 @@ var link = vis.selectAll("pathlink")
     .data(links)
     .enter().append("svg:path")
     .attr("class", "link")
-    .attr("d", diagonal);
+    .attr("d", diagonal)
+    .style("stroke",'lightgrey')
+    .style("stroke-width", function (d) {
+        return (d.target.samples)
+    });
 
 var node = vis.selectAll("g.node")
     .data(nodes)
@@ -110,7 +114,9 @@ node.append("svg:circle")
     })
     .on("mouseout", mouseout)
     .attr("fill", "red")
-    .attr("r", 10);
+    .attr("r", function (d) {
+        return Math.sqrt(d.samples / Math.PI) * 10;
+    });
 
 // .classed("toggled_on", true);
 
@@ -136,7 +142,7 @@ function click(d) {
 
     var div = d3.select("body").append("div")
         .attr("class", "attributetip")
-        .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2000px;\">");
+        .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:1500px;\">");
 
     this_node.style("border", "solid 1px green");
 
