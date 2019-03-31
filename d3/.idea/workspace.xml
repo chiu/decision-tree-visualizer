@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
-              <caret line="198" column="5" selection-start-line="198" selection-start-column="5" selection-end-line="198" selection-end-column="5" />
+              <caret line="196" column="22" lean-forward="true" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -70,7 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>links</find>
       <find>root</find>
       <find>orange</find>
       <find>margin</find>
@@ -99,6 +98,7 @@
       <find>tooltip</find>
       <find>div</find>
       <find>mouseover</find>
+      <find>d3.tip</find>
       <find>tip</find>
     </findStrings>
   </component>
@@ -237,12 +237,12 @@
       <workItem from="1553813065294" duration="363000" />
       <workItem from="1553990142309" duration="7041000" />
       <workItem from="1553998787839" duration="97000" />
-      <workItem from="1553998917985" duration="6175000" />
+      <workItem from="1553998917985" duration="6625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36327000" />
+    <option name="totallyTimeSpent" value="36777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3782" y="47" width="1680" height="954" extended-state="0" />
@@ -403,7 +403,7 @@
     <entry file="file://$PROJECT_DIR$/v5_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="198" column="5" selection-start-line="198" selection-start-column="5" selection-end-line="198" selection-end-column="5" />
+          <caret line="196" column="22" lean-forward="true" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>

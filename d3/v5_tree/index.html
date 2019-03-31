@@ -159,13 +159,42 @@ div.tooltip {
                 .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
+        var vlSpec = {
+            $schema: 'https://vega.github.io/schema/vega-lite/v3.json',
+            data: {
+                values: [
+                    {a: 'C', b: 2},
+                    {a: 'C', b: 7},
+                    {a: 'C', b: 4},
+                    {a: 'D', b: 1},
+                    {a: 'D', b: 2},
+                    {a: 'D', b: 6},
+                    {a: 'E', b: 8},
+                    {a: 'E', b: 4},
+                    {a: 'E', b: 7}
+                ]
+            },
+            mark: 'bar',
+            encoding: {
+                y: {field: 'a', type: 'nominal'},
+                x: {
+                    aggregate: 'average',
+                    field: 'b',
+                    type: 'quantitative',
+                    axis: {
+                        title: 'Average of b'
+                    }
+                }
+            }
+        };
 
+        // Embed the visualization in the container with id `vis`
+        // vegaEmbed('#vis', vlSpec);
         // Define the div for the tooltip
-        var tip = d3.tip().attr('class', 'd3-tip').direction('e').offset([0,5])
-            .html(function(d) {
-                return d
-            });
+        var tip = d3.tip().attr('class', 'd3-tip').direction('e').offset([0, 5])
+            .html("hi");
         svg.call(tip);
+        // vegaEmbed('#vis', vlSpec);
 
         // adds the links between the nodes
         var link = g.selectAll(".link")
@@ -189,15 +218,17 @@ div.tooltip {
             })
             .attr("transform", function (d) {
                 return "translate(" + d.x + "," + d.y + ")";
-            });
-            // .on('click', handleNodeClick);
+            })
+
+        // .on('click', handleNodeClick);
 
         // adds the circle to the node
         node.append("circle")
             .attr("r", 10)
             .attr("fill", "red")
-    .on('mouseover', tip.show)
+            .on('mouseover', tip.show)
             .on('mouseout', tip.hide);
+
 
         // function mouseover() {
         //     div.transition()
@@ -226,37 +257,7 @@ div.tooltip {
             console.log("inside select");
 
             // Assign the specification to a local variable vlSpec.
-            var vlSpec = {
-                $schema: 'https://vega.github.io/schema/vega-lite/v3.json',
-                data: {
-                    values: [
-                        {a: 'C', b: 2},
-                        {a: 'C', b: 7},
-                        {a: 'C', b: 4},
-                        {a: 'D', b: 1},
-                        {a: 'D', b: 2},
-                        {a: 'D', b: 6},
-                        {a: 'E', b: 8},
-                        {a: 'E', b: 4},
-                        {a: 'E', b: 7}
-                    ]
-                },
-                mark: 'bar',
-                encoding: {
-                    y: {field: 'a', type: 'nominal'},
-                    x: {
-                        aggregate: 'average',
-                        field: 'b',
-                        type: 'quantitative',
-                        axis: {
-                            title: 'Average of b'
-                        }
-                    }
-                }
-            };
 
-            // Embed the visualization in the container with id `vis`
-            vegaEmbed('#vis', vlSpec);
         }
 
 
@@ -282,9 +283,6 @@ div.tooltip {
 
     drawVerticalTree(flatData);
     //drawHorizontalTree(flatData);
-
-
-
 
 
 </script>
