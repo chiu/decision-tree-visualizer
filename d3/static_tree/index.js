@@ -65,16 +65,16 @@ var nodes = tree.nodes(treeData);
 // Create an array with all the links
 var links = tree.links(nodes);
 
-console.log("Raw:")
-console.log(treeData)
-console.log("Nodes:")
-console.log(nodes)
-console.log("Links:")
-console.log(links)
+console.log("Raw:");
+console.log(treeData);
+console.log("Nodes:");
+console.log(nodes);
+console.log("Links:");
+console.log(links);
 
 // Show me a link in raw and its path version
-console.log(links[0])
-console.log(diagonal(links[0]))
+console.log(links[0]);
+console.log(diagonal(links[0]));
 
 var link = vis.selectAll("pathlink")
     .data(links)
@@ -100,6 +100,8 @@ node.append("svg:circle")
     .attr("fill", "red")
     .attr("r", 10);
 
+// .classed("toggled_on", true);
+
 node.append("svg:text")
     .attr("dx", 8)
     .attr("dy", 3)
@@ -115,23 +117,15 @@ function mouseover() {
 
 
 function click(d) {
-    console.log("clicked");
-    console.log("the name of this node is " + d.name);
-    var this_node = this;
-    console.log("d is " + d);
-    console.log("this is " + this);
+    var this_node = d3.select(this);
+    console.log("class is " + this_node.attr("class"));
+    console.log("class is " + this_node.attr("class") == "toggled_on");
 
+    var div = d3.select("body").append("div")
+        .attr("class", "attributetip")
+        .html("\<img src=\"python_plots/"+ d.name + ".png\" style=\"float:right;width:400px;height:2000px;\">");
 
-    if (!this_node.classed("toggled_on")) {
-        console.log("inside toggle on");
-        this_node.attr("class", "toggled_on");
-        var div = d3.select("body").append("div")
-            .attr("class", "attributetip")
-            .html("\<img src=\"milk.png\" style=\"float:right;width:400px;height:2000px;\">");
-    } else {
-        console.log("inside toggle off");
-        this_node.classed("toggled_on", false);
-    }
+    this_node.style("border", "solid 1px green");
 
 
 }
