@@ -1,0 +1,18 @@
+{"name": "Top Level", "parent": null, "hasChildren": true},
+{"name": "Level 2: A", "parent": "Top Level", "hasChildren": true },
+{"name": "Level 2: B", "parent": "Top Level","hasChildren": false },
+{"name": "Level 3: A", "parent": "Level 2: A","hasChildren": false },
+{"name": "Level 3: B", "parent": "Level 2: A","hasChildren": false },
+{"name": "Level 3: C", "parent": "Level 2: A","hasChildren": true },
+{"name": "Level 4: A", "parent": "Level 3: C","hasChildren": true },
+{"name": "Level 4: B", "parent": "Level 3: C","hasChildren": true },
+{"name": "Level 4: C", "parent": "Level 3: C","hasChildren": true }
+
+
+
+{"name": "node0", "parent": null, "hasChildren": true},
+{"name", "node1", "parent": 0, "hasChildren": false},
+{"name": "node18", "parent" 0, "hasChildren": false}
+
+
+
