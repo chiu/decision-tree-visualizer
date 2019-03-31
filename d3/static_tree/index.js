@@ -117,14 +117,11 @@ function mouseover() {
 function click(d) {
     console.log("clicked");
     console.log("the name of this node is " + d.name);
-    var this_node = d3.select(this);
+    var this_node = this;
+    console.log("d is " + d);
+    console.log("this is " + this);
 
 
-    // if (!cbMed)
-    //     this.$node.selectAll(".MEDICATION").classed('hideRect', true);
-    // else
-    //     this.$node.selectAll(".MEDICATION").classed('hideRect', false);
-    console.log("this node class is " + this_node.classed("toggled_on"));
     if (!this_node.classed("toggled_on")) {
         console.log("inside toggle on");
         this_node.attr("class", "toggled_on");
