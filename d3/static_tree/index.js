@@ -128,7 +128,7 @@ node.append("svg:text")
     .attr("dx", 8)
     .attr("dy", 3)
     .text(function (d) {
-        return d.name;
+        return d.name + ";" + d.attribute;
     });
 
 function mouseover() {
