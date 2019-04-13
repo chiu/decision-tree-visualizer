@@ -113,7 +113,7 @@ node.append("svg:rect")
         mousemove(d);
     })
     .on("mouseout", mouseout)
-    .attr("fill", "red")
+    .attr("fill", "blue")
     .attr("height", 30)
     .attr("width", function (d) {
         return d.samples;
