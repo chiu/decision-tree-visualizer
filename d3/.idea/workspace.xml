@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static_tree/d3v3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tornado_chart/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/decision_tree_preprocessing-Copy5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/decision_tree_preprocessing-Copy5.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,46 +17,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/static_tree/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="287">
-                  <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
-                  <folding>
-                    <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/d3_collapsible/index.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1426">
-                  <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/d3_collapsible/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="325">
-                  <caret line="226" column="10" lean-forward="true" selection-start-line="224" selection-start-column="8" selection-end-line="226" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static_tree/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static_tree/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="45" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static_tree/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tornado_chart/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static_tree/d3v3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28681">
+              <caret line="1247" column="12" selection-start-line="1247" selection-start-column="12" selection-end-line="1247" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -105,7 +112,6 @@
         <option value="$PROJECT_DIR$/d3_collapsible/index.html" />
         <option value="$PROJECT_DIR$/bar_chart_simple/index.html" />
         <option value="$PROJECT_DIR$/d3_collapsible/index.js" />
-        <option value="$PROJECT_DIR$/static_tree/index.html" />
         <option value="$PROJECT_DIR$/static_tree/index.css" />
         <option value="$PROJECT_DIR$/force_feedback/index.html" />
         <option value="$PROJECT_DIR$/v5_tree/test_json.json" />
@@ -116,7 +122,10 @@
         <option value="$PROJECT_DIR$/v5_tree/index.html" />
         <option value="$PROJECT_DIR$/nice_tooltip/index.html" />
         <option value="$PROJECT_DIR$/d3_collapsible/index.css" />
+        <option value="$PROJECT_DIR$/static_tree/d3v3.js" />
         <option value="$PROJECT_DIR$/static_tree/index.js" />
+        <option value="$PROJECT_DIR$/static_tree/index.html" />
+        <option value="$PROJECT_DIR$/tornado_chart/index.html" />
       </list>
     </option>
   </component>
@@ -132,7 +141,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,45 +148,11 @@
               <item name="d3" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3" type="462c0819:PsiDirectoryNode" />
-              <item name="bar_chart_simple" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3" type="462c0819:PsiDirectoryNode" />
-              <item name="bars_example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3" type="462c0819:PsiDirectoryNode" />
-              <item name="d3_collapsible" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3" type="462c0819:PsiDirectoryNode" />
-              <item name="static_tree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3" type="462c0819:PsiDirectoryNode" />
-              <item name="tooltip_barchart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3" type="462c0819:PsiDirectoryNode" />
-              <item name="v5_bar_chart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="d3" type="462c0819:PsiDirectoryNode" />
-              <item name="v5_tree" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,12 +213,14 @@
       <workItem from="1553998787839" duration="97000" />
       <workItem from="1553998917985" duration="15741000" />
       <workItem from="1554413967307" duration="288000" />
-      <workItem from="1555184508165" duration="186000" />
+      <workItem from="1555184508165" duration="333000" />
+      <workItem from="1555201194581" duration="2358000" />
+      <workItem from="1555283123905" duration="371000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46367000" />
+    <option name="totallyTimeSpent" value="49243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -394,31 +370,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/d3_collapsible/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -429,13 +384,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/d3_collapsible/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="62" column="1" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="621">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/d3v3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28681">
+          <caret line="1247" column="12" selection-start-line="1247" selection-start-column="12" selection-end-line="1247" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tornado_chart/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
