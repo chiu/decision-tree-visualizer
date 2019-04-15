@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tornado_chart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tornado_chart/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+            <state relative-caret-position="522">
+              <caret line="144" column="18" selection-start-line="144" selection-start-column="18" selection-end-line="144" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -69,7 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>drawvertical</find>
       <find>chart.attr</find>
       <find>distribution</find>
       <find>viz</find>
@@ -99,6 +96,7 @@
       <find>path</find>
       <find>stroke-width</find>
       <find>circle</find>
+      <find>True</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,12 +220,12 @@
       <workItem from="1554413967307" duration="288000" />
       <workItem from="1555184508165" duration="333000" />
       <workItem from="1555201194581" duration="2358000" />
-      <workItem from="1555283123905" duration="1342000" />
+      <workItem from="1555283123905" duration="2282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50214000" />
+    <option name="totallyTimeSpent" value="51154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -428,8 +426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+        <state relative-caret-position="522">
+          <caret line="144" column="18" selection-start-line="144" selection-start-column="18" selection-end-line="144" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>

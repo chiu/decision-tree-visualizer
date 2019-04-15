@@ -1,7 +1,7 @@
 //JSON object with the data
 var treeData = {
     "name": "node0",
-    "attribute": "milk <= 0.5",
+    "attribute": "has milk",
     "parent": "null",
     "samples": 101,
     "distribution": [4, 20, 8, 13, 10, 41, 5],
@@ -63,6 +63,16 @@ var div = d3.select("body").append("div")
 // Create a tree "canvas"
 var tree = d3.layout.tree()
     .size([600, 300]);
+
+
+
+
+// node.append("svg:text")
+//     .attr("dx", 70)
+//     .attr("dy", 100)
+//     .text(function (d) {
+//         return "True";
+//     });
 
 var diagonal = d3.svg.diagonal();
 
@@ -130,6 +140,23 @@ node.append("svg:text")
     .text(function (d) {
         return d.name + ";" + d.attribute;
     });
+
+node.append("svg:text")
+    .attr("dx", -80)
+    .attr("dy", 100)
+    .text(function (d) {
+        return "False";
+    });
+
+node.append("svg:text")
+    .attr("dx", 50)
+    .attr("dy", 100)
+    .text(function (d) {
+        return "True";
+    });
+
+
+
 
 function mouseover() {
     div.transition()
