@@ -125,8 +125,8 @@ node.append("svg:rect")
 // .classed("toggled_on", true);
 
 node.append("svg:text")
-    .attr("dx", 8)
-    .attr("dy", 3)
+    .attr("dx", -70)
+    .attr("dy", 60)
     .text(function (d) {
         return d.name + ";" + d.attribute;
     });

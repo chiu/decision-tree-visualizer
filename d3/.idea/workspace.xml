@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static_tree/d3v3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tornado_chart/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tornado_chart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tornado_chart/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +17,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+            <state relative-caret-position="246">
+              <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tornado_chart/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="621">
+              <caret line="27" column="8" lean-forward="true" selection-end-line="204" />
             </state>
           </provider>
         </entry>
@@ -123,9 +125,9 @@
         <option value="$PROJECT_DIR$/nice_tooltip/index.html" />
         <option value="$PROJECT_DIR$/d3_collapsible/index.css" />
         <option value="$PROJECT_DIR$/static_tree/d3v3.js" />
-        <option value="$PROJECT_DIR$/static_tree/index.js" />
         <option value="$PROJECT_DIR$/static_tree/index.html" />
         <option value="$PROJECT_DIR$/tornado_chart/index.html" />
+        <option value="$PROJECT_DIR$/static_tree/index.js" />
       </list>
     </option>
   </component>
@@ -147,6 +149,11 @@
             <path>
               <item name="d3" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="d3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="d3" type="462c0819:PsiDirectoryNode" />
+              <item name="static_tree" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,12 +222,12 @@
       <workItem from="1554413967307" duration="288000" />
       <workItem from="1555184508165" duration="333000" />
       <workItem from="1555201194581" duration="2358000" />
-      <workItem from="1555283123905" duration="371000" />
+      <workItem from="1555283123905" duration="1342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49243000" />
+    <option name="totallyTimeSpent" value="50214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -391,13 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -421,8 +421,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tornado_chart/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="621">
+          <caret line="27" column="8" lean-forward="true" selection-end-line="204" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
