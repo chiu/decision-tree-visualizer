@@ -134,21 +134,36 @@ node.append("svg:rect")
 
 // .classed("toggled_on", true);
 
-node.append("svg:text")
-    .attr("dx", -70)
+// node.append("svg:text")
+//     .attr("dx", -70)
+//     .attr("dy", 60)
+    node.append("text")
+        .attr("dx", -20)
+        .attr("dy", 20)
+        .attr('color', 'white')
+    .text(function (d) {
+            return d.name
+        });
+
+node.append("text")
+    .attr("dx", -20)
+    // .attr("dy", 60)
     .attr("dy", 60)
     .text(function (d) {
-        return d.name + ";" + d.attribute;
+        return d.attribute;
     });
 
-node.append("svg:text")
+var first_node = d3.select("rect");
+first_node.style("fill", 'green');
+
+first_node.append("svg:text")
     .attr("dx", -80)
     .attr("dy", 100)
     .text(function (d) {
         return "False";
     });
 
-node.append("svg:text")
+first_node.append("svg:text")
     .attr("dx", 50)
     .attr("dy", 100)
     .text(function (d) {
@@ -175,7 +190,7 @@ function click(d) {
         .attr("class", "attributetip")
         .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:1500px;\">");
 
-    // this_node.style("border", "solid 1px green");
+    this_node.style("border", "solid 10px orange");
 
 
 }
