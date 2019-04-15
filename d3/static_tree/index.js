@@ -153,8 +153,7 @@ node.append("text")
         return d.attribute;
     });
 
-var first_node = d3.select("rect");
-first_node.style("fill", 'green');
+var first_node =d3.select("#viz");
 
 first_node.append("svg:text")
     .attr("dx", -80)
