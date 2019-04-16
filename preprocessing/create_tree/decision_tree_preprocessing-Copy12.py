@@ -17,8 +17,8 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import matplotlib.pyplot as plt
 
-original_df=pd.read_csv('../data/zoo-animal-classification/zoo.csv', index_col=False)
-class_names_df = pd.read_csv('../data/zoo-animal-classification/class.csv', index_col=False)
+original_df=pd.read_csv('../../data/zoo-animal-classification/zoo.csv', index_col=False)
+class_names_df = pd.read_csv('../../data/zoo-animal-classification/class.csv', index_col=False)
 class_only = class_names_df[['Class_Number', 'Class_Type']]
 class_only = class_only.rename(columns={'Class_Number': 'class_type', "Class_Type": "class_name"})
 df = pd.merge(original_df, class_only, on='class_type', how='outer')
@@ -82,47 +82,47 @@ del df_class['animal_name']
 
 import matplotlib.pyplot as plt
 
-def make_attribute_view(df_class, filename):
-    gini_df = pd.DataFrame()
-    oFig1 = plt.figure(1, figsize=(20,80))
-       #(m,n,x) -> x starts with 1
-    ...
-    # iterating through every column in datafarme
-    plot_index = 1
-    
-    for temp_class_name in df_class.columns:
-        unique_col_values =list(df_class[temp_class_name].unique())
-        unique_col_values.sort()
-
-        if unique_col_values==[0,1]:
-            # for a given column; plot distribution for every possible value
-
-            gini_split=0
-            num_at_record = df_class.shape[0]
-            for i in range(0, len(unique_col_values)):
-                unique_col_value = unique_col_values[i]
-                temp_df = df_class[df_class[temp_class_name]==unique_col_value]
-                values = []
-                gini_score = 1.0
-                num_at_child = float(temp_df.shape[0])
-                for class_name in class_names:
-                    count = temp_df[temp_df['class_name']==class_name].shape[0]
-                    gini_score -= (float(count)/num_at_child)**2
-                    values.append(count)
-                    
-                gini_split+=gini_score*(num_at_child/num_at_record)
-                print(values)
-                new = oFig1.add_subplot(20,2, plot_index)   
-                new.bar(class_names, values)
-                new.set_title(temp_class_name + " is " + str(unique_col_value) + " gini: " + f'{gini_score:.2f}' + " gini split: " + f'{gini_split:.2f}', fontsize=20)
-                plot_index+=1
-                temp_row = {'column_name': temp_class_name, 'column_value': unique_col_value, 'gini_score': gini_score, 'num_at_child': num_at_child, 'num_at_record': num_at_record, 'distribution': values }
-                gini_df = gini_df.append(temp_row, ignore_index=True)
-    plt.show()
-
-    return gini_df
-gini_df = make_attribute_view(df_class, 'milk')
-gini_df
+# def make_attribute_view(df_class, filename):
+#     gini_df = pd.DataFrame()
+#     oFig1 = plt.figure(1, figsize=(20,80))
+#        #(m,n,x) -> x starts with 1
+#     ...
+#     # iterating through every column in datafarme
+#     plot_index = 1
+#
+#     for temp_class_name in df_class.columns:
+#         unique_col_values =list(df_class[temp_class_name].unique())
+#         unique_col_values.sort()
+#
+#         if unique_col_values==[0,1]:
+#             # for a given column; plot distribution for every possible value
+#
+#             gini_split=0
+#             num_at_record = df_class.shape[0]
+#             for i in range(0, len(unique_col_values)):
+#                 unique_col_value = unique_col_values[i]
+#                 temp_df = df_class[df_class[temp_class_name]==unique_col_value]
+#                 values = []
+#                 gini_score = 1.0
+#                 num_at_child = float(temp_df.shape[0])
+#                 for class_name in class_names:
+#                     count = temp_df[temp_df['class_name']==class_name].shape[0]
+#                     gini_score -= (float(count)/num_at_child)**2
+#                     values.append(count)
+#
+#                 gini_split+=gini_score*(num_at_child/num_at_record)
+#                 print(values)
+#                 new = oFig1.add_subplot(20,2, plot_index)
+#                 new.bar(class_names, values)
+#                 new.set_title(temp_class_name + " is " + str(unique_col_value) + " gini: " + f'{gini_score:.2f}' + " gini split: " + f'{gini_split:.2f}', fontsize=20)
+#                 plot_index+=1
+#                 temp_row = {'column_name': temp_class_name, 'column_value': unique_col_value, 'gini_score': gini_score, 'num_at_child': num_at_child, 'num_at_record': num_at_record, 'distribution': values }
+#                 gini_df = gini_df.append(temp_row, ignore_index=True)
+#     plt.show()
+#
+#     return gini_df
+# gini_df = make_attribute_view(df_class, 'milk')
+# gini_df
 
 num_at_record = df_class.shape[0]
 gini_df['proportion'] =  gini_df['num_at_child'] * gini_df['gini_score'] 
@@ -154,7 +154,7 @@ def make_attribute_plots(gini_split_df, filename):
         new.set_title(temp_class_name + " is " + str(unique_col_value) + ", gini: " + f'{gini_score:.2f}' + ", gini split: " + f'{gini_split:.2f}', fontsize=20)
         plot_index+=1
 
-    oFig1.savefig("../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
+    oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
     plt.show()
     
 make_attribute_plots(gini_split_df, 'node0')
