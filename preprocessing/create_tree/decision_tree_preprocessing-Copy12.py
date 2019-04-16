@@ -13,11 +13,14 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
+import numpy as np
+from matplotlib import pyplot as plt
+
 
 
 def make_attribute_view(df_class, filename):
     gini_df = pd.DataFrame()
-    oFig1 = plt.figure(1, figsize=(20, 80))
+    # oFig1 = plt.figure(1, figsize=(20, 80))
     # (m,n,x) -> x starts with 1
     ...
     # iterating through every column in datafarme
@@ -45,11 +48,11 @@ def make_attribute_view(df_class, filename):
 
                 gini_split += gini_score * (num_at_child / num_at_record)
                 print(values)
-                new = oFig1.add_subplot(20, 2, plot_index)
-                new.bar(class_names, values)
-                new.set_title(temp_class_name + " is " + str(
-                    unique_col_value) + " gini: " + f'{gini_score:.2f}' + " gini split: " + f'{gini_split:.2f}',
-                              fontsize=20)
+                # new = oFig1.add_subplot(20, 2, plot_index)
+                #                 # new.bar(class_names, values)
+                #                 # new.set_title(temp_class_name + " is " + str(
+                #                 #     unique_col_value) + " gini: " + f'{gini_score:.2f}' + " gini split: " + f'{gini_split:.2f}',
+                #                 #               fontsize=20)
                 plot_index += 1
                 temp_row = {'column_name': temp_class_name, 'column_value': unique_col_value, 'gini_score': gini_score,
                             'num_at_child': num_at_child, 'num_at_record': num_at_record, 'distribution': values}
@@ -80,8 +83,11 @@ def make_attribute_plots(gini_split_df, filename):
     oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
     plt.show()
 
-def make_tornado_chart(lows_list, values_list):
-    variables = ['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile']
+
+
+
+def make_tornado_chart(lows_list, values_list, oFig1, plot_index):
+    variables = ['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'][::-1]
 
     base = 0
 
@@ -104,11 +110,10 @@ def make_tornado_chart(lows_list, values_list):
     for y, low, value, color in zip(ys, lows, values, colors):
         # The width of the 'low' and 'high' pieces
         low_width = base - low
-        #     high_width = low + value - base
         high_width = value
 
         # Each bar is a "broken" horizontal bar chart
-        # Each bar is a "broken" horizontal bar chart
+        plt = oFig1.add_subplot(20, 1, plot_index)
         plt.broken_barh(
             [(low, low_width), (base, high_width)],
             (y - 0.4, 0.8),
@@ -123,26 +128,38 @@ def make_tornado_chart(lows_list, values_list):
         x = base + high_width / 2
         if x <= base + 50:
             x = base + high_width + 50
-    #     plt.text(x, y, str(value), va='center', ha='center')
+        plt.text(50, y, variables[y], va='center', ha='center')
 
     # Draw a vertical line down the middle
     plt.axvline(base, color='black')
 
     # Position the x-axis on the top, hide all the other spines (=axis lines)
-    axes = plt.gca()  # (gca = get current axes)
-    axes.spines['left'].set_visible(False)
+
+    axes = plt
+    plt.spines['left'].set_visible(False)
     axes.spines['right'].set_visible(False)
     axes.spines['bottom'].set_visible(False)
     axes.xaxis.set_ticks_position('top')
 
     # Make the y-axis display the variables
-    plt.yticks(ys, variables)
+    #     plt.yticks(ys, variables)
 
     # Set the portion of the x- and y-axes to show
-    plt.xlim(base - 50, base + 50)
-    plt.ylim(-1, len(variables))
-    plt.show()
-    return plt
+    plt.set_xlim(base - 50, base + 50)
+    plt.set_ylim(-1, len(variables))
+
+    plt.set_title("plot number" + str(plot_index))
+    #     plt.show()
+    plt.set_yticks(ys, variables)
+
+
+lows_list = [-4, -20, -8, -13, -10, -0, -5]
+highs_list = [11, 0, 0, 0, 0, 41, 0]
+
+oFig1 = plt.figure(1, figsize=(20, 200))
+
+for i in range(1, 3):
+    make_tornado_chart(lows_list, highs_list, oFig1, i)
 
 def get_node_string(orig):
     print(orig)
@@ -251,14 +268,22 @@ gini_split_df = gini_split_df[['column_name', 'gini_split']]
 gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
 
 make_attribute_plots(gini_split_df, 'node0')
+
+
 lows_list = [-4, -20, -8, -13, -10, -0, -5]
 highs_list = [11, 0, 0, 0, 0, 41, 0]
-make_tornado_chart(lows_list, highs_list)
+
+oFig1 = plt.figure(1, figsize=(20, 200))
+
+for i in range(1, 3):
+    make_tornado_chart(lows_list, highs_list, oFig1, i)
+
 
 filename = 'tornado'
-oFig1 = plt.figure(1, figsize=(10, 20))
+oFig1 = plt.figure(1, figsize=(20, 200))
 
 plot_index = 1
+index = 1
 for x in set(gini_split_df['column_name']):
     print(x)
     subset = gini_split_df[gini_split_df['column_name'] == x]
@@ -266,7 +291,9 @@ for x in set(gini_split_df['column_name']):
     row1 = subset.iloc[1]
     lows_list = [-4, -20, -8, -13, -10, -0, -5]
     highs_list = [11, 0, 0, 0, 0, 41, 0]
-    plt = make_tornado_chart(lows_list, highs_list)
+    make_tornado_chart(lows_list, highs_list, oFig1, index)
+    index+=1
+
 
 oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
 plt.show()
