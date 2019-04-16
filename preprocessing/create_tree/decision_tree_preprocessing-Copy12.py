@@ -15,7 +15,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
 
 
-def make_attribute_view(df_class, filename):
+
+def make_gini_df(df_class):
     gini_df = pd.DataFrame()
     # oFig1 = plt.figure(1, figsize=(20, 80))
     # (m,n,x) -> x starts with 1
@@ -76,7 +77,7 @@ def make_attribute_plots(gini_split_df, filename):
     plt.show()
 
 
-def make_tornado_chart(subset, oFig1, plot_index, temp_class_name):
+def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
     row0 = subset.iloc[0]
     row1 = subset.iloc[1]
     row = row0
@@ -158,7 +159,17 @@ def make_tornado_chart(subset, oFig1, plot_index, temp_class_name):
     new.set_title(temp_class_name + " is "  +  "gini split: " + f'{gini_split:.2f}', fontsize=20)
     return "hi"
 
-
+def make_tornado_plot(gini_split_df, filename):
+    # filename = 'tornado'
+    oFig1 = plt.figure(1, figsize=(20, 200))
+    index = 1
+    for x in gini_split_df['column_name'].unique():
+        print(x)
+        subset = gini_split_df[gini_split_df['column_name'] == x]
+        make_tornado_subplot(subset, oFig1, index, x)
+        index += 1
+    oFig1.savefig("../../d3/static_tree/python_plots/" + filename + '.png', pad_inches=0.4, bbox_inches="tight")
+    plt.show()
 
 def get_node_string(orig):
     print(orig)
@@ -208,6 +219,19 @@ def get_node_string(orig):
 
     return (temp_row, fig)
 
+def make_gini_split_df(gini_df):
+
+    num_at_record = df_class.shape[0]
+
+    # create gini split df
+    gini_df['proportion'] = gini_df['num_at_child'] * gini_df['gini_score']
+    gini_splits = gini_df.groupby('column_name')['proportion'].sum() / num_at_record
+    gini_split_df = gini_splits.reset_index().sort_values('proportion').rename(index=str,
+                                                                               columns={'proportion': 'gini_split'})
+
+    gini_split_df = gini_split_df[['column_name', 'gini_split']]
+    gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
+    return gini_split_df
 
 original_df = pd.read_csv('../../data/zoo-animal-classification/zoo.csv', index_col=False)
 class_names_df = pd.read_csv('../../data/zoo-animal-classification/class.csv', index_col=False)
@@ -252,43 +276,26 @@ class_names.sort()
 
 del df_class['animal_name']
 
-gini_df = make_attribute_view(df_class, 'milk')
 
-num_at_record = df_class.shape[0]
-
-# create gini split df
-gini_df['proportion'] = gini_df['num_at_child'] * gini_df['gini_score']
-gini_splits = gini_df.groupby('column_name')['proportion'].sum() / num_at_record
-gini_split_df = gini_splits.reset_index().sort_values('proportion').rename(index=str,
-                                                                           columns={'proportion': 'gini_split'})
-
-gini_split_df = gini_split_df[['column_name', 'gini_split']]
-gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
-
-# make_attribute_plots(gini_split_df, 'node0')
-
-def make_tornado_view(gini_split_df, filename):
-    # filename = 'tornado'
-    oFig1 = plt.figure(1, figsize=(20, 200))
-    index = 1
-    for x in gini_split_df['column_name'].unique():
-        print(x)
-        subset = gini_split_df[gini_split_df['column_name'] == x]
-        make_tornado_chart(subset, oFig1, index, x)
-        index += 1
-    oFig1.savefig("../../d3/static_tree/python_plots/" + filename + '.png', pad_inches=0.4, bbox_inches="tight")
-    plt.show()
+#making class distribution plots
+gini_df = make_gini_df(df_class)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node0')
 
 
 df_milk_is_1 = df_class[df_class['milk'] == 1]
-make_attribute_view(df_milk_is_1, 'node18')
+gini_df = make_gini_df(df_milk_is_1)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node18')
 
 
-df_milk_is_11 = df_class[df_class['milk'] == 0]
-make_attribute_view(df_milk_is_11, 'node1')
+df_milk_is_0 = df_class[df_class['milk'] == 0]
+gini_df = make_gini_df(df_milk_is_0)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node1')
 
-# make_attribute_plots(gini_split_df, 'node0')
-make_tornado_view(gini_split_df, 'node0')
+
+
 
 hist_vals = df_class['class_name'].value_counts(sort=False)
 plt.bar(hist_vals.index.values, hist_vals.values)
@@ -343,9 +350,9 @@ for i in range(0, len(node_list)):
 
 new_df = ult_df.merge(edge_df, on='current_node', how='outer')
 
-make_attribute_view(df_class, 'node0')
-make_attribute_view(df_class[df_class['milk'] > 0.5], 'node18')
-make_attribute_view(df_class[df_class['milk'] <= 0.5], 'node1')
+# make_gini_df(df_class, 'node0')
+# make_gini_df(df_class[df_class['milk'] > 0.5], 'node18')
+# make_gini_df(df_class[df_class['milk'] <= 0.5], 'node1')
 
 full_string = ""
 for index, row in new_df.iterrows():

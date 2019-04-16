@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node18.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node18.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
+            <state relative-caret-position="442">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -40,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/static_tree/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="506">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -48,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tornado_chart/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
+            <state relative-caret-position="253">
               <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
@@ -129,7 +131,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
@@ -142,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,7 +161,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,17 +231,18 @@
       <workItem from="1555378758120" duration="814000" />
       <workItem from="1555386086813" duration="487000" />
       <workItem from="1555400194677" duration="2522000" />
+      <workItem from="1555449460270" duration="756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56910000" />
+    <option name="totallyTimeSpent" value="57666000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="947" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.106371775" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.106088005" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -415,17 +418,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/d3v3.js">
+    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28681">
-          <caret line="1247" column="12" selection-start-line="1247" selection-start-column="12" selection-end-line="1247" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="442">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -436,20 +435,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static_tree/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tornado_chart/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
+        <state relative-caret-position="253">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
+    <entry file="file://$PROJECT_DIR$/static_tree/d3v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="28681">
+          <caret line="1247" column="12" selection-start-line="1247" selection-start-column="12" selection-end-line="1247" selection-end-column="12" />
         </state>
       </provider>
     </entry>
