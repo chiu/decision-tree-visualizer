@@ -230,16 +230,15 @@
       <workItem from="1555398164985" duration="1474000" />
       <workItem from="1555399710404" duration="757000" />
       <workItem from="1555400688800" duration="43000" />
-      <workItem from="1555400788029" duration="956000" />
+      <workItem from="1555400788029" duration="1194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8193000" />
+    <option name="totallyTimeSpent" value="8431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1970181" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -249,8 +248,8 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.59318423" weight="0.32871288" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49520767" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5926518" weight="0.32871288" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49520767" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -258,7 +257,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50479233" side_tool="true" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.40734825" side_tool="true" visible="true" weight="0.32871288" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -267,8 +266,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="FAQ Robot" order="3" />
       <window_info anchor="right" id="Data View" order="4" />
-      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.30363035" side_tool="true" visible="true" weight="0.32960597" />
-      <window_info anchor="right" id="SciView" order="6" sideWeight="0.69636965" visible="true" weight="0.32960597" />
+      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.3038348" side_tool="true" visible="true" weight="0.32960597" />
+      <window_info anchor="right" id="SciView" order="6" sideWeight="0.6961652" visible="true" weight="0.32960597" />
       <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>

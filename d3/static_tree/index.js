@@ -66,16 +66,6 @@ var div = d3.select("body").append("div")
 var tree = d3.layout.tree()
     .size([600, 300]);
 
-
-
-
-// node.append("svg:text")
-//     .attr("dx", 70)
-//     .attr("dy", 100)
-//     .text(function (d) {
-//         return "True";
-//     });
-
 var diagonal = d3.svg.diagonal();
 
 // Preparing the data for the tree layout, convert data into an array of nodes
@@ -131,21 +121,16 @@ node.append("svg:rect")
         return d.samples;
     })
     .attr("transform", function (d) {
-        return "translate(-" + d.samples/2 + "," + 0 + ")";
+        return "translate(-" + d.samples / 2 + "," + 0 + ")";
     });
 
-// .classed("toggled_on", true);
-
-// node.append("svg:text")
-//     .attr("dx", -70)
-//     .attr("dy", 60)
-    node.append("text")
-        .attr("dx", -20)
-        .attr("dy", -10)
-        .attr('color', 'white')
+node.append("text")
+    .attr("dx", -20)
+    .attr("dy", -10)
+    .attr('color', 'white')
     .text(function (d) {
-            return d.name
-        });
+        return d.name
+    });
 
 node.append("text")
     .attr("dx", -20)
@@ -168,24 +153,6 @@ node.append("text")
         return d.right_edge;
     });
 
-var first_node =d3.select("#viz");
-
-first_node.append("svg:text")
-    .attr("dx", -80)
-    .attr("dy", 100)
-    .text(function (d) {
-        return "False";
-    });
-
-first_node.append("svg:text")
-    .attr("dx", 50)
-    .attr("dy", 100)
-    .text(function (d) {
-        return "True";
-    });
-
-
-
 
 function mouseover() {
     div.transition()
@@ -205,7 +172,6 @@ function click(d) {
         .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2500px;\">");
 
     this_node.style("border", "solid 10px orange");
-
 
 }
 
@@ -265,7 +231,7 @@ function mousemove(d) {
         .attr("y", function (d) {
             return y(d);
         })
-        .attr("fill", function(d, i){
+        .attr("fill", function (d, i) {
             return rect_colors[i];
         });
 

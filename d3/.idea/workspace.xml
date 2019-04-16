@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="239" column="100" selection-start-line="239" selection-start-column="100" selection-end-line="239" selection-end-column="100" />
+            <state relative-caret-position="145">
+              <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -68,7 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>d.id</find>
       <find>make_bar</find>
       <find>d3-tip</find>
       <find>bar</find>
@@ -98,6 +96,7 @@
       <find>name</find>
       <find>rect</find>
       <find>red</find>
+      <find>toggled_on</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,12 +228,12 @@
       <workItem from="1555283123905" duration="4215000" />
       <workItem from="1555378758120" duration="814000" />
       <workItem from="1555386086813" duration="487000" />
-      <workItem from="1555400194677" duration="1720000" />
+      <workItem from="1555400194677" duration="2522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56108000" />
+    <option name="totallyTimeSpent" value="56910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="0" />
@@ -267,7 +266,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/static_tree/index.js</url>
-          <line>206</line>
+          <line>173</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -446,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="239" column="100" selection-start-line="239" selection-start-column="100" selection-end-line="239" selection-end-column="100" />
+        <state relative-caret-position="145">
+          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
