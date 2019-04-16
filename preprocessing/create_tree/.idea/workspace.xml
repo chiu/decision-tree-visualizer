@@ -14,14 +14,14 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="674">
-                    <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+                  <state relative-caret-position="313">
+                    <caret line="280" column="20" selection-start-line="280" selection-start-column="20" selection-end-line="280" selection-end-column="20" />
                     <folding>
-                      <element signature="e#18#53#0" expanded="true" />
+                      <element signature="e#17#48#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -33,7 +33,7 @@
     </window>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -95,7 +95,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,6 +106,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,17 +161,18 @@
       <updated>1555386870024</updated>
       <workItem from="1555387438642" duration="576000" />
       <workItem from="1555388021959" duration="487000" />
+      <workItem from="1555388635961" duration="66000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1063000" />
+    <option name="totallyTimeSpent" value="1129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25346112" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25559106" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Project Explorer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -187,9 +188,9 @@
       <window_info anchor="bottom" id="MaxCompute Console" order="7" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49946752" weight="0.3299435" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.12939297" side_tool="true" visible="true" weight="0.32574257" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.12992546" side_tool="true" visible="true" weight="0.32574257" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.870607" visible="true" weight="0.32574257" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.87007457" visible="true" weight="0.32574257" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -197,8 +198,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="FAQ Robot" order="3" />
       <window_info anchor="right" id="Data View" order="4" />
-      <window_info anchor="right" x="0" y="0" width="430" height="777" id="Documentation" order="5" sideWeight="0.51248163" side_tool="true" visible="true" weight="0.7305644" />
-      <window_info active="true" anchor="right" id="SciView" order="6" sideWeight="0.48751837" visible="true" weight="0.7305644" />
+      <window_info anchor="right" x="0" y="0" width="430" height="777" id="Documentation" order="5" sideWeight="0.51395005" side_tool="true" visible="true" weight="0.727902" />
+      <window_info active="true" anchor="right" id="SciView" order="6" sideWeight="0.48604992" visible="true" weight="0.727902" />
       <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
@@ -211,10 +212,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="313">
+          <caret line="280" column="20" selection-start-line="280" selection-start-column="20" selection-end-line="280" selection-end-column="20" />
           <folding>
-            <element signature="e#18#53#0" expanded="true" />
+            <element signature="e#17#48#0" expanded="true" />
           </folding>
         </state>
       </provider>

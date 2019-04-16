@@ -278,7 +278,7 @@ for x in set(gini_split_df['column_name']):
     highs_list = [11, 0, 0, 0, 0, 41, 0]
     plt = make_tornado_chart(lows_list, highs_list)
 
-oFig1.savefig("../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
+oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
 plt.show()
 
 for x in set(gini_split_df['column_name']):
