@@ -101,7 +101,8 @@ def make_tornado_chart(subset, oFig1, plot_index, temp_class_name):
     # The y position for each variable
     ys = range(len(values))[::-1]  # top to bottom
 
-    colors = 'red orange yellow green blue purple brown'.split()
+    # colors = 'red orange yellow green blue purple brown'.split()
+    colors = ['#db5f57', '#dbd057', '#75db57', '#57dbaa', '#579bdb', '#8557db', '#db57c0']
     # Plot the bars, one by one
     plt = oFig1.add_subplot(20, 1, plot_index)
     for y, low, value, color in zip(ys, lows, values, colors):

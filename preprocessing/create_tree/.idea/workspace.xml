@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8eede98-853f-4cdd-9a78-05e8094c396f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="278" column="14" lean-forward="true" selection-start-line="278" selection-start-column="14" selection-end-line="278" selection-end-column="14" />
+            <state relative-caret-position="187">
+              <caret line="104" column="66" lean-forward="true" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="66" />
               <folding>
                 <element signature="e#17#26#0" expanded="true" />
               </folding>
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/pandas/core/indexes/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39180">
-              <caret line="2658" selection-start-line="2658" selection-end-line="2658" />
+            <state relative-caret-position="172">
+              <caret line="3714" column="17" selection-start-line="3714" selection-start-column="14" selection-end-line="3714" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -97,6 +96,8 @@
       <find>set</find>
       <find>make_tornado_chart</find>
       <find>node0</find>
+      <find>colors</find>
+      <find>red</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,12 +230,12 @@
       <workItem from="1555398164985" duration="1474000" />
       <workItem from="1555399710404" duration="757000" />
       <workItem from="1555400688800" duration="43000" />
-      <workItem from="1555400788029" duration="523000" />
+      <workItem from="1555400788029" duration="956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7760000" />
+    <option name="totallyTimeSpent" value="8193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -248,8 +249,8 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.59318423" visible="true" weight="0.32871288" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49574015" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.59318423" weight="0.32871288" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49520767" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -257,7 +258,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.40681577" side_tool="true" visible="true" weight="0.32871288" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50479233" side_tool="true" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -266,8 +267,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="FAQ Robot" order="3" />
       <window_info anchor="right" id="Data View" order="4" />
-      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.3038348" side_tool="true" visible="true" weight="0.32960597" />
-      <window_info active="true" anchor="right" id="SciView" order="6" sideWeight="0.6961652" visible="true" weight="0.32960597" />
+      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.30363035" side_tool="true" visible="true" weight="0.32960597" />
+      <window_info anchor="right" id="SciView" order="6" sideWeight="0.69636965" visible="true" weight="0.32960597" />
       <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
@@ -279,14 +280,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py</url>
-          <line>270</line>
+          <line>271</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/create_tree$decision_tree_preprocessing_Copy12.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555402141759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/create_tree$decision_tree_preprocessing_Copy12.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555404075678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/create_tree$Unnamed.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555393084096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
@@ -294,23 +295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="278" column="14" lean-forward="true" selection-start-line="278" selection-start-column="14" selection-end-line="278" selection-end-column="14" />
-          <folding>
-            <element signature="e#17#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/pandas/core/indexes/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39180">
-          <caret line="2658" selection-start-line="2658" selection-end-line="2658" />
         </state>
       </provider>
     </entry>
@@ -339,6 +323,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="3714" column="17" selection-start-line="3714" selection-start-column="14" selection-end-line="3714" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="104" column="66" lean-forward="true" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="66" />
+          <folding>
+            <element signature="e#17#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -237,7 +237,7 @@ function mousemove(d) {
 
     // var data = [4, 8, 15, 16, 23, 42];
     // document.getElementById("data").innerHTML = data;
-    var rect_colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown'];
+    var rect_colors = ['#db5f57', '#dbd057', '#75db57', '#57dbaa', '#579bdb', '#8557db', '#db57c0'];
     var data = d.distribution;
     var x = d3.scale.ordinal()
         .domain([0, 1, 2, 3, 4, 5, 6])
