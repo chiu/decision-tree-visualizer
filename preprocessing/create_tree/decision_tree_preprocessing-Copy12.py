@@ -1,13 +1,11 @@
 # coding: utf-8
 
-import re
-
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pydotplus
 import seaborn as sns;
 from IPython.display import Image
-from matplotlib import pyplot as plt
 from sklearn.externals.six import StringIO
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
@@ -36,6 +34,7 @@ def make_attribute_plots(gini_split_df, filename):
 
     oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
     plt.show()
+
 
 def make_gini_df(df_class):
     gini_df = pd.DataFrame()
@@ -70,12 +69,12 @@ def make_gini_df(df_class):
                 temp_row = {'column_name': temp_class_name, 'column_value': unique_col_value, 'gini_score': gini_score,
                             'num_at_child': num_at_child, 'num_at_record': num_at_record, 'distribution': values}
                 gini_df = gini_df.append(temp_row, ignore_index=True)
-    plt.show()
+    # plt.show()
 
     return gini_df
 
-def make_gini_split_df(gini_df):
 
+def make_gini_split_df(gini_df):
     num_at_record = df_class.shape[0]
 
     # create gini split df
@@ -87,6 +86,7 @@ def make_gini_split_df(gini_df):
     gini_split_df = gini_split_df[['column_name', 'gini_split']]
     gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
     return gini_split_df
+
 
 def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
     row0 = subset.iloc[0]
@@ -165,10 +165,11 @@ def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
     gini_split = row['gini_split']
     values = row['distribution']
 
-    new =plt
+    new = plt
     # new.bar(class_names, values)
-    new.set_title(temp_class_name + " is "  +  "gini split: " + f'{gini_split:.2f}', fontsize=20)
+    new.set_title(temp_class_name + " is " + "gini split: " + f'{gini_split:.2f}', fontsize=20)
     return "hi"
+
 
 def make_tornado_plot(gini_split_df, filename):
     # filename = 'tornado'
@@ -181,6 +182,7 @@ def make_tornado_plot(gini_split_df, filename):
         index += 1
     oFig1.savefig("../../d3/static_tree/python_plots/" + filename + '.png', pad_inches=0.4, bbox_inches="tight")
     plt.show()
+
 
 def get_node_string(orig):
     print(orig)
@@ -195,23 +197,23 @@ def get_node_string(orig):
     new_value = value.replace('[', '').replace(']', '').split(",")
 
     # make figure:
-    fig, (ax1, ax2) = plt.subplots(1, 2, gridspec_kw={'width_ratios': [1, 3]}, figsize=(4, 2))
+    # fig, (ax1, ax2) = plt.subplots(1, 2, gridspec_kw={'width_ratios': [1, 3]}, figsize=(4, 2))
 
     # gini plot
-    ax1.set_title('gini')
-    ax1.bar(0, float(gini), color='darkred')
-    ax1.get_xaxis().set_visible(False)
-
-    # class distribution plot
-    ax2.set_title('class distribution')
+    # ax1.set_title('gini')
+    # ax1.bar(0, float(gini), color='darkred')
+    # ax1.get_xaxis().set_visible(False)
+    #
+    # # class distribution plot
+    # ax2.set_title('class distribution')
     plot_class_names = list(class_only['class_name'])
     _X = np.arange(len(plot_class_names))
     print(new_value)
     new_new_value = [int(x) for x in new_value]
-    ax2.bar(plot_class_names, new_new_value, color=sns.color_palette("Paired")[0:8])
-    ax2.set_ylim(0, 45)
+    # ax2.bar(plot_class_names, new_new_value, color=sns.color_palette("Paired")[0:8])
+    # ax2.set_ylim(0, 45)
 
-    plt.setp(ax2.xaxis.get_majorticklabels(), rotation=90)
+    # plt.setp(ax2.xaxis.get_majorticklabels(), rotation=90)
 
     plot_name = 'plots/' + 'gini' + str(node_name) + '.png'
     plt.show()
@@ -228,7 +230,7 @@ def get_node_string(orig):
         attribute = s[0].split("[")[1]
         temp_row['attribute'] = attribute
 
-    return (temp_row, fig)
+    return (temp_row)
 
 
 original_df = pd.read_csv('../../data/zoo-animal-classification/zoo.csv', index_col=False)
@@ -239,16 +241,24 @@ df = pd.merge(original_df, class_only, on='class_type', how='outer')
 y = df['class_name']
 
 df_class = df.copy()
-
-del df['class_name']
-del df['class_type']
-df_bool = df.copy()
+#
+# del df['class_name']
+# del df['class_type']
+# df_bool = df.copy()
 
 # make train test split
-X_train, X_test, y_train, y_test = train_test_split(df_bool, y, test_size=0.33, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.33, random_state=1)
 X_test_with_animal_name = X_test.copy()
+
+df_class = X_train.copy()
 del X_train['animal_name']
 del X_test['animal_name']
+
+# delete extra columns with class label
+del X_train['class_name']
+del X_train['class_type']
+del X_test['class_name']
+del X_test['class_type']
 
 # train decision tree
 dtree = DecisionTreeClassifier()
@@ -274,20 +284,104 @@ class_names.sort()
 
 del df_class['animal_name']
 
-
-#making class distribution plots
+# making class distribution plots
 gini_df = make_gini_df(df_class)
 gini_split_df = make_gini_split_df(gini_df)
 make_tornado_plot(gini_split_df, 'node0')
-
 
 df_milk_is_1 = df_class[df_class['milk'] == 1]
 gini_df = make_gini_df(df_milk_is_1)
 gini_split_df = make_gini_split_df(gini_df)
 make_tornado_plot(gini_split_df, 'node18')
 
-
 df_milk_is_0 = df_class[df_class['milk'] == 0]
 gini_df = make_gini_df(df_milk_is_0)
 gini_split_df = make_gini_split_df(gini_df)
 make_tornado_plot(gini_split_df, 'node1')
+
+dot_string = dot_data.getvalue()
+x = dot_string.replace("&le;", "<=")  # .replace("&#35;", "->")
+x = x.replace("\n", "")
+x = x.replace("<br/>", ",")
+x = x.replace("label=<", "")
+x = x.split(";")
+x = x[2:-1]
+
+import re
+
+edge_list = []
+node_list = []
+element_regex = re.compile(r'.+->.+')
+for i in x:
+    if element_regex.match(i):
+        edge_list.append(i)
+    else:
+        node_list.append(i)
+
+edge_df = pd.DataFrame(columns=['current_node', 'parent_node'])
+for i in range(0, len(edge_list)):
+    print(edge_list[i])
+    pattern = "(\d+)"
+    a = re.findall(pattern, edge_list[i])
+    source = a[0]
+    destination = a[1]
+    edge_df = edge_df.append({'current_node': destination, 'parent_node': source}, ignore_index=True)
+
+x = np.arange(10)
+np.ones(x.shape) * 0.4
+sns.set()
+sns.palplot(sns.color_palette())
+
+ult_df = pd.DataFrame(
+    columns=['current_node', 'attribute', 'gini', 'samples', 'value', 'class_name', 'color', 'plot_name'])
+# ult_df = df_.fillna(0) # with 0s rather than NaNs
+
+ult_list = {}
+for i in range(0, len(node_list)):
+    print(node_list[i])
+    (node_string) = get_node_string(node_list[i])
+    ult_df = ult_df.append(node_string, ignore_index=True)
+new_df = ult_df.merge(edge_df, on='current_node', how='outer')
+
+full_string = ""
+for index, row in new_df.iterrows():
+    node_name = row['current_node']
+    attribute = row['attribute']
+    plot_name = row['plot_name']
+    samples = row['samples']
+    class_name = row['class_name']
+    value = row['value']
+    gini = row['gini']
+    if node_name == '0':
+        result = 'node' + str(node_name) + ' = {' \
+                 + 'text: { gini: "gini:' + gini \
+                 + '", samples: "samples: ' + samples \
+                 + '", attribute: "attribute: ' + str(attribute) \
+                 + '", class_name: "class_name: ' + class_name \
+                 + '", value: "value: ' + value \
+                 + '"},' \
+                 + 'connectors: {type: "curve", style: {"stroke-width": ' + str(int(samples) / 5) + '}},' \
+                 + 'image:"' + plot_name + '"},'
+    else:
+        parent = row['parent_node']
+        result = 'node' + str(node_name) + ' = {' + "parent: node" + str(parent) \
+                 + ', text: {' \
+                 + 'gini: "gini: ' + gini \
+                 + '", samples: "samples: ' + samples \
+                 + '", attribute: "attribute: ' + str(attribute) \
+                 + '", class_name: "class_name: ' + class_name \
+                 + '", value: "value: ' + value \
+                 + '"},' \
+                 + 'connectors: {type: "curve", style: {"stroke-width": ' + str(int(samples) / 5) + '}},' \
+                 + 'image:"' + plot_name + '"},'
+    full_string += result
+
+first_part = 'var config = {container: "#basic-example", levelSeparation: 200, connectors: {type: "curve", style: { "stroke-width": 5}}, node: { HTMLclass: "nodeExample1"}}, '
+last_part = "chart_config = [config," + ','.join(['node' + str(x) for x in list(new_df['current_node'].keys())]) + '];'
+whole_string = first_part + full_string + last_part
+# text_file = open("../../treant-js/examples/decision-tree/basic-example.js", "w")
+# text_file.write(whole_string)
+# text_file.close()
+
+plt.close("all")
+print(whole_string)

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8eede98-853f-4cdd-9a78-05e8094c396f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node18.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node18.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoo.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../decision_tree_preprocessing-Copy12.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../decision_tree_preprocessing-Copy12.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zoo.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../zoo.dot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,17 +22,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
+            <state relative-caret-position="281">
+              <caret line="374" column="59" selection-start-line="374" selection-start-column="59" selection-end-line="374" selection-end-column="59" />
               <folding>
-                <element signature="e#17#26#0" expanded="true" />
-                <element signature="e#462#1295#0" />
-                <element signature="e#441#1955#0" />
-                <element signature="e#1995#2626#0" />
-                <element signature="e#2923#5492#0" />
-                <element signature="e#5546#5963#0" />
-                <element signature="e#5996#7606#0" />
+                <element signature="e#17#48#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/matplotlib/cbook/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5445">
+              <caret line="391" selection-start-line="391" selection-end-line="391" />
             </state>
           </provider>
         </entry>
@@ -114,6 +123,7 @@
       <find>red</find>
       <find>make_gini_df</find>
       <find>df_class</find>
+      <find>dot_data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,18 +258,19 @@
       <workItem from="1555400688800" duration="43000" />
       <workItem from="1555400788029" duration="1194000" />
       <workItem from="1555449665991" duration="2128000" />
-      <workItem from="1555453681312" duration="59000" />
+      <workItem from="1555453681312" duration="1516000" />
+      <workItem from="1555455737832" duration="386000" />
+      <workItem from="1555456267646" duration="177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10618000" />
+    <option name="totallyTimeSpent" value="12638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2014652" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20634921" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -267,8 +278,8 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4981685" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6581197" weight="0.32857144" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.492674" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65628815" weight="0.32857144" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.490232" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -276,7 +287,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.507326" side_tool="true" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.509768" side_tool="true" visible="true" weight="0.32857144" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -285,8 +296,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="FAQ Robot" order="3" />
       <window_info anchor="right" id="Data View" order="4" />
-      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.30782312" side_tool="true" visible="true" weight="0.32905984" />
-      <window_info active="true" anchor="right" id="SciView" order="6" sideWeight="0.6921769" visible="true" weight="0.32905984" />
+      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.31155014" side_tool="true" visible="true" weight="0.32905984" />
+      <window_info active="true" anchor="right" id="SciView" order="6" sideWeight="0.68844986" visible="true" weight="0.32905984" />
       <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
@@ -298,14 +309,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py</url>
-          <line>283</line>
-          <option name="timeStamp" value="6" />
+          <line>346</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/create_tree$decision_tree_preprocessing_Copy12.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555453741922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/create_tree$decision_tree_preprocessing_Copy12.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555455993458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/create_tree$Unnamed.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555393084096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
@@ -318,17 +329,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="288" lean-forward="true" selection-start-line="288" selection-end-line="288" />
+        <state relative-caret-position="281">
+          <caret line="374" column="59" selection-start-line="374" selection-start-column="59" selection-end-line="374" selection-end-column="59" />
           <folding>
-            <element signature="e#17#26#0" expanded="true" />
-            <element signature="e#462#1295#0" />
-            <element signature="e#441#1955#0" />
-            <element signature="e#1995#2626#0" />
-            <element signature="e#2923#5492#0" />
-            <element signature="e#5546#5963#0" />
-            <element signature="e#5996#7606#0" />
+            <element signature="e#17#48#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/matplotlib/cbook/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5445">
+          <caret line="391" selection-start-line="391" selection-end-line="391" />
         </state>
       </provider>
     </entry>
