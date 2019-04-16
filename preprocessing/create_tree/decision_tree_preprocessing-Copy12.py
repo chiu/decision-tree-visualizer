@@ -266,28 +266,28 @@ gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gin
 
 make_attribute_plots(gini_split_df, 'node0')
 
+def make_tornado_view(gini_split_df, filename):
+    # filename = 'tornado'
+    oFig1 = plt.figure(1, figsize=(20, 200))
+    index = 1
+    for x in gini_split_df['column_name'].unique():
+        print(x)
+        subset = gini_split_df[gini_split_df['column_name'] == x]
+        make_tornado_chart(subset, oFig1, index, x)
+        index += 1
+    oFig1.savefig("../../d3/static_tree/python_plots/" + filename + '.png', pad_inches=0.4, bbox_inches="tight")
+    plt.show()
 
-filename = 'tornado'
-oFig1 = plt.figure(1, figsize=(20, 200))
-index = 1
-for x in gini_split_df['column_name'].unique():
-    print(x)
-    subset = gini_split_df[gini_split_df['column_name'] == x]
-    make_tornado_chart(subset, oFig1, index, x)
-    index += 1
-oFig1.savefig("../../d3/static_tree/python_plots/" + 'tornado2', pad_inches=0.4, bbox_inches="tight")
-plt.show()
-
-for x in set(gini_split_df['column_name']):
-    print(x)
 
 df_milk_is_1 = df_class[df_class['milk'] == 1]
 make_attribute_view(df_milk_is_1, 'node18')
+
 
 df_milk_is_11 = df_class[df_class['milk'] == 0]
 make_attribute_view(df_milk_is_11, 'node1')
 
 make_attribute_plots(gini_split_df, 'node0')
+make_tornado_view(gini_split_df, 'node0')
 
 hist_vals = df_class['class_name'].value_counts(sort=False)
 plt.bar(hist_vals.index.values, hist_vals.values)

@@ -202,7 +202,7 @@ function click(d) {
 
     var div = d3.select("body").append("div")
         .attr("class", "attributetip")
-        .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:1500px;\">");
+        .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2500px;\">");
 
     this_node.style("border", "solid 10px orange");
 
