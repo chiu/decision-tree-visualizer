@@ -1,9 +1,6 @@
 
 # coding: utf-8
 
-# In[40]:
-
-
 import sklearn.datasets as datasets
 import pandas as pd
 from sklearn.externals.six import StringIO  
@@ -41,8 +38,7 @@ X_train, X_test, y_train, y_test = train_test_split(df_bool, y, test_size=0.33, 
 X_test_with_animal_name = X_test.copy()
 del X_train['animal_name']
 del X_test['animal_name']
-df_bool.shape
-X_train.shape
+
 
 dtree=DecisionTreeClassifier()
 dtree.fit(X_train,y_train)
