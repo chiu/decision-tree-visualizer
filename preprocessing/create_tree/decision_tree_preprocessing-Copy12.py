@@ -15,6 +15,27 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
 
 
+def make_attribute_plots(gini_split_df, filename):
+    oFig1 = plt.figure(1, figsize=(20, 80))
+    #     filename = 'node0'
+
+    plot_index = 1
+    for index, row in gini_split_df.iterrows():
+        print(row['column_name'], row['gini_split'])
+        new = oFig1.add_subplot(20, 2, plot_index)
+        temp_class_name = row['column_name']
+        print(temp_class_name)
+        unique_col_value = row['column_value']
+        gini_score = row['gini_score']
+        gini_split = row['gini_split']
+        values = row['distribution']
+        new.bar(class_names, values)
+        new.set_title(temp_class_name + " is " + str(
+            unique_col_value) + ", gini: " + f'{gini_score:.2f}' + ", gini split: " + f'{gini_split:.2f}', fontsize=20)
+        plot_index += 1
+
+    oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
+    plt.show()
 
 def make_gini_df(df_class):
     gini_df = pd.DataFrame()
@@ -53,29 +74,19 @@ def make_gini_df(df_class):
 
     return gini_df
 
+def make_gini_split_df(gini_df):
 
-def make_attribute_plots(gini_split_df, filename):
-    oFig1 = plt.figure(1, figsize=(20, 80))
-    #     filename = 'node0'
+    num_at_record = df_class.shape[0]
 
-    plot_index = 1
-    for index, row in gini_split_df.iterrows():
-        print(row['column_name'], row['gini_split'])
-        new = oFig1.add_subplot(20, 2, plot_index)
-        temp_class_name = row['column_name']
-        print(temp_class_name)
-        unique_col_value = row['column_value']
-        gini_score = row['gini_score']
-        gini_split = row['gini_split']
-        values = row['distribution']
-        new.bar(class_names, values)
-        new.set_title(temp_class_name + " is " + str(
-            unique_col_value) + ", gini: " + f'{gini_score:.2f}' + ", gini split: " + f'{gini_split:.2f}', fontsize=20)
-        plot_index += 1
+    # create gini split df
+    gini_df['proportion'] = gini_df['num_at_child'] * gini_df['gini_score']
+    gini_splits = gini_df.groupby('column_name')['proportion'].sum() / num_at_record
+    gini_split_df = gini_splits.reset_index().sort_values('proportion').rename(index=str,
+                                                                               columns={'proportion': 'gini_split'})
 
-    oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
-    plt.show()
-
+    gini_split_df = gini_split_df[['column_name', 'gini_split']]
+    gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
+    return gini_split_df
 
 def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
     row0 = subset.iloc[0]
@@ -219,19 +230,6 @@ def get_node_string(orig):
 
     return (temp_row, fig)
 
-def make_gini_split_df(gini_df):
-
-    num_at_record = df_class.shape[0]
-
-    # create gini split df
-    gini_df['proportion'] = gini_df['num_at_child'] * gini_df['gini_score']
-    gini_splits = gini_df.groupby('column_name')['proportion'].sum() / num_at_record
-    gini_split_df = gini_splits.reset_index().sort_values('proportion').rename(index=str,
-                                                                               columns={'proportion': 'gini_split'})
-
-    gini_split_df = gini_split_df[['column_name', 'gini_split']]
-    gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
-    return gini_split_df
 
 original_df = pd.read_csv('../../data/zoo-animal-classification/zoo.csv', index_col=False)
 class_names_df = pd.read_csv('../../data/zoo-animal-classification/class.csv', index_col=False)
@@ -293,97 +291,3 @@ df_milk_is_0 = df_class[df_class['milk'] == 0]
 gini_df = make_gini_df(df_milk_is_0)
 gini_split_df = make_gini_split_df(gini_df)
 make_tornado_plot(gini_split_df, 'node1')
-
-
-
-
-hist_vals = df_class['class_name'].value_counts(sort=False)
-plt.bar(hist_vals.index.values, hist_vals.values)
-
-export_graphviz(dtree, out_file='zoo.dot',
-                filled=True, rounded=True,
-                special_characters=True, feature_names=X_train.columns,
-                class_names=list(class_only['class_name'].unique()))
-
-dot_string = dot_data.getvalue()
-x = dot_string.replace("&le;", "<=")  # .replace("&#35;", "->")
-x = x.replace("\n", "")
-x = x.replace("<br/>", ",")
-x = x.replace("label=<", "")
-x = x.split(";")
-x = x[2:-1]
-
-edge_list = []
-node_list = []
-element_regex = re.compile(r'.+->.+')
-for i in x:
-    if element_regex.match(i):
-        edge_list.append(i)
-    else:
-        node_list.append(i)
-
-edge_df = pd.DataFrame(columns=['current_node', 'parent_node'])
-for i in range(0, len(edge_list)):
-    print(edge_list[i])
-    pattern = "(\d+)"
-    a = re.findall(pattern, edge_list[i])
-    source = a[0]
-    destination = a[1]
-    edge_df = edge_df.append({'current_node': destination, 'parent_node': source}, ignore_index=True)
-
-x = np.arange(10)
-np.ones(x.shape) * 0.4
-
-sns.set()
-sns.palplot(sns.color_palette())
-
-ult_df = pd.DataFrame(
-    columns=['current_node', 'attribute', 'gini', 'samples', 'value', 'class_name', 'color', 'plot_name'])
-# ult_df = df_.fillna(0) # with 0s rather than NaNs
-
-ult_list = {}
-for i in range(0, len(node_list)):
-    (node_string, fig) = get_node_string(node_list[i])
-    ult_df = ult_df.append(node_string, ignore_index=True)
-    fig.savefig('../../treant-js/examples/decision-tree/' + node_string['plot_name'], pad_inches=0.4,
-                bbox_inches="tight")
-
-new_df = ult_df.merge(edge_df, on='current_node', how='outer')
-
-# make_gini_df(df_class, 'node0')
-# make_gini_df(df_class[df_class['milk'] > 0.5], 'node18')
-# make_gini_df(df_class[df_class['milk'] <= 0.5], 'node1')
-
-full_string = ""
-for index, row in new_df.iterrows():
-    node_name = row['current_node']
-    attribute = row['attribute']
-    plot_name = row['plot_name']
-    samples = row['samples']
-    class_name = row['class_name']
-    value = row['value']
-    gini = row['gini']
-    if node_name == '0':
-        result = 'node' + str(
-            node_name) + ' = {' + 'text: { gini: "gini:' + gini + '", samples: "samples: ' + samples + '", attribute: "attribute: ' + str(
-            attribute) + '", class_name: "class_name: ' + class_name + '", value: "value: ' + value + '"},' + 'connectors: {type: "curve", style: {"stroke-width": ' + str(
-            int(samples) / 5) + '}},' + 'image:"' + plot_name + '"},'
-    else:
-        parent = row['parent_node']
-        result = 'node' + str(node_name) + ' = {' + "parent: node" + str(
-            parent) + ', text: {' + 'gini: "gini: ' + gini + '", samples: "samples: ' + samples + '", attribute: "attribute: ' + str(
-            attribute) + '", class_name: "class_name: ' + class_name + '", value: "value: ' + value + '"},' + 'connectors: {type: "curve", style: {"stroke-width": ' + str(
-            int(samples) / 5) + '}},' + 'image:"' + plot_name + '"},'
-
-    #     print(result)
-    full_string += result
-
-#         + 'connectors: {type: "step", style: {"stroke-width": 2}},' \
-
-
-first_part = 'var config = {container: "#basic-example", levelSeparation: 200, connectors: {type: "curve", style: { "stroke-width": 5}}, node: { HTMLclass: "nodeExample1"}}, '
-last_part = "chart_config = [config," + ','.join(['node' + str(x) for x in list(new_df['current_node'].keys())]) + '];'
-whole_string = first_part + full_string + last_part
-text_file = open("../../treant-js/examples/decision-tree/basic-example.js", "w")
-text_file.write(whole_string)
-text_file.close()
