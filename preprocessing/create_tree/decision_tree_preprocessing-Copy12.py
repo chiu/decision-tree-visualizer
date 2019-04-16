@@ -125,7 +125,7 @@ def make_tornado_chart(subset, oFig1, plot_index, temp_class_name):
         x = base + high_width / 2
         if x <= base + 50:
             x = base + high_width + 50
-        plt.text(50, y, variables[y], va='center', ha='center')
+        plt.text(50, y, variables[y], va='center', ha='center', fontsize=20)
 
     # Draw a vertical line down the middle
     plt.axvline(base, color='black')
@@ -147,7 +147,7 @@ def make_tornado_chart(subset, oFig1, plot_index, temp_class_name):
 
     plt.set_title("plot number" + str(plot_index))
     #     plt.show()
-    plt.set_yticks(ys, variables)
+    # plt.set_yticks(ys, variables, fontsize=20)
 
     gini_split = row['gini_split']
     values = row['distribution']
@@ -264,7 +264,7 @@ gini_split_df = gini_splits.reset_index().sort_values('proportion').rename(index
 gini_split_df = gini_split_df[['column_name', 'gini_split']]
 gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
 
-make_attribute_plots(gini_split_df, 'node0')
+# make_attribute_plots(gini_split_df, 'node0')
 
 def make_tornado_view(gini_split_df, filename):
     # filename = 'tornado'
@@ -286,7 +286,7 @@ make_attribute_view(df_milk_is_1, 'node18')
 df_milk_is_11 = df_class[df_class['milk'] == 0]
 make_attribute_view(df_milk_is_11, 'node1')
 
-make_attribute_plots(gini_split_df, 'node0')
+# make_attribute_plots(gini_split_df, 'node0')
 make_tornado_view(gini_split_df, 'node0')
 
 hist_vals = df_class['class_name'].value_counts(sort=False)

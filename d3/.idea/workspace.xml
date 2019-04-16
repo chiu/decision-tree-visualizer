@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/decision_tree_preprocessing-Copy12.py" afterDir="false" />
@@ -22,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+            <state relative-caret-position="214">
+              <caret line="200" column="71" lean-forward="true" selection-start-line="200" selection-start-column="71" selection-end-line="200" selection-end-column="71" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -232,12 +230,12 @@
       <workItem from="1555283123905" duration="4215000" />
       <workItem from="1555378758120" duration="814000" />
       <workItem from="1555386086813" duration="487000" />
-      <workItem from="1555400194677" duration="148000" />
+      <workItem from="1555400194677" duration="337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54536000" />
+    <option name="totallyTimeSpent" value="54725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="0" />
@@ -421,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+        <state relative-caret-position="214">
+          <caret line="200" column="71" lean-forward="true" selection-start-line="200" selection-start-column="71" selection-end-line="200" selection-end-column="71" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
