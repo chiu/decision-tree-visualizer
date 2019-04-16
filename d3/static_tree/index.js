@@ -237,6 +237,7 @@ function mousemove(d) {
 
     // var data = [4, 8, 15, 16, 23, 42];
     // document.getElementById("data").innerHTML = data;
+    var rect_colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown'];
     var data = d.distribution;
     var x = d3.scale.ordinal()
         .domain([0, 1, 2, 3, 4, 5, 6])
@@ -263,6 +264,9 @@ function mousemove(d) {
         })
         .attr("y", function (d) {
             return y(d);
+        })
+        .attr("fill", function(d, i){
+            return rect_colors[i];
         });
 
     var x_names = d3.scale.ordinal()
@@ -287,7 +291,7 @@ function mousemove(d) {
         .attr("y", 0)
         .attr("x", 9)
         .attr("dy", ".35em")
-        .attr("transform", "rotate(90)")
+        .attr("transform", "rotate(45)")
         .style("text-anchor", "start");
 
     chart.append("g")
