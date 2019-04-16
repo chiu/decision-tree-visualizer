@@ -2,20 +2,17 @@
 
 import re
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pydotplus
 import seaborn as sns;
 from IPython.display import Image
+from matplotlib import pyplot as plt
 from sklearn.externals.six import StringIO
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
-import numpy as np
-from matplotlib import pyplot as plt
-
 
 
 def make_attribute_view(df_class, filename):
@@ -47,12 +44,6 @@ def make_attribute_view(df_class, filename):
                     values.append(count)
 
                 gini_split += gini_score * (num_at_child / num_at_record)
-                print(values)
-                # new = oFig1.add_subplot(20, 2, plot_index)
-                #                 # new.bar(class_names, values)
-                #                 # new.set_title(temp_class_name + " is " + str(
-                #                 #     unique_col_value) + " gini: " + f'{gini_score:.2f}' + " gini split: " + f'{gini_split:.2f}',
-                #                 #               fontsize=20)
                 plot_index += 1
                 temp_row = {'column_name': temp_class_name, 'column_value': unique_col_value, 'gini_score': gini_score,
                             'num_at_child': num_at_child, 'num_at_record': num_at_record, 'distribution': values}
@@ -60,6 +51,7 @@ def make_attribute_view(df_class, filename):
     plt.show()
 
     return gini_df
+
 
 def make_attribute_plots(gini_split_df, filename):
     oFig1 = plt.figure(1, figsize=(20, 80))
@@ -84,8 +76,6 @@ def make_attribute_plots(gini_split_df, filename):
     plt.show()
 
 
-
-
 def make_tornado_chart(lows_list, values_list, oFig1, plot_index):
     variables = ['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'][::-1]
 
@@ -107,13 +97,14 @@ def make_tornado_chart(lows_list, values_list, oFig1, plot_index):
 
     colors = 'red orange yellow green blue purple brown'.split()
     # Plot the bars, one by one
+    plt = oFig1.add_subplot(20, 1, plot_index)
     for y, low, value, color in zip(ys, lows, values, colors):
         # The width of the 'low' and 'high' pieces
         low_width = base - low
         high_width = value
 
         # Each bar is a "broken" horizontal bar chart
-        plt = oFig1.add_subplot(20, 1, plot_index)
+
         plt.broken_barh(
             [(low, low_width), (base, high_width)],
             (y - 0.4, 0.8),
@@ -151,15 +142,17 @@ def make_tornado_chart(lows_list, values_list, oFig1, plot_index):
     plt.set_title("plot number" + str(plot_index))
     #     plt.show()
     plt.set_yticks(ys, variables)
+    return "hi"
 
 
-lows_list = [-4, -20, -8, -13, -10, -0, -5]
-highs_list = [11, 0, 0, 0, 0, 41, 0]
+# lows_list = [-4, -20, -8, -13, -10, -0, -5]
+# highs_list = [11, 0, 0, 0, 0, 41, 0]
+#
+# oFig1 = plt.figure(1, figsize=(20, 200))
+#
+# for i in range(1, 3):
+#     make_tornado_chart(lows_list, highs_list, oFig1, i)
 
-oFig1 = plt.figure(1, figsize=(20, 200))
-
-for i in range(1, 3):
-    make_tornado_chart(lows_list, highs_list, oFig1, i)
 
 def get_node_string(orig):
     print(orig)
@@ -210,7 +203,6 @@ def get_node_string(orig):
     return (temp_row, fig)
 
 
-
 original_df = pd.read_csv('../../data/zoo-animal-classification/zoo.csv', index_col=False)
 class_names_df = pd.read_csv('../../data/zoo-animal-classification/class.csv', index_col=False)
 class_only = class_names_df[['Class_Number', 'Class_Type']]
@@ -224,13 +216,13 @@ del df['class_name']
 del df['class_type']
 df_bool = df.copy()
 
-#make train test split
+# make train test split
 X_train, X_test, y_train, y_test = train_test_split(df_bool, y, test_size=0.33, random_state=1)
 X_test_with_animal_name = X_test.copy()
 del X_train['animal_name']
 del X_test['animal_name']
 
-#train decision tree
+# train decision tree
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train, y_train)
 y_pred = dtree.predict(X_test)
@@ -258,7 +250,7 @@ gini_df = make_attribute_view(df_class, 'milk')
 
 num_at_record = df_class.shape[0]
 
-#create gini split df
+# create gini split df
 gini_df['proportion'] = gini_df['num_at_child'] * gini_df['gini_score']
 gini_splits = gini_df.groupby('column_name')['proportion'].sum() / num_at_record
 gini_split_df = gini_splits.reset_index().sort_values('proportion').rename(index=str,
@@ -268,15 +260,6 @@ gini_split_df = gini_split_df[['column_name', 'gini_split']]
 gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
 
 make_attribute_plots(gini_split_df, 'node0')
-
-
-lows_list = [-4, -20, -8, -13, -10, -0, -5]
-highs_list = [11, 0, 0, 0, 0, 41, 0]
-
-oFig1 = plt.figure(1, figsize=(20, 200))
-
-for i in range(1, 3):
-    make_tornado_chart(lows_list, highs_list, oFig1, i)
 
 
 filename = 'tornado'
@@ -289,13 +272,12 @@ for x in set(gini_split_df['column_name']):
     subset = gini_split_df[gini_split_df['column_name'] == x]
     row0 = subset.iloc[0]
     row1 = subset.iloc[1]
-    lows_list = [-4, -20, -8, -13, -10, -0, -5]
-    highs_list = [11, 0, 0, 0, 0, 41, 0]
+    lows_list = row0['distribution'] * -1
+    highs_list = row1['distribution']
     make_tornado_chart(lows_list, highs_list, oFig1, index)
-    index+=1
+    index += 1
 
-
-oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
+oFig1.savefig("../../d3/static_tree/python_plots/" + 'tornado2', pad_inches=0.4, bbox_inches="tight")
 plt.show()
 
 for x in set(gini_split_df['column_name']):
@@ -348,10 +330,6 @@ np.ones(x.shape) * 0.4
 
 sns.set()
 sns.palplot(sns.color_palette())
-
-
-
-
 
 ult_df = pd.DataFrame(
     columns=['current_node', 'attribute', 'gini', 'samples', 'value', 'class_name', 'color', 'plot_name'])
