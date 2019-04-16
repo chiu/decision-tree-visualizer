@@ -288,8 +288,8 @@ function mousemove(d) {
         .attr("class", "axis")
         .call(xAxis)
         .selectAll("text")
-        .attr("y", 0)
-        .attr("x", 9)
+        .attr("y", 15)
+        .attr("x", 0)
         .attr("dy", ".35em")
         .attr("transform", "rotate(45)")
         .style("text-anchor", "start");
