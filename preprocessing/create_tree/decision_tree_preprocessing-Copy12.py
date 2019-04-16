@@ -76,7 +76,7 @@ def make_attribute_plots(gini_split_df, filename):
     plt.show()
 
 
-def make_tornado_chart(lows_list, values_list, oFig1, plot_index):
+def make_tornado_chart(lows_list, values_list, plt, plot_index):
     variables = ['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'][::-1]
 
     base = 0
@@ -97,7 +97,7 @@ def make_tornado_chart(lows_list, values_list, oFig1, plot_index):
 
     colors = 'red orange yellow green blue purple brown'.split()
     # Plot the bars, one by one
-    plt = oFig1.add_subplot(20, 1, plot_index)
+    # plt = oFig1.add_subplot(20, 1, plot_index)
     for y, low, value, color in zip(ys, lows, values, colors):
         # The width of the 'low' and 'high' pieces
         low_width = base - low
@@ -259,25 +259,89 @@ gini_split_df = gini_splits.reset_index().sort_values('proportion').rename(index
 gini_split_df = gini_split_df[['column_name', 'gini_split']]
 gini_split_df = gini_df.merge(gini_split_df, on='column_name').sort_values(['gini_split', 'column_value'])
 
-make_attribute_plots(gini_split_df, 'node0')
+# make_attribute_plots(gini_split_df, 'node0')
 
 
 filename = 'tornado'
-oFig1 = plt.figure(1, figsize=(20, 200))
+# oFig1 = plt.figure(1, )
+
+nrows = len(set(gini_split_df['column_name'])) + 1
+# fig, axes = plt.subplots(nrows, 1, figsize=(20, 1000))
 
 plot_index = 1
 index = 1
+
+oFig1 = plt.figure(1, figsize=(20, 80))
 for x in set(gini_split_df['column_name']):
     print(x)
     subset = gini_split_df[gini_split_df['column_name'] == x]
     row0 = subset.iloc[0]
     row1 = subset.iloc[1]
-    lows_list = row0['distribution'] * -1
-    highs_list = row1['distribution']
-    make_tornado_chart(lows_list, highs_list, oFig1, index)
+    lows_list = [-x for x in row0['distribution']]
+    values_list = row1['distribution']
+    # plot(row, x, y)
+    variables = ['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'][::-1]
+
+    base = 0
+
+    lows = np.array(
+        lows_list
+    )
+
+    values = np.array(
+        values_list
+    )
+
+    ###############################################################################
+    # The actual drawing part
+
+    # The y position for each variable
+    ys = range(len(values))[::-1]  # top to bottom
+
+    colors = 'red orange yellow green blue purple brown'.split()
+    # Plot the bars, one by one
+    # plt = oFig1.add_subplot(20, 1, plot_index)
+
+    new = oFig1.add_subplot(20, 2, plot_index)
+    # new = oFig1.add_subplot(20, 2, plot_index)
+    for y, low, value, color in zip(ys, lows, values, colors):
+        # The width of the 'low' and 'high' pieces
+        print(low)
+        print(value)
+        low_width = base - low
+        high_width = value
+
+        # Each bar is a "broken" horizontal bar chart
+
+        new.broken_barh(
+            [(low, low_width), (base, high_width)],
+            (y - 0.4, 0.8),
+            facecolors=[color, color],  # Try different colors if you like
+            edgecolors=['black', 'black'],
+            linewidth=1,
+        )
+
+        # Display the value as text. It should be positioned in the center of
+        # the 'high' bar, except if there isn't any room there, then it should be
+        # next to bar instead.
+        x = base + high_width / 2
+        if x <= base + 50:
+            x = base + high_width + 50
+        plt.text(50, y, variables[y], va='center', ha='center')
+
+    # Draw a vertical line down the middle
+    new.axvline(base, color='black')
+
+
+    # Set the portion of the x- and y-axes to show
+    new.set_xlim(base - 50, base + 50)
+    new.set_ylim(-1, len(variables))
+    new.set_title("plot number" + str(plot_index))
+    #     plt.show()
+    new.set_yticks(ys, variables)
     index += 1
 
-oFig1.savefig("../../d3/static_tree/python_plots/" + 'tornado2', pad_inches=0.4, bbox_inches="tight")
+oFig1.savefig("../../d3/static_tree/python_plots/" + 'tornado3', pad_inches=0.4, bbox_inches="tight")
 plt.show()
 
 for x in set(gini_split_df['column_name']):
