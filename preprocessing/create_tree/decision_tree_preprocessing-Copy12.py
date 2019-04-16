@@ -76,7 +76,13 @@ def make_attribute_plots(gini_split_df, filename):
     plt.show()
 
 
-def make_tornado_chart(lows_list, values_list, oFig1, plot_index):
+def make_tornado_chart(subset, oFig1, plot_index, temp_class_name):
+    row0 = subset.iloc[0]
+    row1 = subset.iloc[1]
+    row = row0
+
+    lows_list = [-x for x in row0['distribution']]
+    values_list = row1['distribution']
     variables = ['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'][::-1]
 
     base = 0
@@ -142,16 +148,15 @@ def make_tornado_chart(lows_list, values_list, oFig1, plot_index):
     plt.set_title("plot number" + str(plot_index))
     #     plt.show()
     plt.set_yticks(ys, variables)
+
+    gini_split = row['gini_split']
+    values = row['distribution']
+
+    new =plt
+    # new.bar(class_names, values)
+    new.set_title(temp_class_name + " is "  +  "gini split: " + f'{gini_split:.2f}', fontsize=20)
     return "hi"
 
-
-# lows_list = [-4, -20, -8, -13, -10, -0, -5]
-# highs_list = [11, 0, 0, 0, 0, 41, 0]
-#
-# oFig1 = plt.figure(1, figsize=(20, 200))
-#
-# for i in range(1, 3):
-#     make_tornado_chart(lows_list, highs_list, oFig1, i)
 
 
 def get_node_string(orig):
@@ -264,19 +269,12 @@ make_attribute_plots(gini_split_df, 'node0')
 
 filename = 'tornado'
 oFig1 = plt.figure(1, figsize=(20, 200))
-
-plot_index = 1
 index = 1
-for x in set(gini_split_df['column_name']):
+for x in gini_split_df['column_name'].unique():
     print(x)
     subset = gini_split_df[gini_split_df['column_name'] == x]
-    row0 = subset.iloc[0]
-    row1 = subset.iloc[1]
-    lows_list = [-x for x in row0['distribution']]
-    highs_list = row1['distribution']
-    make_tornado_chart(lows_list, highs_list, oFig1, index)
+    make_tornado_chart(subset, oFig1, index, x)
     index += 1
-
 oFig1.savefig("../../d3/static_tree/python_plots/" + 'tornado2', pad_inches=0.4, bbox_inches="tight")
 plt.show()
 
