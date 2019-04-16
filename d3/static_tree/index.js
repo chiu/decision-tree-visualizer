@@ -4,6 +4,8 @@ var treeData = {
     "attribute": "has milk",
     "parent": "null",
     "samples": 101,
+    "left_edge": "False",
+    "right_edge": "True",
     "distribution": [4, 20, 8, 13, 10, 41, 5],
     "children": [
         {
@@ -139,7 +141,7 @@ node.append("svg:rect")
 //     .attr("dy", 60)
     node.append("text")
         .attr("dx", -20)
-        .attr("dy", 20)
+        .attr("dy", -10)
         .attr('color', 'white')
     .text(function (d) {
             return d.name
@@ -147,10 +149,23 @@ node.append("svg:rect")
 
 node.append("text")
     .attr("dx", -20)
-    // .attr("dy", 60)
     .attr("dy", 60)
     .text(function (d) {
         return d.attribute;
+    });
+
+node.append("text")
+    .attr("dx", -90)
+    .attr("dy", 100)
+    .text(function (d) {
+        return d.left_edge;
+    });
+
+node.append("text")
+    .attr("dx", 50)
+    .attr("dy", 100)
+    .text(function (d) {
+        return d.right_edge;
     });
 
 var first_node =d3.select("#viz");
