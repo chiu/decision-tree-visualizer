@@ -1,44 +1,54 @@
 //JSON object with the data
 var treeData = {
     "name": "node0",
-    "attribute": "has milk",
-    "parent": "null",
-    "samples": 101,
     "left_edge": "False",
     "right_edge": "True",
-    "distribution": [4, 20, 8, 13, 10, 41, 5],
+    "attribute": "milk <= 0.5",
+    "samples": 67,
+    "distribution": [28, 13, 9, 7, 5, 4, 1],
     "children": [
         {
             "name": "node1",
             "attribute": "feathers <= 0.5",
-            "parent": "Top Level",
-            "samples": 60,
-            "distribution": [4, 20, 8, 13, 10, 0, 5],
+            "parent": 0,
+            "samples": 39,
+            "distribution": [0, 13, 9, 7, 5, 4, 1],
             "children": [
                 {
                     "name": "node2",
-                    "attribute": "none; leaf",
-                    "parent": "node1",
-                    "samples": 40,
-                    "distribution": [4, 0, 8, 13, 10, 0, 5],
-                },
-                {
-                    "name": "node17",
                     "attribute": "fins <= 0.5",
-                    "parent": "node1",
-                    "samples": 20,
-                    "distribution": [0, 20, 0, 0, 0, 0, 0],
-                }
-            ]
+                    "parent": 1,
+                    "samples": 26,
+                    "distribution": [0, 0, 9, 7, 5, 4, 1],
+                    "children": [{
+                        "name": "node3",
+                        "attribute": "backbone <= 0.5",
+                        "parent": 2,
+                        "samples": 17,
+                        "distribution": [0, 0, 0, 7, 5, 4, 1],
+                        "children": ['4', '9']
+                    }, {
+                        "name": "node12",
+                        "attribute": "nan",
+                        "parent": 2,
+                        "samples": 9,
+                        "distribution": [0, 0, 9, 0, 0, 0, 0],
+                    }]
+                }, {
+                    "name": "node13",
+                    "attribute": "nan",
+                    "parent": 1,
+                    "samples": 13,
+                    "distribution": [0, 13, 0, 0, 0, 0, 0],
+                },]
         },
         {
-            "name": "node18",
-            "attribute": "none; leaf",
-            "parent": "Top Parent",
-            "samples": 41,
-            "distribution": [0, 0, 0, 0, 0, 41, 0],
-        }
-
+            "name": "node14",
+            "attribute": "nan",
+            "parent": 0,
+            "samples": 28,
+            "distribution": [28, 0, 0, 0, 0, 0, 0],
+        },
     ]
 };
 
@@ -240,7 +250,7 @@ function mousemove(d) {
         });
 
     var x_names = d3.scale.ordinal()
-        .domain(['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'])
+        .domain(['Mammal', 'Bird', 'Fish', 'Bug', 'Invertebrate', 'Reptile', 'Amphibian'])
         .rangeBands([0, width]);
 
     var xAxis = d3.svg.axis()

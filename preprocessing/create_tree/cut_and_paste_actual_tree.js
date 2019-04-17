@@ -1,19 +1,5 @@
 var treeData = {
-    {
-        "name": "node0",
-        "attribute": "milk <= 0.5",
-        "samples": 67,
-        "distribution": [28, 13, 9, 7, 5, 4, 1],
-        "children": ['1', '14']
-    },
-    {
-        "name": "node1",
-        "attribute": "feathers <= 0.5",
-        "parent": 0,
-        "samples": 39,
-        "distribution": [0, 13, 9, 7, 5, 4, 1],
-        "children": ['2', '13']
-    },
+   
     {
         "name": "node2",
         "attribute": "fins <= 0.5",
@@ -110,12 +96,4 @@ var treeData = {
         "distribution": [0, 13, 0, 0, 0, 0, 0],
         "children": nan
     },
-    {
-        "name": "node14",
-        "attribute": "nan",
-        "parent": 0,
-        "samples": 28,
-        "distribution": [28, 0, 0, 0, 0, 0, 0],
-        "children": nan
-    },
-}
+    

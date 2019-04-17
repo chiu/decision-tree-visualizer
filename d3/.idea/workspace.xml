@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/tornado.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/tornado.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/actual_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/actual_tree.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/decision_tree_preprocessing-Copy12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/decision_tree_preprocessing-Copy12.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/decision_tree_preprocessing-Copy12.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini10.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini11.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini13.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini14.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini6.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini7.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini8.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini9.png" beforeDir="false" afterPath="$PROJECT_DIR$/../treant-js/examples/decision-tree/plots/gini9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/new_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/new_tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/preprocessing_redux.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/preprocessing_redux.ipynb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="684">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -48,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../preprocessing/create_tree/new_tree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="218" column="38" lean-forward="true" selection-start-line="218" selection-start-column="38" selection-end-line="218" selection-end-column="38" />
+            <state>
+              <caret column="1947" selection-start-column="1947" selection-end-column="1947" />
             </state>
           </provider>
         </entry>
@@ -155,9 +141,9 @@
         <option value="$PROJECT_DIR$/static_tree/index.html" />
         <option value="$PROJECT_DIR$/tornado_chart/index.html" />
         <option value="$PROJECT_DIR$/static_tree/index.css" />
-        <option value="$PROJECT_DIR$/static_tree/index.js" />
         <option value="$PROJECT_DIR$/../preprocessing/create_tree/tree2.json" />
         <option value="$PROJECT_DIR$/../preprocessing/create_tree/new_tree.js" />
+        <option value="$PROJECT_DIR$/static_tree/index.js" />
       </list>
     </option>
   </component>
@@ -263,18 +249,18 @@
       <workItem from="1555400194677" duration="2522000" />
       <workItem from="1555449460270" duration="1097000" />
       <workItem from="1555459517654" duration="2612000" />
-      <workItem from="1555464344354" duration="1912000" />
+      <workItem from="1555464344354" duration="3448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62531000" />
+    <option name="totallyTimeSpent" value="64067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.106088005" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.106088005" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -292,25 +278,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.106088005" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32987553" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -320,7 +287,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/static_tree/index.js</url>
-          <line>177</line>
+          <line>187</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -504,20 +471,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
+    <entry file="file://$PROJECT_DIR$/../preprocessing/create_tree/new_tree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-          </folding>
+        <state>
+          <caret column="1947" selection-start-column="1947" selection-end-column="1947" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../preprocessing/create_tree/new_tree.js">
+    <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="218" column="38" lean-forward="true" selection-start-line="218" selection-start-column="38" selection-end-line="218" selection-end-column="38" />
+        <state relative-caret-position="684">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

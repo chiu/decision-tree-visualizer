@@ -42,6 +42,8 @@ def make_gini_df(df_class):
     # iterating through every column in datafarme
     plot_index = 1
 
+    class_names = ['Mammal', 'Bird', 'Fish', 'Bug', 'Invertebrate', 'Reptile', 'Amphibian']
+
     for temp_class_name in df_class.columns:
         unique_col_values = list(df_class[temp_class_name].unique())
         unique_col_values.sort()
@@ -91,7 +93,7 @@ def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
 
     lows_list = [-x for x in row0['distribution']]
     values_list = row1['distribution']
-    variables = ['Amphibian', 'Bird', 'Bug', 'Fish', 'Invertebrate', 'Mammal', 'Reptile'][::-1]
+    variables = ['Mammal', 'Bird', 'Fish', 'Bug', 'Invertebrate', 'Reptile', 'Amphibian'][::-1]
 
     base = 0
 
@@ -240,6 +242,9 @@ accuracy_score(y_test, y_pred)
 dot_data = StringIO()
 class_names = list(class_only['class_name'].unique())
 class_names.sort()
+
+
+
 export_graphviz(dtree, out_file=dot_data,
                 filled=True, rounded=True,
                 special_characters=True, proportion=False, feature_names=X_train.columns, node_ids=False,
@@ -251,25 +256,22 @@ Image(graph.create_png())
 X_test_with_animal_name['y_pred'] = y_pred
 X_test_with_animal_name['y_test'] = y_test
 
-class_names = list(class_only['class_name'])
-class_names.sort()
-
 del df_class['animal_name']
 
 # making class distribution plots
-# gini_df = make_gini_df(df_class)
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node0')
-#
-# df_milk_is_1 = df_class[df_class['milk'] == 1]
-# gini_df = make_gini_df(df_milk_is_1)
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node18')
-#
-# df_milk_is_0 = df_class[df_class['milk'] == 0]
-# gini_df = make_gini_df(df_milk_is_0)
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node1')
+gini_df = make_gini_df(df_class)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node0')
+
+df_milk_is_1 = df_class[df_class['milk'] == 1]
+gini_df = make_gini_df(df_milk_is_1)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node14')
+
+df_milk_is_0 = df_class[df_class['milk'] == 0]
+gini_df = make_gini_df(df_milk_is_0)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node1')
 
 
 # make string representation of model
@@ -320,17 +322,19 @@ full_string = ""
 for index, row in new_df.iterrows():
     node_name = row['current_node']
     attribute = row['attribute']
-    # plot_name = row['plot_name']
     samples = row['samples']
     class_name = row['class_name']
     value = row['value']
     gini = row['gini']
     child_nodes = row['child_nodes']
-    print(child_nodes)
-    # print(np.isnan(child_nodes))
-    # print(pd.isnull(child_nodes).all()==True)
-    # if not (pd.isnull(child_nodes).all()==True):
-    #     child_nodes = ['node' + x for x in list(child_nodes)]
+
+    myorder = [5, 1, 3, 2, 4, 6, 0]
+    print(value)
+    print(type(value))
+    value = value.replace('[', '').replace(']', '').split(',')
+    value = [int(value[i]) for i in myorder]
+    print(value)
+
     parent_node = row['parent_node']
 
     if node_name == '0':
