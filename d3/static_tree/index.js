@@ -162,16 +162,20 @@ function mouseover() {
 
 
 function click(d) {
+
+    d3.selectAll("rect").attr("style", "outline: 0px solid green;");
     console.log("d.name is " + d.name);
-    var this_node = d3.select(this);
+    let this_node = d3.select(this);
+    // this_node.attr('class', 'toggled_on');
+    this_node.attr("style", "outline: 3px solid orange;");
     console.log("class is " + this_node.attr("class"));
-    console.log("class is " + this_node.attr("class") == "toggled_on");
+    // console.log("class is " + this_node.attr("class") == "toggled_on");
 
     var div = d3.select("body").append("div")
         .attr("class", "attributetip")
         .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2500px;\">");
 
-    this_node.style("border", "solid 10px orange");
+    //this_node.style("outline", "solid 10px orange");
 
 }
 
