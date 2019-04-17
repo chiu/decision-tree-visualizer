@@ -33,7 +33,23 @@ var treeData = {
                                 "parent": 3,
                                 "samples": 12,
                                 "distribution": [0, 0, 0, 7, 5, 0, 0],
-                                "children": ['5', '6']
+                                "children": [
+                                    {
+                                        "name": "node5",
+                                        "attribute": "nan",
+                                        "parent": 4,
+                                        "samples": 6,
+                                        "distribution": [0, 0, 0, 6, 0, 0, 0],
+                                    },
+                                    {
+                                        "name": "node6",
+                                        "attribute": "airborne <= 0.5",
+                                        "parent": 4,
+                                        "samples": 6,
+                                        "distribution": [0, 0, 0, 1, 5, 0, 0],
+                                        "children": ['7', '8']
+                                    },
+                                ]
                             }, {
                                 "name": "node9",
                                 "attribute": "tail <= 0.5",
@@ -76,8 +92,8 @@ var treeData = {
 
 // Create a svg canvas
 var vis = d3.select("#viz").append("svg:svg")
-    .attr("width", 600)
-    .attr("height", 600)
+    .attr("width", 1200)
+    .attr("height", 1200)
     .append("svg:g")
     .attr("transform", "translate(40, 30)"); // shift everything to the right
 
@@ -90,7 +106,7 @@ var div = d3.select("body").append("div")
 
 // Create a tree "canvas"
 var tree = d3.layout.tree()
-    .size([600, 300]);
+    .size([600, 600]);
 
 var diagonal = d3.svg.diagonal();
 
