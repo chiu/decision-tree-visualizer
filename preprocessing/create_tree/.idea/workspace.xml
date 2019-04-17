@@ -14,10 +14,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tree3.js">
+        <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+            <state relative-caret-position="164">
+              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+              <folding>
+                <element signature="e#17#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/matplotlib/cbook/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5445">
+              <caret line="391" selection-start-line="391" selection-end-line="391" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda/envs/dt3/lib/python3.7/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4785">
+              <caret line="320" selection-start-line="320" selection-end-line="320" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/pandas/core/indexes/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="55020">
+              <caret line="3714" column="17" selection-start-line="3714" selection-start-column="14" selection-end-line="3714" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/pandas/core/frame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42495">
+              <caret line="2926" selection-start-line="2926" selection-end-line="2926" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/matplotlib/transforms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36765">
+              <caret line="2461" selection-start-line="2461" selection-end-line="2461" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/matplotlib/figure.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19710">
+              <caret line="1348" selection-start-line="1348" selection-end-line="1348" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda/envs/dt3/lib/python3.7/site-packages/matplotlib/projections/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1170">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -142,6 +208,30 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="decision_tree_preprocessing-Copy12" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="create_tree" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -171,18 +261,17 @@
       <workItem from="1555463400757" duration="200000" />
       <workItem from="1555463724637" duration="1465000" />
       <workItem from="1555465323575" duration="3065000" />
-      <workItem from="1555468519026" duration="1440000" />
+      <workItem from="1555468519026" duration="1691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20688000" />
+    <option name="totallyTimeSpent" value="20939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21338156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21855922" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -199,7 +288,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.34737486" side_tool="true" visible="true" weight="0.4512448" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.34737486" side_tool="true" visible="true" weight="0.32857144" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
