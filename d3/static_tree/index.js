@@ -277,7 +277,7 @@ function mousemove(d) {
     console.log("inside select");
 
     div
-        .text("Info about " + d.name + ":" + d.info + "\n" + d.attribute)
+        .text("Class Distribution:")
         .attr("transform", "translate(0," + 5 + ")")
         .style("left", (d3.event.pageX) + "px")
         .style("top", (d3.event.pageY) + "px")
@@ -287,11 +287,11 @@ function mousemove(d) {
     var chart = g.append('svg')
         .classed('chart', true);
 
-    var info = g.append('text')
-        .classed('info', true)
-        .attr('x', 20)
-        .attr('y', 20)
-        .text('distribution: ' + d.distribution.toString());
+    // var info = g.append('text')
+    //     .classed('info', true)
+    //     .attr('x', 20)
+    //     .attr('y', 20)
+    //     .text('distribution: ' + d.distribution.toString());
 
 
     var margin = 30;
