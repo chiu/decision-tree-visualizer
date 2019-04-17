@@ -257,7 +257,10 @@ function click(d) {
     if (d.children != null) {
         d3.select("body").append("div")
             .attr("class", "attributetip")
-            .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2500px;\">");
+            .attr("dx", 0)
+            .attr("dy", 0)
+            .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
+
     } else {
         d3.select("body").append("div")
             .attr("class", "attributetip")
@@ -304,7 +307,7 @@ function mousemove(d) {
         .rangeBands([0, width]);
 
     var y = d3.scale.linear()
-        .domain([0, 45])
+        .domain([0, 30])
         .range([height, 0]);
 
     chart.attr("width", width + 2 * margin)

@@ -169,7 +169,12 @@ def make_tornado_plot(gini_split_df, filename):
     # filename = 'tornado'
     oFig1 = plt.figure(1, figsize=(20, 200))
     index = 1
+
+
+
     for x in gini_split_df['column_name'].unique():
+        if index > 3:
+            break
         print(x)
         subset = gini_split_df[gini_split_df['column_name'] == x]
         make_tornado_subplot(subset, oFig1, index, x)
@@ -257,7 +262,7 @@ del dfc['animal_name']
 
 
 # # making class distribution plots
-# #layer 1
+# # #layer 1
 # gini_df = make_gini_df(dfc)
 # gini_split_df = make_gini_split_df(gini_df)
 # make_tornado_plot(gini_split_df, 'node0')
@@ -274,7 +279,7 @@ del dfc['animal_name']
 # gini_split_df = make_gini_split_df(gini_df)
 # make_tornado_plot(gini_split_df, 'node1')
 
-# #layer 3
+#layer 3
 # old_conditions = (dfc['milk']==0)
 # parent_condition = (dfc['feathers'] == 0)
 # conditions = old_conditions & parent_condition
@@ -295,18 +300,18 @@ def turn_df_into_tornado_plot(dfc_subset, plot_name):
     gini_split_df = make_gini_split_df(gini_df)
     make_tornado_plot(gini_split_df, plot_name)
 
-# #layer 4
-# old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0)
-#
-# current_condition = (dfc['fins'] == 0)
-# conditions = old_conditions & current_condition
-# gini_df = make_gini_df(dfc[conditions])
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node3')
-#
-# current_condition = (dfc['fins'] == 1)
-# conditions = old_conditions & current_condition
-# turn_df_into_tornado_plot(dfc[conditions], 'node12')
+#layer 4
+old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0)
+
+current_condition = (dfc['fins'] == 0)
+conditions = old_conditions & current_condition
+gini_df = make_gini_df(dfc[conditions])
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node3')
+
+current_condition = (dfc['fins'] == 1)
+conditions = old_conditions & current_condition
+turn_df_into_tornado_plot(dfc[conditions], 'node12')
 
 
 #layer 5

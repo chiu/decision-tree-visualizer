@@ -3,7 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="b8eede98-853f-4cdd-9a78-05e8094c396f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node13.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node14.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node9.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +67,8 @@
       <find>class_names</find>
       <find>width</find>
       <find>make_tornado</find>
+      <find>make_tornado_plot</find>
+      <find>for</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -201,12 +216,12 @@
       <workItem from="1555475903191" duration="282000" />
       <workItem from="1555477543084" duration="184000" />
       <workItem from="1555477731897" duration="2269000" />
-      <workItem from="1555526440756" duration="423000" />
+      <workItem from="1555526440756" duration="463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25432000" />
+    <option name="totallyTimeSpent" value="26403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -220,7 +235,7 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.497558" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65140414" weight="0.32857144" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6507937" visible="true" weight="0.32857144" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7332112" weight="0.5255102" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -229,7 +244,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.34859586" side_tool="true" visible="true" weight="0.32780084" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.34920636" side_tool="true" visible="true" weight="0.32780084" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -238,8 +253,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="FAQ Robot" order="3" />
       <window_info anchor="right" id="Data View" order="4" />
-      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.33890578" side_tool="true" visible="true" weight="0.01831502" />
-      <window_info anchor="right" id="SciView" order="6" sideWeight="0.66109425" visible="true" weight="0.01831502" />
+      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.34042552" side_tool="true" visible="true" weight="0.01831502" />
+      <window_info active="true" anchor="right" id="SciView" order="6" sideWeight="0.65957445" visible="true" weight="0.01831502" />
       <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
@@ -255,7 +270,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/create_tree$decision_tree_preprocessing_Copy12.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555483862866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/create_tree$decision_tree_preprocessing_Copy12.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555528194880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/create_tree$Unnamed.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555393084096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
