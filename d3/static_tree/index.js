@@ -3,33 +3,33 @@ var treeData = {
     "name": "node0",
     "left_edge": "False",
     "right_edge": "True",
-    "attribute": "milk <= 0.5",
+    "attribute": "has milk",
     "samples": 67,
     "distribution": [28, 13, 9, 7, 5, 4, 1],
     "children": [
         {
             "name": "node1",
-            "attribute": "feathers <= 0.5",
+            "attribute": "has feathers",
             "parent": 0,
             "samples": 39,
             "distribution": [0, 13, 9, 7, 5, 4, 1],
             "children": [
                 {
                     "name": "node2",
-                    "attribute": "fins <= 0.5",
+                    "attribute": "has fins",
                     "parent": 1,
                     "samples": 26,
                     "distribution": [0, 0, 9, 7, 5, 4, 1],
                     "children": [{
                         "name": "node3",
-                        "attribute": "backbone <= 0.5",
+                        "attribute": "has backbone",
                         "parent": 2,
                         "samples": 17,
                         "distribution": [0, 0, 0, 7, 5, 4, 1],
                         "children": [
                             {
                                 "name": "node4",
-                                "attribute": "predator <= 0.5",
+                                "attribute": "is predator",
                                 "parent": 3,
                                 "samples": 12,
                                 "distribution": [0, 0, 0, 7, 5, 0, 0],
@@ -74,14 +74,12 @@ var treeData = {
                                 "children": [
                                     {
                                         "name": "node10",
-                                        "attribute": "nan",
                                         "parent": 9,
                                         "samples": 1,
                                         "distribution": [0, 0, 0, 0, 0, 0, 1],
                                     },
                                     {
                                         "name": "node11",
-                                        "attribute": "nan",
                                         "parent": 9,
                                         "samples": 4,
                                         "distribution": [0, 0, 0, 0, 0, 4, 0],
@@ -91,14 +89,12 @@ var treeData = {
                         ]
                     }, {
                         "name": "node12",
-                        "attribute": "nan",
                         "parent": 2,
                         "samples": 9,
                         "distribution": [0, 0, 9, 0, 0, 0, 0],
                     }]
                 }, {
                     "name": "node13",
-                    "attribute": "nan",
                     "parent": 1,
                     "samples": 13,
                     "distribution": [0, 13, 0, 0, 0, 0, 0],
@@ -106,7 +102,6 @@ var treeData = {
         },
         {
             "name": "node14",
-            "attribute": "nan",
             "parent": 0,
             "samples": 28,
             "distribution": [28, 0, 0, 0, 0, 0, 0],
@@ -202,28 +197,28 @@ node.append("text")
     .attr('color', 'white')
     .text(function (d) {
         return d.name
-    });
+    }).style("font-size", "14px");
 
 node.append("text")
-    .attr("dx", -20)
-    .attr("dy", 60)
+    .attr("dx", -30)
+    .attr("dy", 50)
     .text(function (d) {
         return d.attribute;
-    });
+    }).style("font-size", "14px");
 
 node.append("text")
     .attr("dx", -90)
-    .attr("dy", 100)
+    .attr("dy", 60)
     .text(function (d) {
         return d.left_edge;
-    });
+    }).style("font-size", "14px");
 
 node.append("text")
     .attr("dx", 50)
-    .attr("dy", 100)
+    .attr("dy", 60)
     .text(function (d) {
         return d.right_edge;
-    });
+    }).style("font-size", "14px");
 
 
 function mouseover() {
