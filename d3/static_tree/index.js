@@ -163,11 +163,11 @@ function mouseover() {
 
 function click(d) {
 
-    d3.selectAll("rect").attr("style", "outline: 0px solid green;");
+    d3.selectAll("rect").attr("style", "outline: 0px;");
     console.log("d.name is " + d.name);
     let this_node = d3.select(this);
     // this_node.attr('class', 'toggled_on');
-    this_node.attr("style", "outline: 3px solid orange;");
+    this_node.attr("style", "outline: 5px solid orange;");
     console.log("class is " + this_node.attr("class"));
     // console.log("class is " + this_node.attr("class") == "toggled_on");
 

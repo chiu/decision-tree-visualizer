@@ -2,14 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8eede98-853f-4cdd-9a78-05e8094c396f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node18.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/tornado.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/tornado.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoo.dot" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../decision_tree_preprocessing-Copy12.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../decision_tree_preprocessing-Copy12.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zoo.dot" beforeDir="false" afterPath="$PROJECT_DIR$/../zoo.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini10.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini11.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini13.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini14.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini6.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini7.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini8.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini9.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../treant-js/examples/decision-tree/plots/gini9.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,10 +36,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="374" column="59" selection-start-line="374" selection-start-column="59" selection-end-line="374" selection-end-column="59" />
+            <state relative-caret-position="283">
+              <caret line="340" column="9" lean-forward="true" selection-start-line="340" selection-start-column="9" selection-end-line="340" selection-end-column="9" />
               <folding>
-                <element signature="e#17#48#0" expanded="true" />
+                <element signature="e#17#26#0" expanded="true" />
+                <element signature="e#455#1288#0" />
+                <element signature="e#2774#3405#0" />
+                <element signature="e#3482#6050#0" />
+                <element signature="e#6105#6522#0" />
+                <element signature="e#6556#7594#0" />
               </folding>
             </state>
           </provider>
@@ -133,6 +152,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/tree3.js" />
         <option value="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" />
       </list>
     </option>
@@ -180,6 +200,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,7 +212,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,16 +281,21 @@
       <workItem from="1555453681312" duration="1516000" />
       <workItem from="1555455737832" duration="386000" />
       <workItem from="1555456267646" duration="177000" />
+      <workItem from="1555461411766" duration="1937000" />
+      <workItem from="1555463400757" duration="200000" />
+      <workItem from="1555463724637" duration="1465000" />
+      <workItem from="1555465323575" duration="2501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12638000" />
+    <option name="totallyTimeSpent" value="18684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20634921" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21611722" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -278,8 +303,8 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4981685" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65628815" weight="0.32857144" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.490232" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6532357" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.73382175" weight="0.45204082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -287,7 +312,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.509768" side_tool="true" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.34676436" side_tool="true" visible="true" weight="0.32857144" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -296,8 +321,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="FAQ Robot" order="3" />
       <window_info anchor="right" id="Data View" order="4" />
-      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.31155014" side_tool="true" visible="true" weight="0.32905984" />
-      <window_info active="true" anchor="right" id="SciView" order="6" sideWeight="0.68844986" visible="true" weight="0.32905984" />
+      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.33282673" side_tool="true" visible="true" weight="0.01831502" />
+      <window_info anchor="right" id="SciView" order="6" sideWeight="0.66717327" visible="true" weight="0.01831502" />
       <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
@@ -305,19 +330,30 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py</url>
-          <line>346</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="df" />
+        <watch expression="new_df" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/create_tree$decision_tree_preprocessing_Copy12.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555455993458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/create_tree$decision_tree_preprocessing_Copy12.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555467987504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/create_tree$Unnamed.coverage" NAME="decision_tree_preprocessing-Copy12 Coverage Results" MODIFIED="1555393084096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>new_df</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test.py">
@@ -329,10 +365,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="374" column="59" selection-start-line="374" selection-start-column="59" selection-end-line="374" selection-end-column="59" />
+        <state relative-caret-position="283">
+          <caret line="340" column="9" lean-forward="true" selection-start-line="340" selection-start-column="9" selection-end-line="340" selection-end-column="9" />
           <folding>
-            <element signature="e#17#48#0" expanded="true" />
+            <element signature="e#17#26#0" expanded="true" />
+            <element signature="e#455#1288#0" />
+            <element signature="e#2774#3405#0" />
+            <element signature="e#3482#6050#0" />
+            <element signature="e#6105#6522#0" />
+            <element signature="e#6556#7594#0" />
           </folding>
         </state>
       </provider>

@@ -1,10 +1,11 @@
 # coding: utf-8
 
+import re
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pydotplus
-import seaborn as sns;
 from IPython.display import Image
 from sklearn.externals.six import StringIO
 from sklearn.metrics import accuracy_score
@@ -38,9 +39,6 @@ def make_attribute_plots(gini_split_df, filename):
 
 def make_gini_df(df_class):
     gini_df = pd.DataFrame()
-    # oFig1 = plt.figure(1, figsize=(20, 80))
-    # (m,n,x) -> x starts with 1
-    ...
     # iterating through every column in datafarme
     plot_index = 1
 
@@ -69,8 +67,6 @@ def make_gini_df(df_class):
                 temp_row = {'column_name': temp_class_name, 'column_value': unique_col_value, 'gini_score': gini_score,
                             'num_at_child': num_at_child, 'num_at_record': num_at_record, 'distribution': values}
                 gini_df = gini_df.append(temp_row, ignore_index=True)
-    # plt.show()
-
     return gini_df
 
 
@@ -196,28 +192,9 @@ def get_node_string(orig):
     value = re.search('value = (.+]),', orig).group(1)
     new_value = value.replace('[', '').replace(']', '').split(",")
 
-    # make figure:
-    # fig, (ax1, ax2) = plt.subplots(1, 2, gridspec_kw={'width_ratios': [1, 3]}, figsize=(4, 2))
-
-    # gini plot
-    # ax1.set_title('gini')
-    # ax1.bar(0, float(gini), color='darkred')
-    # ax1.get_xaxis().set_visible(False)
-    #
-    # # class distribution plot
-    # ax2.set_title('class distribution')
     plot_class_names = list(class_only['class_name'])
     _X = np.arange(len(plot_class_names))
-    print(new_value)
-    new_new_value = [int(x) for x in new_value]
-    # ax2.bar(plot_class_names, new_new_value, color=sns.color_palette("Paired")[0:8])
-    # ax2.set_ylim(0, 45)
-
-    # plt.setp(ax2.xaxis.get_majorticklabels(), rotation=90)
-
     plot_name = 'plots/' + 'gini' + str(node_name) + '.png'
-    plt.show()
-
     temp_row = {'current_node': node_name, 'gini': gini, 'samples': samples, 'class_name': class_name, 'color': color,
                 'value': value, 'plot_name': plot_name}
 
@@ -229,7 +206,6 @@ def get_node_string(orig):
     if gini_match is None:
         attribute = s[0].split("[")[1]
         temp_row['attribute'] = attribute
-
     return (temp_row)
 
 
@@ -241,10 +217,6 @@ df = pd.merge(original_df, class_only, on='class_type', how='outer')
 y = df['class_name']
 
 df_class = df.copy()
-#
-# del df['class_name']
-# del df['class_type']
-# df_bool = df.copy()
 
 # make train test split
 X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.33, random_state=1)
@@ -285,20 +257,22 @@ class_names.sort()
 del df_class['animal_name']
 
 # making class distribution plots
-gini_df = make_gini_df(df_class)
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node0')
+# gini_df = make_gini_df(df_class)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node0')
+#
+# df_milk_is_1 = df_class[df_class['milk'] == 1]
+# gini_df = make_gini_df(df_milk_is_1)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node18')
+#
+# df_milk_is_0 = df_class[df_class['milk'] == 0]
+# gini_df = make_gini_df(df_milk_is_0)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node1')
 
-df_milk_is_1 = df_class[df_class['milk'] == 1]
-gini_df = make_gini_df(df_milk_is_1)
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node18')
 
-df_milk_is_0 = df_class[df_class['milk'] == 0]
-gini_df = make_gini_df(df_milk_is_0)
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node1')
-
+# make string representation of model
 dot_string = dot_data.getvalue()
 x = dot_string.replace("&le;", "<=")  # .replace("&#35;", "->")
 x = x.replace("\n", "")
@@ -306,8 +280,6 @@ x = x.replace("<br/>", ",")
 x = x.replace("label=<", "")
 x = x.split(";")
 x = x[2:-1]
-
-import re
 
 edge_list = []
 node_list = []
@@ -328,13 +300,9 @@ for i in range(0, len(edge_list)):
     edge_df = edge_df.append({'current_node': destination, 'parent_node': source}, ignore_index=True)
 
 x = np.arange(10)
-np.ones(x.shape) * 0.4
-sns.set()
-sns.palplot(sns.color_palette())
 
 ult_df = pd.DataFrame(
     columns=['current_node', 'attribute', 'gini', 'samples', 'value', 'class_name', 'color', 'plot_name'])
-# ult_df = df_.fillna(0) # with 0s rather than NaNs
 
 ult_list = {}
 for i in range(0, len(node_list)):
@@ -343,45 +311,47 @@ for i in range(0, len(node_list)):
     ult_df = ult_df.append(node_string, ignore_index=True)
 new_df = ult_df.merge(edge_df, on='current_node', how='outer')
 
+# adding chldren columns
+child_df = edge_df.groupby('parent_node').agg({'current_node': lambda x: list(x)}).reset_index()
+child_df.rename(index=str, columns={"parent_node": "current_node", "current_node": "child_nodes"}, inplace=True)
+new_df = new_df.merge(child_df, on='current_node', how='outer')
+
 full_string = ""
 for index, row in new_df.iterrows():
     node_name = row['current_node']
     attribute = row['attribute']
-    plot_name = row['plot_name']
+    # plot_name = row['plot_name']
     samples = row['samples']
     class_name = row['class_name']
     value = row['value']
     gini = row['gini']
+    child_nodes = row['child_nodes']
+    print(child_nodes)
+    # print(np.isnan(child_nodes))
+    # print(pd.isnull(child_nodes).all()==True)
+    # if not (pd.isnull(child_nodes).all()==True):
+    #     child_nodes = ['node' + x for x in list(child_nodes)]
+    parent_node = row['parent_node']
+
     if node_name == '0':
-        result = 'node' + str(node_name) + ' = {' \
-                 + 'text: { gini: "gini:' + gini \
-                 + '", samples: "samples: ' + samples \
-                 + '", attribute: "attribute: ' + str(attribute) \
-                 + '", class_name: "class_name: ' + class_name \
-                 + '", value: "value: ' + value \
-                 + '"},' \
-                 + 'connectors: {type: "curve", style: {"stroke-width": ' + str(int(samples) / 5) + '}},' \
-                 + 'image:"' + plot_name + '"},'
+        result = (
+            f'{{"name": "node{str(node_name)}", "attribute": "{attribute}",'
+            f'"samples": {samples}, "distribution": {value}, "children": {child_nodes}}},'
+        )
     else:
         parent = row['parent_node']
-        result = 'node' + str(node_name) + ' = {' + "parent: node" + str(parent) \
-                 + ', text: {' \
-                 + 'gini: "gini: ' + gini \
-                 + '", samples: "samples: ' + samples \
-                 + '", attribute: "attribute: ' + str(attribute) \
-                 + '", class_name: "class_name: ' + class_name \
-                 + '", value: "value: ' + value \
-                 + '"},' \
-                 + 'connectors: {type: "curve", style: {"stroke-width": ' + str(int(samples) / 5) + '}},' \
-                 + 'image:"' + plot_name + '"},'
+        result = (
+            f'{{"name": "node{str(node_name)}", "attribute": "{attribute}", "parent": {parent_node},'
+            f'"samples": {samples}, "distribution": {value}, "children": {child_nodes}}},'
+        )
     full_string += result
 
-first_part = 'var config = {container: "#basic-example", levelSeparation: 200, connectors: {type: "curve", style: { "stroke-width": 5}}, node: { HTMLclass: "nodeExample1"}}, '
-last_part = "chart_config = [config," + ','.join(['node' + str(x) for x in list(new_df['current_node'].keys())]) + '];'
+first_part = 'var treeData = {'
+last_part = "}"
 whole_string = first_part + full_string + last_part
-# text_file = open("../../treant-js/examples/decision-tree/basic-example.js", "w")
-# text_file.write(whole_string)
-# text_file.close()
+text_file = open("new_tree.js", "w")
+text_file.write(whole_string)
+text_file.close()
 
 plt.close("all")
 print(whole_string)
