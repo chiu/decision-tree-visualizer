@@ -4,12 +4,6 @@
     <list default="true" id="b8eede98-853f-4cdd-9a78-05e8094c396f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node6.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node9.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,12 +201,12 @@
       <workItem from="1555475903191" duration="282000" />
       <workItem from="1555477543084" duration="184000" />
       <workItem from="1555477731897" duration="2269000" />
-      <workItem from="1555526440756" duration="239000" />
+      <workItem from="1555526440756" duration="423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25248000" />
+    <option name="totallyTimeSpent" value="25432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />

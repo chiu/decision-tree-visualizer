@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node4.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node5.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node6.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node9.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/decision_tree_preprocessing-Copy12.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="197" column="30" lean-forward="true" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="30" />
+            <state relative-caret-position="361">
+              <caret line="215" column="19" lean-forward="true" selection-start-line="215" selection-start-column="19" selection-end-line="215" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -251,12 +245,12 @@
       <workItem from="1555459517654" duration="2612000" />
       <workItem from="1555464344354" duration="5360000" />
       <workItem from="1555475902464" duration="3052000" />
-      <workItem from="1555526441374" duration="239000" />
+      <workItem from="1555526441374" duration="423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69270000" />
+    <option name="totallyTimeSpent" value="69454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -482,8 +476,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="197" column="30" lean-forward="true" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="30" />
+        <state relative-caret-position="361">
+          <caret line="215" column="19" lean-forward="true" selection-start-line="215" selection-start-column="19" selection-end-line="215" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>

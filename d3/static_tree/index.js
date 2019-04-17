@@ -182,18 +182,18 @@ node.append("svg:rect")
     .on("mouseout", mouseout)
     .attr("fill", "blue")
     .attr("fill", function (d) {
-        var color_dict = {
-            'Mammal': '#db5f57',
-            'Bird': '#dbd057',
-            'Fish': '#75db57',
-            'Bug': '#57dbaa',
-            'Invertebrate': '#579bdb',
-            'Reptile': '#8557db',
-            'Amphibian': '#db57c0'
-        };
+        // var color_dict = {
+        //     'Mammal': '#db5f57',
+        //     'Bird': '#dbd057',
+        //     'Fish': '#75db57',
+        //     'Bug': '#57dbaa',
+        //     'Invertebrate': '#579bdb',
+        //     'Reptile': '#8557db',
+        //     'Amphibian': '#db57c0'
+        // };
 
         var rect_colors = ['#db5f57', '#dbd057', '#75db57', '#57dbaa', '#579bdb', '#8557db', '#db57c0'];
-        arr = d.distribution;
+        let arr = d.distribution;
         let b = arr.indexOf(Math.max(...arr));
         return rect_colors[b];
     })
@@ -206,11 +206,11 @@ node.append("svg:rect")
     });
 
 node.append("text")
-    .attr("dx", -20)
+    .attr("dx", -30)
     .attr("dy", -10)
     .attr('color', 'white')
     .text(function (d) {
-        return d.name
+        return "animals: " + d.samples;
     }).style("font-size", "14px");
 
 node.append("text")
