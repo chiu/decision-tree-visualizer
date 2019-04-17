@@ -294,22 +294,46 @@ del dfc['animal_name']
 # make_tornado_plot(gini_split_df, 'node13')
 
 
-#layer 4
-old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0)
+def turn_df_into_tornado_plot(dfc_subset, plot_name):
+    gini_df = make_gini_df(dfc_subset)
+    gini_split_df = make_gini_split_df(gini_df)
+    make_tornado_plot(gini_split_df, plot_name)
 
-current_condition = (dfc['fins'] == 0)
+# #layer 4
+# old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0)
+#
+# current_condition = (dfc['fins'] == 0)
+# conditions = old_conditions & current_condition
+# gini_df = make_gini_df(dfc[conditions])
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node3')
+#
+# current_condition = (dfc['fins'] == 1)
+# conditions = old_conditions & current_condition
+# turn_df_into_tornado_plot(dfc[conditions], 'node12')
+
+
+#layer 5
+old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0) & (dfc['fins']==0)
+
+current_condition = (dfc['backbone'] == 0)
 conditions = old_conditions & current_condition
-gini_df = make_gini_df(dfc[conditions])
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node3')
+turn_df_into_tornado_plot(dfc[conditions], 'node4')
 
-current_condition = (dfc['fins'] == 1)
+current_condition = (dfc['backbone'] == 1)
 conditions = old_conditions & current_condition
-gini_df = make_gini_df(dfc[conditions])
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node12')
+turn_df_into_tornado_plot(dfc[conditions], 'node9')
 
+#layer 6
+old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0) & (dfc['fins']==0) & (dfc['backbone']==0)
 
+current_condition = (dfc['predator'] == 0)
+conditions = old_conditions & current_condition
+turn_df_into_tornado_plot(dfc[conditions], 'node5')
+
+current_condition = (dfc['predator'] == 1)
+conditions = old_conditions & current_condition
+turn_df_into_tornado_plot(dfc[conditions], 'node6')
 
 
 # make string representation of model

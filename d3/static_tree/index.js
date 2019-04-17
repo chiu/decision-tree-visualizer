@@ -6,6 +6,8 @@ var treeData = {
     "attribute": "has milk",
     "samples": 67,
     "distribution": [28, 13, 9, 7, 5, 4, 1],
+    "color": "red",
+    "majority": "Mammal",
     "children": [
         {
             "name": "node1",
@@ -13,6 +15,7 @@ var treeData = {
             "parent": 0,
             "samples": 39,
             "distribution": [0, 13, 9, 7, 5, 4, 1],
+            "majority": "Bird",
             "children": [
                 {
                     "name": "node2",
@@ -20,81 +23,84 @@ var treeData = {
                     "parent": 1,
                     "samples": 26,
                     "distribution": [0, 0, 9, 7, 5, 4, 1],
-                    "children": [{
-                        "name": "node3",
-                        "attribute": "has backbone",
-                        "parent": 2,
-                        "samples": 17,
-                        "distribution": [0, 0, 0, 7, 5, 4, 1],
-                        "children": [
-                            {
-                                "name": "node4",
-                                "attribute": "is predator",
-                                "parent": 3,
-                                "samples": 12,
-                                "distribution": [0, 0, 0, 7, 5, 0, 0],
-                                "children": [
-                                    {
-                                        "name": "node5",
-                                        "attribute": "nan",
-                                        "parent": 4,
-                                        "samples": 6,
-                                        "distribution": [0, 0, 0, 6, 0, 0, 0],
-                                    },
-                                    {
-                                        "name": "node6",
-                                        "attribute": "can fly",
-                                        "parent": 4,
-                                        "samples": 6,
-                                        "distribution": [0, 0, 0, 1, 5, 0, 0],
-                                        "children": [
-                                            {
-                                                "name": "node7",
-                                                "parent": 6,
-                                                "samples": 5,
-                                                "distribution": [0, 0, 0, 0, 5, 0, 0],
-                                            },
-                                            {
-                                                "name": "node8",
-                                                "parent": 6,
-                                                "samples": 1,
-                                                "distribution": [0, 0, 0, 1, 0, 0, 0],
-                                            },
-                                        ]
-                                    },
-                                ]
-                            }, {
-                                "name": "node9",
-                                "attribute": "has tail",
-                                "parent": 3,
-                                "samples": 5,
-                                "distribution": [0, 0, 0, 0, 0, 4, 1],
-                                "children": [
-                                    {
-                                        "name": "node10",
-                                        "parent": 9,
-                                        "samples": 1,
-                                        "distribution": [0, 0, 0, 0, 0, 0, 1],
-                                    },
-                                    {
-                                        "name": "node11",
-                                        "parent": 9,
-                                        "samples": 4,
-                                        "distribution": [0, 0, 0, 0, 0, 4, 0],
-                                    },
-                                ]
-                            },
-                        ]
-                    }, {
-                        "name": "node12",
-                        "parent": 2,
-                        "samples": 9,
-                        "distribution": [0, 0, 9, 0, 0, 0, 0],
-                    }]
+                    "majority": "Fish",
+                    "children": [
+                        {
+                            "name": "node3",
+                            "attribute": "has backbone",
+                            "parent": 2,
+                            "samples": 17,
+                            "distribution": [0, 0, 0, 7, 5, 4, 1],
+                            "children": [
+                                {
+                                    "name": "node4",
+                                    "attribute": "is predator",
+                                    "parent": 3,
+                                    "samples": 12,
+                                    "distribution": [0, 0, 0, 7, 5, 0, 0],
+                                    "children": [
+                                        {
+                                            "name": "node5",
+                                            "attribute": "nan",
+                                            "parent": 4,
+                                            "samples": 6,
+                                            "distribution": [0, 0, 0, 6, 0, 0, 0],
+                                        },
+                                        {
+                                            "name": "node6",
+                                            "attribute": "can fly",
+                                            "parent": 4,
+                                            "samples": 6,
+                                            "distribution": [0, 0, 0, 1, 5, 0, 0],
+                                            "children": [
+                                                {
+                                                    "name": "node7",
+                                                    "parent": 6,
+                                                    "samples": 5,
+                                                    "distribution": [0, 0, 0, 0, 5, 0, 0],
+                                                },
+                                                {
+                                                    "name": "node8",
+                                                    "parent": 6,
+                                                    "samples": 1,
+                                                    "distribution": [0, 0, 0, 1, 0, 0, 0],
+                                                },
+                                            ]
+                                        },
+                                    ]
+                                }, {
+                                    "name": "node9",
+                                    "attribute": "has tail",
+                                    "parent": 3,
+                                    "samples": 5,
+                                    "distribution": [0, 0, 0, 0, 0, 4, 1],
+                                    "children": [
+                                        {
+                                            "name": "node10",
+                                            "parent": 9,
+                                            "samples": 1,
+                                            "distribution": [0, 0, 0, 0, 0, 0, 1],
+                                        },
+                                        {
+                                            "name": "node11",
+                                            "parent": 9,
+                                            "samples": 4,
+                                            "distribution": [0, 0, 0, 0, 0, 4, 0],
+                                        },
+                                    ]
+                                },
+                            ]
+                        }, {
+                            "name": "node12",
+                            "parent": 2,
+                            "samples": 9,
+                            "distribution": [0, 0, 9, 0, 0, 0, 0],
+                        }]
                 }, {
                     "name": "node13",
                     "parent": 1,
                     "samples": 13,
+                    "majority": "Bird",
                     "distribution": [0, 13, 0, 0, 0, 0, 0],
                 },]
         },
@@ -103,6 +109,7 @@ var treeData = {
             "parent": 0,
             "samples": 28,
             "distribution": [28, 0, 0, 0, 0, 0, 0],
+            "majority": "Mammal"
         },
     ]
 };
@@ -165,6 +172,7 @@ var node = vis.selectAll("g.node")
         return "translate(" + d.x + "," + d.y + ")";
     });
 
+
 // Add the dot at every node
 node.append("svg:rect")
     .on("mouseover", mouseover)
@@ -174,6 +182,18 @@ node.append("svg:rect")
     })
     .on("mouseout", mouseout)
     .attr("fill", "blue")
+    .attr("fill", function (d) {
+        var color_dict = {
+            'Mammal': '#db5f57',
+            'Bird': '#dbd057',
+            'Fish': '#75db57',
+            'Bug': '#57dbaa',
+            'Invertebrate': '#579bdb',
+            'Reptile': '#8557db',
+            'Amphibian': '#db57c0'
+        };
+        return color_dict[d.majority];
+    })
     .attr("height", 30)
     .attr("width", function (d) {
         return d.samples + 10;
