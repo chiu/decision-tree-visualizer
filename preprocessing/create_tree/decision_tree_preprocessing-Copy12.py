@@ -30,7 +30,7 @@ def make_attribute_plots(gini_split_df, filename):
         values = row['distribution']
         new.bar(class_names, values)
         new.set_title(temp_class_name + " is " + str(
-            unique_col_value) + ", gini: " + f'{gini_score:.2f}' + ", gini split: " + f'{gini_split:.2f}', fontsize=20)
+            unique_col_value) + ", gini: " + f'{gini_score:.2f}' + ", gini split: " + f'{gini_split:.2f}', fontsize=40)
         plot_index += 1
 
     oFig1.savefig("../../d3/static_tree/python_plots/" + filename, pad_inches=0.4, bbox_inches="tight")
@@ -73,7 +73,7 @@ def make_gini_df(df_class):
 
 
 def make_gini_split_df(gini_df):
-    num_at_record = df_class.shape[0]
+    num_at_record = dfc.shape[0]
 
     # create gini split df
     gini_df['proportion'] = gini_df['num_at_child'] * gini_df['gini_score']
@@ -218,13 +218,13 @@ class_only = class_only.rename(columns={'Class_Number': 'class_type', "Class_Typ
 df = pd.merge(original_df, class_only, on='class_type', how='outer')
 y = df['class_name']
 
-df_class = df.copy()
+dfc = df.copy()
 
 # make train test split
 X_train, X_test, y_train, y_test = train_test_split(df, y, test_size=0.33, random_state=1)
 X_test_with_animal_name = X_test.copy()
 
-df_class = X_train.copy()
+dfc = X_train.copy()
 del X_train['animal_name']
 del X_test['animal_name']
 
@@ -256,22 +256,60 @@ Image(graph.create_png())
 X_test_with_animal_name['y_pred'] = y_pred
 X_test_with_animal_name['y_test'] = y_test
 
-del df_class['animal_name']
+del dfc['animal_name']
 
-# making class distribution plots
-gini_df = make_gini_df(df_class)
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node0')
 
-df_milk_is_1 = df_class[df_class['milk'] == 1]
-gini_df = make_gini_df(df_milk_is_1)
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node14')
 
-df_milk_is_0 = df_class[df_class['milk'] == 0]
-gini_df = make_gini_df(df_milk_is_0)
+# # making class distribution plots
+# #layer 1
+# gini_df = make_gini_df(dfc)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node0')
+#
+#
+# #layer 2
+# df_milk_is_1 = dfc[dfc['milk'] == 1]
+# gini_df = make_gini_df(df_milk_is_1)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node14')
+#
+# df_milk_is_0 = dfc[dfc['milk'] == 0]
+# gini_df = make_gini_df(df_milk_is_0)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node1')
+
+# #layer 3
+# old_conditions = (dfc['milk']==0)
+# parent_condition = (dfc['feathers'] == 0)
+# conditions = old_conditions & parent_condition
+# gini_df = make_gini_df(dfc[conditions])
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node2')
+#
+# old_conditions = (dfc['milk']==0)
+# parent_condition = (dfc['feathers'] == 1)
+# conditions = old_conditions & parent_condition
+# gini_df = make_gini_df(dfc[conditions])
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node13')
+
+
+#layer 4
+old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0)
+
+current_condition = (dfc['fins'] == 0)
+conditions = old_conditions & current_condition
+gini_df = make_gini_df(dfc[conditions])
 gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node1')
+make_tornado_plot(gini_split_df, 'node3')
+
+current_condition = (dfc['fins'] == 1)
+conditions = old_conditions & current_condition
+gini_df = make_gini_df(dfc[conditions])
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node12')
+
+
 
 
 # make string representation of model

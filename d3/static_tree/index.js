@@ -43,21 +43,19 @@ var treeData = {
                                     },
                                     {
                                         "name": "node6",
-                                        "attribute": "airborne <= 0.5",
+                                        "attribute": "can fly",
                                         "parent": 4,
                                         "samples": 6,
                                         "distribution": [0, 0, 0, 1, 5, 0, 0],
                                         "children": [
                                             {
                                                 "name": "node7",
-                                                "attribute": "nan",
                                                 "parent": 6,
                                                 "samples": 5,
                                                 "distribution": [0, 0, 0, 0, 5, 0, 0],
                                             },
                                             {
                                                 "name": "node8",
-                                                "attribute": "nan",
                                                 "parent": 6,
                                                 "samples": 1,
                                                 "distribution": [0, 0, 0, 1, 0, 0, 0],
@@ -67,7 +65,7 @@ var treeData = {
                                 ]
                             }, {
                                 "name": "node9",
-                                "attribute": "tail <= 0.5",
+                                "attribute": "has tail",
                                 "parent": 3,
                                 "samples": 5,
                                 "distribution": [0, 0, 0, 0, 0, 4, 1],
@@ -109,19 +107,12 @@ var treeData = {
     ]
 };
 
-
-// var linkData = [
-// {source: "node0", target: "node18"},
-// {source: "node0", target: "node1"}
-// ];
-
 // Create a svg canvas
 var vis = d3.select("#viz").append("svg:svg")
     .attr("width", 1200)
     .attr("height", 1200)
     .append("svg:g")
     .attr("transform", "translate(40, 30)"); // shift everything to the right
-
 
 // Add tooltip div
 var div = d3.select("body").append("div")
@@ -164,7 +155,7 @@ var link = vis.selectAll("pathlink")
     .attr("d", diagonal)
     .style("stroke", 'lightgrey')
     .style("stroke-width", function (d) {
-        return (d.target.samples)
+        return d.target.samples + 10;
     });
 
 var node = vis.selectAll("g.node")
@@ -185,10 +176,10 @@ node.append("svg:rect")
     .attr("fill", "blue")
     .attr("height", 30)
     .attr("width", function (d) {
-        return d.samples;
+        return d.samples + 10;
     })
     .attr("transform", function (d) {
-        return "translate(-" + d.samples / 2 + "," + 0 + ")";
+        return "translate(-" + (d.samples + 10) / 2 + "," + 0 + ")";
     });
 
 node.append("text")
@@ -231,6 +222,8 @@ function mouseover() {
 function click(d) {
 
     d3.selectAll("rect").attr("style", "outline: 0px;");
+    d3.selectAll(".attributetip").remove();
+
     console.log("d.name is " + d.name);
     let this_node = d3.select(this);
     // this_node.attr('class', 'toggled_on');
@@ -238,10 +231,17 @@ function click(d) {
     console.log("class is " + this_node.attr("class"));
     // console.log("class is " + this_node.attr("class") == "toggled_on");
 
-    var div = d3.select("body").append("div")
-        .attr("class", "attributetip")
-        .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2500px;\">");
+    if (d.children != null) {
+        d3.select("body").append("div")
+            .attr("class", "attributetip")
+            .html("\<img src=\"python_plots/" + d.name + ".png\" style=\"float:right;width:400px;height:2500px;\">");
+    } else {
+        d3.select("body").append("div")
+            .attr("class", "attributetip")
+            .html("leaf node has no candidate splits");
 
+
+    }
     //this_node.style("outline", "solid 10px orange");
 
 }
