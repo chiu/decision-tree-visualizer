@@ -191,7 +191,11 @@ node.append("svg:rect")
             'Reptile': '#8557db',
             'Amphibian': '#db57c0'
         };
-        return color_dict[d.majority];
+
+        var rect_colors = ['#db5f57', '#dbd057', '#75db57', '#57dbaa', '#579bdb', '#8557db', '#db57c0'];
+        arr = d.distribution;
+        let b = arr.indexOf(Math.max(...arr));
+        return rect_colors[b];
     })
     .attr("height", 30)
     .attr("width", function (d) {

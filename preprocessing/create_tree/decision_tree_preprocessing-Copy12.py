@@ -86,7 +86,7 @@ def make_gini_split_df(gini_df):
     return gini_split_df
 
 
-def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
+def make_tornado_subplot(subset, oFig1, plot_index, temp_attribute):
     row0 = subset.iloc[0]
     row1 = subset.iloc[1]
     row = row0
@@ -121,7 +121,6 @@ def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
         high_width = value
 
         # Each bar is a "broken" horizontal bar chart
-
         plt.broken_barh(
             [(low, low_width), (base, high_width)],
             (y - 0.4, 0.8),
@@ -136,7 +135,7 @@ def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
         x = base + high_width / 2
         if x <= base + 50:
             x = base + high_width + 50
-        plt.text(50, y, variables[y], va='center', ha='center', fontsize=20)
+        plt.text(50, y, variables[y], va='center', ha='center', fontsize=40)
 
     # Draw a vertical line down the middle
     plt.axvline(base, color='black')
@@ -157,15 +156,12 @@ def make_tornado_subplot(subset, oFig1, plot_index, temp_class_name):
     plt.set_ylim(-1, len(variables))
 
     plt.set_title("plot number" + str(plot_index))
-    #     plt.show()
     # plt.set_yticks(ys, variables, fontsize=20)
 
     gini_split = row['gini_split']
-    values = row['distribution']
 
     new = plt
-    # new.bar(class_names, values)
-    new.set_title(temp_class_name + " is " + "gini split: " + f'{gini_split:.2f}', fontsize=20)
+    new.set_title(temp_attribute + " is " + "gini split: " + f'{gini_split:.2f}', fontsize=40)
     return "hi"
 
 
