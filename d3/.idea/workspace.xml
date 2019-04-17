@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="820abd9f-73e6-420a-a74c-e2d383391cb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_tree/python_plots/node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static_tree/python_plots/node1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/actual_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/actual_tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/decision_tree_preprocessing-Copy12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/new_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/new_tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/preprocessing_redux.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/preprocessing_redux.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../preprocessing/create_tree/cut_and_paste_actual_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../preprocessing/create_tree/cut_and_paste_actual_tree.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="410">
+              <caret line="66" column="10" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
               </folding>
@@ -249,12 +244,12 @@
       <workItem from="1555400194677" duration="2522000" />
       <workItem from="1555449460270" duration="1097000" />
       <workItem from="1555459517654" duration="2612000" />
-      <workItem from="1555464344354" duration="3448000" />
+      <workItem from="1555464344354" duration="3629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64067000" />
+    <option name="totallyTimeSpent" value="64248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -287,7 +282,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/static_tree/index.js</url>
-          <line>187</line>
+          <line>203</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -480,8 +475,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static_tree/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="410">
+          <caret line="66" column="10" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>

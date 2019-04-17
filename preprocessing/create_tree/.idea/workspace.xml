@@ -4,13 +4,7 @@
     <list default="true" id="b8eede98-853f-4cdd-9a78-05e8094c396f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/static_tree/python_plots/node1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actual_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/actual_tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" beforeDir="false" afterPath="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/new_tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing_redux.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing_redux.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cut_and_paste_actual_tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/cut_and_paste_actual_tree.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,30 +142,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="RunManager">
-    <configuration name="decision_tree_preprocessing-Copy12" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="create_tree" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />

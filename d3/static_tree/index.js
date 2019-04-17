@@ -26,7 +26,23 @@ var treeData = {
                         "parent": 2,
                         "samples": 17,
                         "distribution": [0, 0, 0, 7, 5, 4, 1],
-                        "children": ['4', '9']
+                        "children": [
+                            {
+                                "name": "node4",
+                                "attribute": "predator <= 0.5",
+                                "parent": 3,
+                                "samples": 12,
+                                "distribution": [0, 0, 0, 7, 5, 0, 0],
+                                "children": ['5', '6']
+                            }, {
+                                "name": "node9",
+                                "attribute": "tail <= 0.5",
+                                "parent": 3,
+                                "samples": 5,
+                                "distribution": [0, 0, 0, 0, 0, 4, 1],
+                                "children": ['10', '11']
+                            },
+                        ]
                     }, {
                         "name": "node12",
                         "attribute": "nan",

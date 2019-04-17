@@ -1,21 +1,6 @@
 var treeData = {
    
-    {
-        "name": "node2",
-        "attribute": "fins <= 0.5",
-        "parent": 1,
-        "samples": 26,
-        "distribution": [0, 0, 9, 7, 5, 4, 1],
-        "children": ['3', '12']
-    },
-    {
-        "name": "node3",
-        "attribute": "backbone <= 0.5",
-        "parent": 2,
-        "samples": 17,
-        "distribution": [0, 0, 0, 7, 5, 4, 1],
-        "children": ['4', '9']
-    },
+    
     {
         "name": "node4",
         "attribute": "predator <= 0.5",
@@ -23,7 +8,18 @@ var treeData = {
         "samples": 12,
         "distribution": [0, 0, 0, 7, 5, 0, 0],
         "children": ['5', '6']
+    },{
+        "name": "node9",
+        "attribute": "tail <= 0.5",
+        "parent": 3,
+        "samples": 5,
+        "distribution": [0, 0, 0, 0, 0, 4, 1],
+        "children": ['10', '11']
     },
+
+
+
+
     {
         "name": "node5",
         "attribute": "nan",
@@ -56,14 +52,7 @@ var treeData = {
         "distribution": [0, 0, 0, 1, 0, 0, 0],
         "children": nan
     },
-    {
-        "name": "node9",
-        "attribute": "tail <= 0.5",
-        "parent": 3,
-        "samples": 5,
-        "distribution": [0, 0, 0, 0, 0, 4, 1],
-        "children": ['10', '11']
-    },
+ 
     {
         "name": "node10",
         "attribute": "nan",
@@ -80,20 +69,6 @@ var treeData = {
         "distribution": [0, 0, 0, 0, 0, 4, 0],
         "children": nan
     },
-    {
-        "name": "node12",
-        "attribute": "nan",
-        "parent": 2,
-        "samples": 9,
-        "distribution": [0, 0, 9, 0, 0, 0, 0],
-        "children": nan
-    },
-    {
-        "name": "node13",
-        "attribute": "nan",
-        "parent": 1,
-        "samples": 13,
-        "distribution": [0, 13, 0, 0, 0, 0, 0],
-        "children": nan
-    },
+    ,
+    
     
