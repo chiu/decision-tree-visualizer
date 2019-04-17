@@ -41,7 +41,6 @@ var treeData = {
                                     "children": [
                                         {
                                             "name": "node5",
-                                            "attribute": "nan",
                                             "parent": 4,
                                             "samples": 6,
                                             "distribution": [0, 0, 0, 6, 0, 0, 0],
