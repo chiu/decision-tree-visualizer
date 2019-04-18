@@ -182,7 +182,7 @@ def make_tornado_plot(gini_split_df, filename):
 
     attributes = gini_split_df['column_name'].unique()
     length = len(attributes)
-    subset_attributes = attributes[[1, math.floor(length / 2), length - 1]]
+    subset_attributes = attributes[[0, math.floor(length / 2), length - 1]]
     subset_attributes = remove_dupes_maintain_order(subset_attributes)
 
     plot_prefix = ["Best Attribute: ", "Okay Attribute: ", "Worst Attribute: "]
@@ -277,66 +277,66 @@ del dfc['animal_name']
 
 
 # making class distribution plots
-# # #layer 1
-# gini_df = make_gini_df(dfc)
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node0')
-#
-#
-# #layer 2
-# df_milk_is_1 = dfc[dfc['milk'] == 1]
-# gini_df = make_gini_df(df_milk_is_1)
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node14')
-#
-# df_milk_is_0 = dfc[dfc['milk'] == 0]
-# gini_df = make_gini_df(df_milk_is_0)
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node1')
-
-# # layer 3
-# old_conditions = (dfc['milk']==0)
-# parent_condition = (dfc['feathers'] == 0)
-# conditions = old_conditions & parent_condition
-# gini_df = make_gini_df(dfc[conditions])
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node2')
-#
-# old_conditions = (dfc['milk']==0)
-# parent_condition = (dfc['feathers'] == 1)
-# conditions = old_conditions & parent_condition
-# gini_df = make_gini_df(dfc[conditions])
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node13')
+# #layer 1
+gini_df = make_gini_df(dfc)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node0')
 
 
+#layer 2
+df_milk_is_1 = dfc[dfc['milk'] == 1]
+gini_df = make_gini_df(df_milk_is_1)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node14')
+
+df_milk_is_0 = dfc[dfc['milk'] == 0]
+gini_df = make_gini_df(df_milk_is_0)
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node1')
+
+# layer 3
+old_conditions = (dfc['milk']==0)
+parent_condition = (dfc['feathers'] == 0)
+conditions = old_conditions & parent_condition
+gini_df = make_gini_df(dfc[conditions])
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node2')
+
+old_conditions = (dfc['milk']==0)
+parent_condition = (dfc['feathers'] == 1)
+conditions = old_conditions & parent_condition
+gini_df = make_gini_df(dfc[conditions])
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node13')
 
 
-# #layer 4
-# old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0)
-#
-# current_condition = (dfc['fins'] == 0)
-# conditions = old_conditions & current_condition
-# gini_df = make_gini_df(dfc[conditions])
-# gini_split_df = make_gini_split_df(gini_df)
-# make_tornado_plot(gini_split_df, 'node3')
-#
-# current_condition = (dfc['fins'] == 1)
-# conditions = old_conditions & current_condition
-# turn_df_into_tornado_plot(dfc[conditions], 'node12')
-#
-#
-# #layer 5
-# old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0) & (dfc['fins']==0)
-#
-# current_condition = (dfc['backbone'] == 0)
-# conditions = old_conditions & current_condition
-# turn_df_into_tornado_plot(dfc[conditions], 'node4')
-#
-# current_condition = (dfc['backbone'] == 1)
-# conditions = old_conditions & current_condition
-# turn_df_into_tornado_plot(dfc[conditions], 'node9')
-#
+
+
+#layer 4
+old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0)
+
+current_condition = (dfc['fins'] == 0)
+conditions = old_conditions & current_condition
+gini_df = make_gini_df(dfc[conditions])
+gini_split_df = make_gini_split_df(gini_df)
+make_tornado_plot(gini_split_df, 'node3')
+
+current_condition = (dfc['fins'] == 1)
+conditions = old_conditions & current_condition
+turn_df_into_tornado_plot(dfc[conditions], 'node12')
+
+
+#layer 5
+old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0) & (dfc['fins']==0)
+
+current_condition = (dfc['backbone'] == 0)
+conditions = old_conditions & current_condition
+turn_df_into_tornado_plot(dfc[conditions], 'node4')
+
+current_condition = (dfc['backbone'] == 1)
+conditions = old_conditions & current_condition
+turn_df_into_tornado_plot(dfc[conditions], 'node9')
+
 # #layer 6
 old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0) & (dfc['fins']==0) & (dfc['backbone']==0)
 
