@@ -8,6 +8,7 @@ var treeData = {
     "distribution": [28, 13, 9, 7, 5, 4, 1],
     "color": "red",
     "majority": "Mammal",
+    "samples_prefix": "Animals: ",
     "children": [
         {
             "name": "node1",
@@ -16,6 +17,7 @@ var treeData = {
             "samples": 39,
             "distribution": [0, 13, 9, 7, 5, 4, 1],
             "majority": "Bird",
+            "samples_prefix": "Animals: ",
             "children": [
                 {
                     "name": "node2",
@@ -108,6 +110,7 @@ var treeData = {
             "parent": 0,
             "samples": 28,
             "distribution": [28, 0, 0, 0, 0, 0, 0],
+            "samples_prefix": "Animals: ",
             "majority": "Mammal"
         },
     ]
@@ -206,11 +209,16 @@ node.append("svg:rect")
     });
 
 node.append("text")
-    .attr("dx", -30)
-    .attr("dy", -10)
+    .attr("dx", 0)
+    .attr("dy", -5)
     .attr('color', 'white')
     .text(function (d) {
-        return "animals: " + d.samples;
+        if (d.samples_prefix != null) {
+            result = d.samples_prefix + d.samples;
+        } else {
+            result = d.samples;
+        }
+        return result
     }).style("font-size", "14px");
 
 node.append("text")
@@ -260,9 +268,9 @@ function click(d) {
             .attr("dx", 0)
             .attr("dy", 0)
             .html("\<img src=\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/3117222/v2" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
-            // .html("\<img src=\"python_plots2/v2" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
+        // .html("\<img src=\"python_plots2/v2" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
 
-            // .html("\<img src=\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/3117222/" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
+        // .html("\<img src=\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/3117222/" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
 
     } else {
         d3.select("body").append("div")

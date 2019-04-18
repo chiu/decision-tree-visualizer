@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8eede98-853f-4cdd-9a78-05e8094c396f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/bars.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/d3v3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/great.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/milk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/node9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/plotnode0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/tornado.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/tornado2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/delete/trial_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/milk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d3/static_tree/python_plots2/v2node9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../d3/decision_tree_ultimate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/decision_tree_ultimate/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
