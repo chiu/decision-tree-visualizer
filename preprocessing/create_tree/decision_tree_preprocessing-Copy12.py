@@ -132,10 +132,10 @@ def make_tornado_subplot(subset, oFig1, plot_index, temp_attribute):
         # Display the value as text. It should be positioned in the center of
         # the 'high' bar, except if there isn't any room there, then it should be
         # next to bar instead.
-        x = base + high_width / 2
-        if x <= base + 50:
-            x = base + high_width + 50
-        plt.text(50, y, variables[y], va='center', ha='center', fontsize=40)
+        # x = base + high_width / 2
+        # if x <= base + 50:
+        #     x = base + high_width + 50
+        plt.text(35, y, variables[y], va='center', ha='center', fontsize=40)
 
     # Draw a vertical line down the middle
     plt.axvline(base, color='black')
@@ -148,36 +148,47 @@ def make_tornado_subplot(subset, oFig1, plot_index, temp_attribute):
     axes.spines['bottom'].set_visible(False)
     axes.xaxis.set_ticks_position('top')
 
+
     # Make the y-axis display the variables
     #     plt.yticks(ys, variables)
 
     # Set the portion of the x- and y-axes to show
-    plt.set_xlim(base - 50, base + 50)
+    plt.set_xlim(base - 30, base + 30)
     plt.set_ylim(-1, len(variables))
+
+    # plt.set_xlabel('num animals', fontsize=30)
 
     plt.set_title("plot number" + str(plot_index))
     # plt.set_yticks(ys, variables, fontsize=20)
+    plt.tick_params(labelsize=30)
 
     gini_split = row['gini_split']
 
     new = plt
-    new.set_title(temp_attribute + " is " + "gini split: " + f'{gini_split:.2f}', fontsize=40)
+    new.set_title(temp_attribute + "; " + "gini split: " + f'{gini_split:.2f}', fontsize=40)
     return "hi"
 
+import math
+
+def remove_dupes_maintain_order(seq):
+    seen = set()
+    seen_add = seen.add
+    return [x for x in seq if not (x in seen or seen_add(x))]
 
 def make_tornado_plot(gini_split_df, filename):
     # filename = 'tornado'
     oFig1 = plt.figure(1, figsize=(20, 200))
     index = 1
 
+    attributes = gini_split_df['column_name'].unique()
+    length = len(attributes)
+    subset_attributes = attributes[[1, math.floor(length / 2), length - 1]]
+    subset_attributes = remove_dupes_maintain_order(subset_attributes)
 
-
-    for x in gini_split_df['column_name'].unique():
-        if index > 3:
-            break
-        print(x)
-        subset = gini_split_df[gini_split_df['column_name'] == x]
-        make_tornado_subplot(subset, oFig1, index, x)
+    plot_prefix = ["Best Attribute: ", "Okay Attribute: ", "Worst Attribute: "]
+    for attribute in subset_attributes:
+        subset = gini_split_df[gini_split_df['column_name'] == attribute]
+        make_tornado_subplot(subset, oFig1, index, plot_prefix[index-1] + attribute)
         index += 1
     oFig1.savefig("../../d3/static_tree/python_plots/" + filename + '.png', pad_inches=0.4, bbox_inches="tight")
     plt.show()
@@ -266,24 +277,24 @@ del dfc['animal_name']
 
 
 # making class distribution plots
-# #layer 1
-gini_df = make_gini_df(dfc)
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node0')
+# # #layer 1
+# gini_df = make_gini_df(dfc)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node0')
+#
+#
+# #layer 2
+# df_milk_is_1 = dfc[dfc['milk'] == 1]
+# gini_df = make_gini_df(df_milk_is_1)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node14')
+#
+# df_milk_is_0 = dfc[dfc['milk'] == 0]
+# gini_df = make_gini_df(df_milk_is_0)
+# gini_split_df = make_gini_split_df(gini_df)
+# make_tornado_plot(gini_split_df, 'node1')
 
-
-#layer 2
-df_milk_is_1 = dfc[dfc['milk'] == 1]
-gini_df = make_gini_df(df_milk_is_1)
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node14')
-
-df_milk_is_0 = dfc[dfc['milk'] == 0]
-gini_df = make_gini_df(df_milk_is_0)
-gini_split_df = make_gini_split_df(gini_df)
-make_tornado_plot(gini_split_df, 'node1')
-
-#layer 3
+# # layer 3
 # old_conditions = (dfc['milk']==0)
 # parent_condition = (dfc['feathers'] == 0)
 # conditions = old_conditions & parent_condition
@@ -313,8 +324,8 @@ make_tornado_plot(gini_split_df, 'node1')
 # current_condition = (dfc['fins'] == 1)
 # conditions = old_conditions & current_condition
 # turn_df_into_tornado_plot(dfc[conditions], 'node12')
-
-
+#
+#
 # #layer 5
 # old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0) & (dfc['fins']==0)
 #
@@ -327,15 +338,15 @@ make_tornado_plot(gini_split_df, 'node1')
 # turn_df_into_tornado_plot(dfc[conditions], 'node9')
 #
 # #layer 6
-# old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0) & (dfc['fins']==0) & (dfc['backbone']==0)
-#
-# current_condition = (dfc['predator'] == 0)
-# conditions = old_conditions & current_condition
-# turn_df_into_tornado_plot(dfc[conditions], 'node5')
-#
-# current_condition = (dfc['predator'] == 1)
-# conditions = old_conditions & current_condition
-# turn_df_into_tornado_plot(dfc[conditions], 'node6')
+old_conditions = (dfc['milk']==0) & (dfc['feathers'] == 0) & (dfc['fins']==0) & (dfc['backbone']==0)
+
+current_condition = (dfc['predator'] == 0)
+conditions = old_conditions & current_condition
+turn_df_into_tornado_plot(dfc[conditions], 'node5')
+
+current_condition = (dfc['predator'] == 1)
+conditions = old_conditions & current_condition
+turn_df_into_tornado_plot(dfc[conditions], 'node6')
 
 
 # make string representation of model
