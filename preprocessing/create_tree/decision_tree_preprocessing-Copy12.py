@@ -190,7 +190,7 @@ def make_tornado_plot(gini_split_df, filename):
         subset = gini_split_df[gini_split_df['column_name'] == attribute]
         make_tornado_subplot(subset, oFig1, index, plot_prefix[index-1] + attribute)
         index += 1
-    oFig1.savefig("../../d3/static_tree/python_plots/" + filename + '.png', pad_inches=0.4, bbox_inches="tight")
+    oFig1.savefig("../../d3/static_tree/python_plots2/v2" + filename + '.png', pad_inches=0.4, bbox_inches="tight")
     plt.show()
 
 def turn_df_into_tornado_plot(dfc_subset, plot_name):
