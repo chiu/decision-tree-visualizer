@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../d3/decision_tree_ultimate/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/decision_tree_ultimate/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../d3/decision_tree_ultimate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../d3/decision_tree_ultimate/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="160" column="48" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
+            <state relative-caret-position="597">
+              <caret line="310" selection-start-line="310" selection-end-line="310" />
             </state>
           </provider>
         </entry>
@@ -119,6 +120,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,7 +132,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -150,6 +151,30 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="decision_tree_preprocessing-Copy12" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="create_tree" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/anaconda/envs/dt3/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -185,18 +210,20 @@
       <workItem from="1555477543084" duration="184000" />
       <workItem from="1555477731897" duration="2269000" />
       <workItem from="1555526440756" duration="463000" />
-      <workItem from="1555560086926" duration="869000" />
+      <workItem from="1555560086926" duration="1123000" />
+      <workItem from="1555612212805" duration="969000" />
+      <workItem from="1556083674650" duration="239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29342000" />
+    <option name="totallyTimeSpent" value="30804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21820374" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22543702" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="DB Browser" order="3" />
@@ -204,7 +231,7 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.497558" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6495727" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6495727" weight="0.32857144" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.73260075" weight="0.5255102" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -213,7 +240,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.35042736" side_tool="true" visible="true" weight="0.32780084" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.35042736" side_tool="true" visible="true" weight="0.29356846" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -222,8 +249,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="FAQ Robot" order="3" />
       <window_info anchor="right" id="Data View" order="4" />
-      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.3419453" side_tool="true" visible="true" weight="0.01831502" />
-      <window_info anchor="right" id="SciView" order="6" sideWeight="0.6580547" visible="true" weight="0.01831502" />
+      <window_info anchor="right" x="0" y="0" width="430" height="880" id="Documentation" order="5" sideWeight="0.34393063" side_tool="true" visible="true" weight="0.01831502" />
+      <window_info active="true" anchor="right" id="SciView" order="6" sideWeight="0.65606934" visible="true" weight="0.01831502" />
       <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
@@ -322,8 +349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/decision_tree_preprocessing-Copy12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="160" column="48" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
+        <state relative-caret-position="597">
+          <caret line="310" selection-start-line="310" selection-end-line="310" />
         </state>
       </provider>
     </entry>

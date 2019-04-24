@@ -268,8 +268,7 @@ function click(d) {
             .attr("dx", 0)
             .attr("dy", 0)
             .html("\<img src=\"python_plots2/v2" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
-
-            // .html("\<img src=\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/3117222/v2" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
+        // .html("\<img src=\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/3117222/v2" + d.name + ".png\" style=\"float:right;width:400px;height:600px;\">")
 
 
     } else {
